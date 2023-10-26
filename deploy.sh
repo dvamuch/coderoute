@@ -6,6 +6,6 @@ ssh -p 2425 root@10.0.2.15 /bin/bash <<EOF
   cd coderoute
   git add .
   git commit -m "Local changes"
-  git pull origin main
+  git pull origin master
   exit
 EOF
