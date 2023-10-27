@@ -9,7 +9,7 @@ import {createRouter, createWebHashHistory} from "vue-router";
 const routes = [
   {path: "/", component: MainPage},
   {path: "/routes", component: RouteListPage},
-  {path: "/route", component: RoutePage},
+  {path: "/routes/:id", component: RoutePage},
 ];
 
 const router = createRouter({
