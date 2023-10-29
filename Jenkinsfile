@@ -13,6 +13,7 @@ node {
 	    sh "chmod +x -R ${env.WORKSPACE}"
             sh './deploy.sh'
 
+
        
     }
 
