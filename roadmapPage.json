@@ -1,0 +1,36 @@
+{
+  "roadmap": {
+    "title": "Frontend Разработчик",
+    "description": "Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО"
+  },
+  "progress": {
+    "isStarted": true,
+    "percents": 33,
+    "finished": 3,
+    "in_process": 2,
+    "skipped": 3,
+    "total": 18
+  },
+  "nodes": [
+    {
+      "node_id": 1,
+      "title": "Интернет",
+      "status": "finished",
+      "status_id": 3,
+      "secondaryNodes": [
+        {
+          "node_id": 2,
+          "title": "Как работает интернет?",
+          "status": "finished",
+          "status_id": 3
+        },
+        {
+          "node_id": 3,
+          "title": "Что такое HTTP?",
+          "status": "finished",
+          "status_id": 3
+        }
+      ]
+    }
+  ]
+}

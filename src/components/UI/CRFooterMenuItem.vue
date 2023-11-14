@@ -1,10 +1,6 @@
 <script setup>
 const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  status: {
+  text: {
     type: String,
     required: true,
   },
@@ -12,7 +8,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <div>{{ props.title }} - {{ props.status }}</div>
+
+  <li><a href="#" class="listItem">{{ props.text}}</a></li>
+
 </template>
 
 <style scoped>

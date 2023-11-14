@@ -1,5 +1,5 @@
 <script setup>
-import FooterMenuItemComponent from "@/components/UI/FooterMenuItemComponent.vue";
+import FooterMenuItemComponent from "@/components/UI/CRFooterMenuItem.vue";
 
 const props = defineProps({
   title: {
@@ -14,15 +14,9 @@ const props = defineProps({
 </script>
 
 <template>
-
-  <h4>{{ props.title }}</h4>
-
-  <div>
+  <ul class="rightList flexibleY">
+    <li><h3 class="listItem title">{{ props.title }}</h3></li>
     <FooterMenuItemComponent v-for="menuItem in props.menuItems" :key="menuItem" :text="menuItem"></FooterMenuItemComponent>
-  </div>
+  </ul>
 
 </template>
-
-<style scoped>
-
-</style>

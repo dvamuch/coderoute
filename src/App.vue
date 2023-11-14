@@ -1,13 +1,15 @@
 <template>
-  <HeaderComponent></HeaderComponent>
-  <router-view></router-view>
+  <div class="uApiWrap">
+    <HeaderComponent></HeaderComponent>
+    <router-view></router-view>
 
-  <FooterComponent></FooterComponent>
+    <FooterComponent></FooterComponent>
+  </div>
 </template>
 
 <script>
-import FooterComponent from "@/components/UI/FooterComponent.vue";
-import HeaderComponent from "@/components/UI/HeaderComponent.vue";
+import FooterComponent from "@/components/UI/CRFooter.vue";
+import HeaderComponent from "@/components/UI/CRHeader.vue";
 import {defineComponent} from "vue";
 
 export default defineComponent({
