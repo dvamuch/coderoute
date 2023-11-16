@@ -1,24 +1,23 @@
 <script setup>
-import {useAppStore} from "@/stores/app";
 
-const {setModal} = useAppStore();
-
-const props = defineProps({
-  node: {
-    type: Object,
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  status: {
+    type: String,
+    required: true,
+  },
+  id: {
+    type: Number,
     required: true,
   },
 });
-
 
 </script>
 
 <template>
 
-  <div style="background-color: crimson">
-
-    <button @click="setModal(true)"> kek</button>
-
-    <div>{{ props.node.title }} - {{ props.node.status }}</div>
-  </div>
+  <div class="crFormItem button noShrink completed radMedium filled hMedium"> {{ title }}</div>
 </template>

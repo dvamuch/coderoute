@@ -11,7 +11,8 @@
           <p>Code<span class="fn-primary">Route</span> - это сервис с детальными дорожными картами для изучения
             IT-направлений</p>
         </div>
-        <a title="" href="/roadmaps" class="crFormItem button primary radRound filled hLarge">Начать обучение</a>
+        <router-link title="" to="/roadmaps" class="crFormItem button primary radRound filled hLarge">Начать обучение
+        </router-link>
       </div>
     </header>
 
@@ -62,7 +63,3 @@
     </section>
   </main>
 </template>
-
-<style scoped>
-
-</style>

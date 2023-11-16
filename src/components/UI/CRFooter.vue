@@ -1,7 +1,14 @@
 <script setup>
-
 import FooterMenuComponent from "@/components/UI/CRFooterMenu.vue";
+import CRLoginModal from "@/components/UI/CRLoginModal.vue";
 import LogoComponent from "@/components/UI/CRLogo.vue";
+
+import {useAuthorizationStore} from "@/stores/authorization"
+import {computed} from "vue";
+
+const authorizationStore = useAuthorizationStore();
+const isShowingLoginModal = computed(() => authorizationStore.isShowingLoginModal);
+
 </script>
 
 <template>
@@ -16,18 +23,9 @@ import LogoComponent from "@/components/UI/CRLogo.vue";
     <div class="rightSide flexible">
       <FooterMenuComponent title="О продукте" :menu-items="['Новости', 'Команда']"></FooterMenuComponent>
       <FooterMenuComponent title="Давайте общаться" :menu-items="['Наши контакты', 'GitHub']"></FooterMenuComponent>
-      <!--      <ul class="rightList flexibleY">-->
-      <!--        <li><h3 class="listItem title">О продукте</h3></li>-->
-      <!--        <li><a href="#" class="listItem">Новости</a></li>-->
-      <!--        <li><a href="#" class="listItem">Команда</a></li>-->
-      <!--      </ul>-->
-      <!--      <ul class="rightList flexibleY">-->
-      <!--        <li><h3 class="listItem title">Давайте общаться</h3></li>-->
-      <!--        <li><a href="#" class="listItem">Наши контакты</a></li>-->
-      <!--        <li><a href="#" class="listItem">GitHub</a></li>-->
-      <!--      </ul>-->
     </div>
   </footer>
 
 
+  <CRLoginModal v-if="isShowingLoginModal"></CRLoginModal>
 </template>
