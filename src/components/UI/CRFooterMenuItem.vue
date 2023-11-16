@@ -8,7 +8,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <button>{{ props.text }}</button>
+
+  <li><a href="#" class="listItem">{{ props.text}}</a></li>
+
 </template>
 
 <style scoped>
