@@ -1,4 +1,5 @@
 <script setup>
+
 const props = defineProps({
   text: {
     type: String,
@@ -8,9 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-
-  <div>{{ props.text}}</div>
-
+  <button>{{ props.text }}</button>
 </template>
 
 <style scoped>
