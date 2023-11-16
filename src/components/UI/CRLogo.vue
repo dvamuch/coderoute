@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <p>Логотип</p>
+  <img class="img sMedium noShrink" alt="" src="@/assets/logo.svg"/>
 </template>
 
 <style scoped>
