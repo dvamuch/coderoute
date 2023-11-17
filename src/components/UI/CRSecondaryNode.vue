@@ -1,12 +1,18 @@
 <script setup>
 
-defineProps({
+import {useNodeModalStore} from "@/stores/nodeModal";
+import {useNodeStatusStore} from "@/stores/nodeStatus";
+
+const {getNodeClassesByStatusId} = useNodeStatusStore();
+const {openNodeModal} = useNodeModalStore();
+
+const props = defineProps({
   title: {
     type: String,
     required: true,
   },
-  status: {
-    type: String,
+  statusId: {
+    type: Number,
     required: true,
   },
   id: {
@@ -18,6 +24,5 @@ defineProps({
 </script>
 
 <template>
-
-  <div class="crFormItem button noShrink completed radMedium filled hMedium"> {{ title }}</div>
+  <div class="crFormItem button noShrink radMedium hMedium" :class="getNodeClassesByStatusId(props.statusId)" @click="openNodeModal"> {{ title }}</div>
 </template>

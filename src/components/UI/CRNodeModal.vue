@@ -1,41 +1,71 @@
 <script setup>
-const props = defineProps({
-  node: {
-    type: Object,
-    required: true,
-  },
-});
-import {useAppStore} from "@/stores/app";
-const {setModal} = useAppStore();
-
-// const test = () => {
-//   console.log('test');
-// }
 
 </script>
 
 <template>
-  <div class="modal-mask">
-    <div class="modal-wrapper">
-      <div class="modal-container" v-click-out="() => setModal(false)">
-        <div>{{ props.node.status }}</div>
-        <select>
-          <option value="">Обновить статус</option>
-          <option value="skipped">Пропустил</option>
-          <option value="not_started">Не изучаю</option>
-          <option value="in_process">В процессе</option>
-        </select>
 
-        <h3>{{ props.node.title }}</h3>
+  <div class="flexibleY gapMedium">
+    <div class="flexibleY gapXSmallest">
 
-        {{ props.node.description }}
 
-        <button class="modal-default-button" @click="setModal(false)">
-          Close
-        </button>
+      <div class="flexible">
+
+        <div class="crSelect flexible active">
+          <div class="crFormItem crSelectInput button noShrink secondary radSmall hSmall gapMini">
+            <div class="sSmallest crFormItem radRound completed filled"></div>
+            <div class="grow">Изучил</div>
+          </div>
+          <div class="crFormItem crSelectButton button noShrink primary filled radSmall hSmall gapMini">
+            <div>Обновить статус</div>
+            <div class="crSelectArrow">df</div>
+          </div>
+
+          <div class="crSelectContent bg-background">
+            <ul class="borderedList">
+              <li class="item flexible gapMini link">
+                <div class="sSmallest crFormItem radRound secondary2 filled"></div>
+                <div>Пропустил</div>
+              </li>
+              <li class="item flexible gapMini link">
+                <div class="sSmallest crFormItem radRound primary"></div>
+                <div>Не изучаю</div>
+              </li>
+              <li class="item flexible gapMini link">
+                <div class="sSmallest crFormItem radRound primary filled"></div>
+                <div>В процессе</div>
+              </li>
+              <li class="item flexible gapMini link">
+                <div class="sSmallest crFormItem radRound completed filled"></div>
+                <div>Изучил</div>
+              </li>
+            </ul>
+          </div>
+        </div>
 
       </div>
-    </div>
-  </div>
-</template>
 
+
+      <h6 class="fn-subcap"><b>Интернет</b></h6>
+      <p class="lhMain">Интернет — это глобальная сеть, которая объединяет огромное количество компьютеров по всему
+        земному шару и дает возможность получения доступа к информационным ресурсам.</p>
+      <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>
+      <ul class="linkedList fn-accent">
+        <li class="item">
+          <a title="" href="#" class="link">Как работает интернет?</a>
+        </li>
+        <li class="item">
+          <a title="" href="#" class="link">Интернет в деталях</a>
+        </li>
+        <li class="item">
+          <a title="" href="#" class="link">Введение в интернет</a>
+        </li>
+        <li class="item">
+          <a title="" href="#" class="link">Как работает Web?</a>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+
+</template>

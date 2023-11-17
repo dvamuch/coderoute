@@ -1,15 +1,21 @@
 <script setup>
 
 import CRLinesAndSecondaryNodes from "@/components/UI/CRLinesAndSecondaryNodes.vue";
+import {useNodeModalStore} from "@/stores/nodeModal";
+import {useNodeStatusStore} from "@/stores/nodeStatus";
 import {computed} from "vue";
+
+const {getNodeClassesByStatusId, getVerticalLineClassesByStatusId} = useNodeStatusStore();
+
+const {openNodeModal} = useNodeModalStore();
 
 const props = defineProps({
   title: {
     type: String,
     required: true,
   },
-  status: {
-    type: String,
+  statusId: {
+    type: Number,
     required: true,
   },
   id: {
@@ -32,7 +38,7 @@ const isShowRight = computed(() => props.indexInArray % 2 === 0);
 </script>
 
 <template>
-  <div class="vLine bg-completed"></div>
+  <div class="vLine" :class="getVerticalLineClassesByStatusId(statusId)"></div>
   <div class="treeBlock">
 
     <div class="section side left">
@@ -43,7 +49,9 @@ const isShowRight = computed(() => props.indexInArray % 2 === 0);
 
     <div class="section">
 
-      <div class="crFormItem button noShrink completed radSmall filled hMedium"> {{ props.title }}</div>
+      <div class="crFormItem button noShrink radSmall hMedium" :class="getNodeClassesByStatusId(statusId)"
+           @click="openNodeModal"> {{ props.title }}
+      </div>
 
     </div>
 

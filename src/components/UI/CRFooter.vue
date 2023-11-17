@@ -1,14 +1,6 @@
 <script setup>
 import FooterMenuComponent from "@/components/UI/CRFooterMenu.vue";
-import CRLoginModal from "@/components/UI/CRLoginModal.vue";
 import LogoComponent from "@/components/UI/CRLogo.vue";
-
-import {useAuthorizationStore} from "@/stores/authorization"
-import {computed} from "vue";
-
-const authorizationStore = useAuthorizationStore();
-const isShowingLoginModal = computed(() => authorizationStore.isShowingLoginModal);
-
 </script>
 
 <template>
@@ -25,7 +17,4 @@ const isShowingLoginModal = computed(() => authorizationStore.isShowingLoginModa
       <FooterMenuComponent title="Давайте общаться" :menu-items="['Наши контакты', 'GitHub']"></FooterMenuComponent>
     </div>
   </footer>
-
-
-  <CRLoginModal v-if="isShowingLoginModal"></CRLoginModal>
 </template>

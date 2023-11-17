@@ -15,50 +15,99 @@ const nodes = [
   {
     id: 1,
     title: "Интернет",
-    status: "finished",
+    statusId: 4,
     secondaryNodes: [
       {
-        id: 2, title: "Как работает интернет?", status: "finished",
+        id: 2, title: "Как работает интернет?",
+        statusId: 4,
       }, {
         id: 3,
         title: "Что такое HTTP?",
-        status: "finished",
+        statusId: 4,
       },
     ],
   },
   {
     id: 4,
     title: "HTML",
-    status: "skipped",
+    statusId: 3,
     secondaryNodes: [
       {
-        id: 5, title: "Основы", status: "finished",
+        id: 5, title: "Основы",
+        statusId: 3,
       }, {
         id: 6,
         title: "Семантическая вёрстка",
-        status: "finished",
+        statusId: 3,
       },
     ],
   },
   {
     id: 7,
     title: "CSS",
-    status: "skipped",
+    statusId: 2,
     secondaryNodes: [
       {
-        id: 8, title: "Основы", status: "finished",
+        id: 8, title: "Основы",
+        statusId: 2,
       },
       {
         id: 9,
         title: "Создание макетов",
-        status: "finished",
+        statusId: 1,
       },
       {
         id: 10,
         title: "Отзывчивый дизайн",
-        status: "finished",
+        statusId: 1,
       },
     ],
+  },
+  {
+    id: 11,
+    title: "JavaScript",
+    statusId: 1,
+    secondaryNodes: [
+      {
+        id: 12, title: "Основы",
+        statusId: 1,
+      },
+      {
+        id: 13,
+        title: " DOM",
+        statusId: 1,
+      },
+    ],
+  },
+  {
+    id: 14,
+    title: "Системы контроля версий",
+    statusId: 1,
+    secondaryNodes: [],
+  },
+  {
+    id: 15,
+    title: "Системы управления пакетами",
+    statusId: 1,
+    secondaryNodes: [],
+  },
+  {
+    id: 16,
+    title: "Выбор Framework",
+    statusId: 1,
+    secondaryNodes: [],
+  },
+  {
+    id: 17,
+    title: "Написание CSS",
+    statusId: 1,
+    secondaryNodes: [],
+  },
+  {
+    id: 18,
+    title: "Архитектура CSS",
+    statusId: 1,
+    secondaryNodes: [],
   },
 ];
 
@@ -100,7 +149,7 @@ const nodes = [
           :title="node.title"
           :index-in-array="index"
           :secondary-nodes="node.secondaryNodes"
-          :status="node.status">
+          :status-id="node.statusId">
       </CRMainAndSecondaryNodes>
 
       <!--      <div class="vLine bg-secondary2"></div>-->

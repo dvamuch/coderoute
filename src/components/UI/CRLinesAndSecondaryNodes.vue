@@ -1,7 +1,10 @@
 <script setup>
 
 import CRSecondaryNode from "@/components/UI/CRSecondaryNode.vue";
+import {useNodeStatusStore} from "@/stores/nodeStatus";
 import {computed} from "vue";
+
+const {getLineClassesByStatusId} = useNodeStatusStore();
 
 const props = defineProps({
   indexInArray: {
@@ -23,15 +26,15 @@ const isShowRight = computed(() => props.indexInArray % 2 === 0);
     <div class="buttons">
       <CRSecondaryNode v-for="secondaryNode in secondaryNodes" v-bind:key="secondaryNode.id"
                        :title="secondaryNode.title" :id="secondaryNode.id"
-                       :status="secondaryNode.status"></CRSecondaryNode>
+                       :status-id="secondaryNode.statusId"></CRSecondaryNode>
     </div>
 
     <div class="lines">
-      <div v-for="secondaryNode in secondaryNodes" v-bind:key="secondaryNode.id" class="curve fn-completed">
+      <div v-for="secondaryNode in secondaryNodes" v-bind:key="secondaryNode.id" class="curve">
         <svg viewBox="0 0 400 400" preserveAspectRatio="none">
-          <path class="path" d="M 0 400 C 0 300 200 0 400 0"/>
-          <path class="path" d="M 0 200 C 100 -200 300 -200 400 200"/>
-          <path class="path" d="M 0 0 C 100 0 300 100 400 400"/>
+          <path class="path" :class="getLineClassesByStatusId(secondaryNode.statusId)" d="M 0 400 C 0 300 200 0 400 0"/>
+          <path class="path" :class="getLineClassesByStatusId(secondaryNode.statusId)" d="M 0 200 C 100 -200 300 -200 400 200"/>
+          <path class="path" :class="getLineClassesByStatusId(secondaryNode.statusId)" d="M 0 0 C 100 0 300 100 400 400"/>
         </svg>
       </div>
     </div>
@@ -39,11 +42,11 @@ const isShowRight = computed(() => props.indexInArray % 2 === 0);
 
   <div v-if="isShowRight" class="sideIn">
     <div class="lines">
-      <div v-for="secondaryNode in secondaryNodes" v-bind:key="secondaryNode.id" class="curve fn-completed">
+      <div v-for="secondaryNode in secondaryNodes" v-bind:key="secondaryNode.id" class="curve">
         <svg viewBox="0 0 400 400" preserveAspectRatio="none">
-          <path class="path" d="M 0 400 C 0 300 200 0 400 0"/>
-          <path class="path" d="M 0 200 C 100 -200 300 -200 400 200"/>
-          <path class="path" d="M 0 0 C 100 0 300 100 400 400"/>
+          <path class="path" :class="getLineClassesByStatusId(secondaryNode.statusId)" d="M 0 400 C 0 300 200 0 400 0"/>
+          <path class="path" :class="getLineClassesByStatusId(secondaryNode.statusId)" d="M 0 200 C 100 -200 300 -200 400 200"/>
+          <path class="path" :class="getLineClassesByStatusId(secondaryNode.statusId)" d="M 0 0 C 100 0 300 100 400 400"/>
         </svg>
       </div>
     </div>
@@ -51,7 +54,7 @@ const isShowRight = computed(() => props.indexInArray % 2 === 0);
     <div class="buttons">
       <CRSecondaryNode v-for="secondaryNode in secondaryNodes" v-bind:key="secondaryNode.id"
                        :title="secondaryNode.title" :id="secondaryNode.id"
-                       :status="secondaryNode.status"></CRSecondaryNode>
+                       :status-id="secondaryNode.statusId"></CRSecondaryNode>
     </div>
   </div>
 </template>
