@@ -1,27 +1,18 @@
 ﻿using CodeRoute.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace CodeRoute.DAL
 {
-    public class TestContext : DbContext, IContext
+    public class TestContext : DbContext
     {
         public TestContext(DbContextOptions<TestContext> options) : base(options)
         {
-            if (this.Routes.Count() == 0)
+            if ((this.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists() == false)
             {
-                ResetTestDB();
+                this.Database.EnsureCreated();
             }
-        }
-
-        private void ResetTestDB()
-        {
-            this.AddRoutePresets();
-            this.AddVertexPresets();
-            this.AddVertexConnectionsPresets();
-            this.AddRouteStatusPresets();
-            this.AddVertexStatusPresets();
-
-            this.SaveChanges();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

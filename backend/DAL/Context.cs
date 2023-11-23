@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace CodeRoute.DAL
 {
-    public class Context : DbContext, IContext
+    public class Context : DbContext
     {
         public Context(DbContextOptions<Context> options) : base(options)
         {

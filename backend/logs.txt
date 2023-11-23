@@ -208,3 +208,756 @@ Information: Now listening on: https://localhost:5002
 Information: Application started. Press Ctrl+C to shut down.
 Information: Hosting environment: Development
 Information: Content root path: D:\МИСиС\7 Сем\Методология разработки\CodeRoute\Server
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Information: Get all routes request
+Information: Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT r."RouteId", r."Desctiption", r."MarkDownPage", r."Title"
+FROM "Routes" AS r
+OFFSET @__p_0
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Information: Get all routes request
+Information: Executed DbCommand (168ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT r."RouteId", r."Desctiption", r."MarkDownPage", r."Title"
+FROM "Routes" AS r
+OFFSET @__p_0
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Information: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Information: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Information: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Information: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Information: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Information: Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Information: Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Information: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (100ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (25ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Error: Failed executing DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Error: Failed executing DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Error: Failed executing DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Error: Failed executing DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+Error: [null]
+Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)Error: [null]
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (25ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)Error: [null]
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Information: Now listening on: http://localhost:5001
+Information: Now listening on: https://localhost:5002
+Information: Application started. Press Ctrl+C to shut down.
+Information: Hosting environment: Development
+Information: Content root path: D:\Projects\coderoute\backend
+Error: Failed executing DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Error with add new user in db
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:04:56:: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:04:56:: Information: Now listening on: http://localhost:5001
+23.11.2023 23:04:56:: Information: Now listening on: https://localhost:5002
+23.11.2023 23:04:56:: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:04:56:: Information: Hosting environment: Development
+23.11.2023 23:04:56:: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:05:01:: Error: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+23.11.2023 23:05:01:: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:05:24 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:05:24 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:05:24 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:05:24 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:05:24 :: Information: Hosting environment: Development
+23.11.2023 23:05:24 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:05:29 :: Error: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+23.11.2023 23:05:29 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:08:00 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:08:00 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:08:00 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:08:00 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:08:00 :: Information: Hosting environment: Development
+23.11.2023 23:08:00 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:08:06 :: Error: Failed executing DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+23.11.2023 23:08:06 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:08:19 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:08:19 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:08:19 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:08:19 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:08:19 :: Information: Hosting environment: Development
+23.11.2023 23:08:19 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:09:57 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:09:57 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:09:57 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:09:57 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:09:57 :: Information: Hosting environment: Development
+23.11.2023 23:09:57 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:10:03 :: Error: Failed executing DbCommand (24ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+23.11.2023 23:10:03 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:10:24 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:10:24 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:10:24 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:10:24 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:10:24 :: Information: Hosting environment: Development
+23.11.2023 23:10:24 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:10:29 :: Error: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+23.11.2023 23:10:29 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:10:48 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:10:48 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:10:48 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:10:48 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:10:48 :: Information: Hosting environment: Development
+23.11.2023 23:10:48 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:10:53 :: Error: Failed executing DbCommand (30ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Users" ("UserId", "Email", "IsAdmin", "Password", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+23.11.2023 23:10:53 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:11:44 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:11:44 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:11:44 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:11:44 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:11:44 :: Information: Hosting environment: Development
+23.11.2023 23:11:44 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:11:48 :: Information: Get all routes request
+23.11.2023 23:11:48 :: Information: Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT r."RouteId", r."Desctiption", r."MarkDownPage", r."Title"
+FROM "Routes" AS r
+OFFSET @__p_0
+23.11.2023 23:12:40 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:12:40 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:12:40 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:12:40 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:12:40 :: Information: Hosting environment: Development
+23.11.2023 23:12:40 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:12:45 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:13:32 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:13:32 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:13:32 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:13:32 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:13:32 :: Information: Hosting environment: Development
+23.11.2023 23:13:32 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:13:35 :: Information: Get all routes request
+23.11.2023 23:13:42 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:14:47 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:14:47 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:14:47 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:14:47 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:14:47 :: Information: Hosting environment: Development
+23.11.2023 23:14:47 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:14:53 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:15:53 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:15:53 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:15:53 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:15:53 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:15:53 :: Information: Hosting environment: Development
+23.11.2023 23:15:53 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:15:58 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:16:34 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:16:34 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:16:34 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:16:34 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:16:34 :: Information: Hosting environment: Development
+23.11.2023 23:16:34 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:16:43 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:17:01 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:17:01 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:17:01 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:17:01 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:17:01 :: Information: Hosting environment: Development
+23.11.2023 23:17:01 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:18:17 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:18:28 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:18:28 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:18:28 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:18:28 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:18:28 :: Information: Hosting environment: Development
+23.11.2023 23:18:28 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:18:33 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:18:57 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:18:57 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:18:57 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:18:57 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:18:57 :: Information: Hosting environment: Development
+23.11.2023 23:18:57 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:20:33 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:20:33 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:20:33 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:20:33 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:20:33 :: Information: Hosting environment: Development
+23.11.2023 23:20:33 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:20:39 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:21:00 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:21:00 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:21:00 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:21:00 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:21:00 :: Information: Hosting environment: Development
+23.11.2023 23:21:00 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:21:04 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:22:03 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:22:03 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:22:03 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:22:03 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:22:03 :: Information: Hosting environment: Development
+23.11.2023 23:22:03 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:22:09 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|234_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)23.11.2023 23:22:41 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:22:41 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:22:41 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:22:41 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:22:41 :: Information: Hosting environment: Development
+23.11.2023 23:22:41 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:22:46 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23.11.2023 23:23:24 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:23:24 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:23:24 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:23:24 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:23:24 :: Information: Hosting environment: Development
+23.11.2023 23:23:24 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:23:28 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23.11.2023 23:23:59 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:23:59 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:23:59 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:23:59 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:23:59 :: Information: Hosting environment: Development
+23.11.2023 23:23:59 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:24:03 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23.11.2023 23:25:44 :: Critical: Application startup exception
+Cannot resolve scoped service 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.DAL.Repositories.UserRepository]' from root provider.Cannot resolve scoped service 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.DAL.Repositories.UserRepository]' from root provider.23.11.2023 23:25:53 :: Critical: Application startup exception
+Cannot resolve scoped service 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.DAL.Repositories.UserRepository]' from root provider.Cannot resolve scoped service 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.DAL.Repositories.UserRepository]' from root provider.23.11.2023 23:26:14 :: Critical: Application startup exception
+Cannot resolve scoped service 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.DAL.Repositories.UserRepository]' from root provider.Cannot resolve scoped service 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.DAL.Repositories.UserRepository]' from root provider.23.11.2023 23:26:48 :: Critical: Application startup exception
+Unable to resolve service for type 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.ExceptionWare.ExceptionMiddleware]' while attempting to activate 'CodeRoute.ExceptionWare.ExceptionMiddleware'.Unable to resolve service for type 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.ExceptionWare.ExceptionMiddleware]' while attempting to activate 'CodeRoute.ExceptionWare.ExceptionMiddleware'.23.11.2023 23:27:12 :: Critical: Application startup exception
+Cannot resolve scoped service 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.ExceptionWare.ExceptionMiddleware]' from root provider.Cannot resolve scoped service 'Microsoft.Extensions.Logging.Logger`1[CodeRoute.ExceptionWare.ExceptionMiddleware]' from root provider.23.11.2023 23:27:51 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:27:51 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:27:51 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:27:51 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:27:51 :: Information: Hosting environment: Development
+23.11.2023 23:27:51 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:28:09 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:28:09 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:28:09 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:28:09 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:28:09 :: Information: Hosting environment: Development
+23.11.2023 23:28:09 :: Information: Content root path: D:\Projects\coderoute\backend
+23.11.2023 23:28:13 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "PK_Users"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23.11.2023 23:28:30 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+23.11.2023 23:28:30 :: Information: Now listening on: http://localhost:5001
+23.11.2023 23:28:30 :: Information: Now listening on: https://localhost:5002
+23.11.2023 23:28:30 :: Information: Application started. Press Ctrl+C to shut down.
+23.11.2023 23:28:30 :: Information: Hosting environment: Development
+23.11.2023 23:28:30 :: Information: Content root path: D:\Projects\coderoute\backend

@@ -4,9 +4,10 @@ namespace CodeRoute.DAL.Repositories
 {
     public class UserRepository
     {
-        private readonly IContext _context;
+        private readonly Context _context;
         private Logger<UserRepository> _logger;
-        public UserRepository(IContext context, Logger<UserRepository> logger)
+
+        public UserRepository(Context context, Logger<UserRepository> logger)
         {
             _context = context;
             _logger = logger;
@@ -31,7 +32,7 @@ namespace CodeRoute.DAL.Repositories
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.InnerException, "Error with add new user in db", null);
+                _logger.LogError(ex.InnerException, "Ошибка при добавлении нового пользователя", null);
                 return false;
             }
 

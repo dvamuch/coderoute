@@ -6,10 +6,10 @@ namespace CodeRoute.DAL.Repositories
 {
     public class RouteRepository
     {
-        private readonly IContext _context;
+        private readonly Context _context;
         private Logger<RouteRepository> _logger;
 
-        public RouteRepository(IContext context, Logger<RouteRepository> logger)
+        public RouteRepository(Context context, Logger<RouteRepository> logger)
         {
             _context = context;
             _logger = logger;
