@@ -5,11 +5,8 @@ import {useHelpModalStore} from "@/stores/helpModal";
 
 const helpModal = useHelpModalStore();
 
-fetch("http://localhost:8081/Routes/2").then((result) => {
-  console.log(result);
-}).catch((error) => {
-  console.log(error);
-});
+const result = await fetch("http://localhost:8081/Routes/2");
+console.log(await result.json());
 
 const nodes = [
   {
