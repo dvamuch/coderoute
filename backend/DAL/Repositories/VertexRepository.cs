@@ -5,8 +5,8 @@ namespace CodeRoute.DAL.Repositories
 {
     public class VertexRepository
     {
-        private readonly IContext _context;
-        public VertexRepository(IContext context)
+        private readonly Context _context;
+        public VertexRepository(Context context)
         {
             _context = context;
         }

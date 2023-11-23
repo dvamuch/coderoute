@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AZLtRI2lhqOD5cn8NhqPiF+xlit3jGoiTCXBuGnfW/wfXvlrqOcX3KgIIMLxRAaiVtZHrEo+6pIenRoKxEUTjw==",
+  "dgSpecHash": "aqBDPauXv0+6eSJWfmvx4wGJQ7IGyftl34+HLGP4JOHOg7/50pCttG72MiizjTtaQlrvPop3IvmW4e7JBLSUMQ==",
   "success": true,
-  "projectFilePath": "D:\\МИСиС\\7 Сем\\Методология разработки\\CodeRoute\\Server\\CodeRoute.csproj",
+  "projectFilePath": "D:\\Projects\\coderoute\\backend\\CodeRoute.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\79035\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.14\\microsoft.aspnetcore.authentication.jwtbearer.7.0.14.nupkg.sha512",
     "C:\\Users\\79035\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

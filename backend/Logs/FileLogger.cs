@@ -29,12 +29,47 @@
         {
             lock (_lock)
             {
-                string log = logLevel.ToString() + ": " + formatter(state, exception) + Environment.NewLine;
-                if (logLevel == LogLevel.Error)
-                {
+                string log = DateTime.Now + " :: ";
 
+                Console.Write(log);
+                switch (logLevel)
+                {
+                    case LogLevel.Warning:
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        break;
+                    case LogLevel.Error:
+                    case LogLevel.Critical:
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        break;
+
+                    case LogLevel.Information:
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        break;
+                    case LogLevel.Trace:
+                    case LogLevel.Debug:
+                    case LogLevel.None:
+                    default:
+                        break;
                 }
-                //Console.WriteLine(log);
+
+                log += logLevel.ToString();
+                Console.Write(logLevel.ToString());
+                Console.ForegroundColor = ConsoleColor.White;
+
+                log += ": " + state + Environment.NewLine;
+                Console.Write(": " + state + Environment.NewLine);
+                if (exception != null)
+                {
+                    log += exception.Message + exception.Message;
+                    Console.Write(exception.Message + exception.StackTrace);
+
+                    Console.Write(Environment.NewLine + "Exception data: " + Environment.NewLine);
+                    foreach (var item in exception.Data)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+                Console.WriteLine();
                 File.AppendAllText(filePath, log);
             }
         }

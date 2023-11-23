@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Npgsql;
 using Prometheus;
 
 [assembly: ApiController]
@@ -58,6 +59,11 @@ namespace CodeRoute
 
             app.MapControllers();
 
+            app.UseCors(builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+
             app.Run();
         }
 
@@ -65,7 +71,7 @@ namespace CodeRoute
         {
             builder.Logging.ClearProviders();
             builder.Logging.AddFile(Path.Combine(Environment.CurrentDirectory, "logs.txt"));
-            builder.Logging.AddConsole();
+            //builder.Logging.AddConsole();
         }
 
         private static void AddContext(WebApplicationBuilder builder)
@@ -73,15 +79,31 @@ namespace CodeRoute
             //Изъятие строки подключения из конфигурации
             var connectionStrings = builder.Configuration.GetConnectionString("DefaultConnection");
             Console.WriteLine("ConnectionStrings: " + connectionStrings);
-            builder.Services.AddDbContext<IContext, Context>(options =>
+            builder.Services.AddDbContext<Context>(options =>
             {
                 options.UseNpgsql(connectionStrings);
             });
+
+            //Проверка подключения
+            try
+            {
+                NpgsqlConnection conn = new NpgsqlConnection(connectionStrings);
+                conn.Open();
+                if (conn.State == System.Data.ConnectionState.Open)
+                    Console.WriteLine("Success open postgreSQL connection.");
+                else
+                    Console.WriteLine("Failed open postgreSQL connection.");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private static void AddTestContext(WebApplicationBuilder builder)
         {
-            builder.Services.AddDbContext<IContext, TestContext>(options =>
+            builder.Services.AddDbContext<TestContext>(options =>
             {
                 options.UseInMemoryDatabase("code_route");
             });

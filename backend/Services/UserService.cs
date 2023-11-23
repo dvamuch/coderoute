@@ -17,6 +17,7 @@ namespace CodeRoute.Services
         {
             User newUser = new User()
             {
+                UserId = 1,
                 Email = user.Email,
                 Password = user.Password,
                 UserName = user.UserName,

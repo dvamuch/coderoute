@@ -1,15 +1,9 @@
-﻿using CodeRoute.DAL.Repositories;
-
+﻿
 namespace CodeRoute.DAL
 {
-    public static class PresetsForContext
+    public static class PresetsForContext 
     {
-        public static void SaveChanges(this IContext context)
-        {
-
-        }
-
-        public static void AddRoutePresets(this IContext context)
+        public static void AddRoutePresets(this Context context)
         {
             context.Routes.Add(new Models.Route() { RouteId = 1, Title = "", Desctiption = "", MarkDownPage = "" });
             context.Routes.Add(new Models.Route() { RouteId = 2, Title = "Frontend Разработчик", Desctiption = "Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО", MarkDownPage = "" });
@@ -17,7 +11,7 @@ namespace CodeRoute.DAL
             context.Routes.Add(new Models.Route() { RouteId = 4, Title = "DevOps инженер", Desctiption = "Специалист, который синхронизирует этапы разработки программного продукта", MarkDownPage = "" });
         }
 
-        public static void AddVertexPresets(this IContext context)
+        public static void AddVertexPresets(this Context context)
         {
             context.Vertexes.Add(new Models.Vertex()
             {
@@ -124,7 +118,7 @@ namespace CodeRoute.DAL
             });
         }
 
-        public static void AddVertexConnectionsPresets(this IContext context)
+        public static void AddVertexConnectionsPresets(this Context context)
         {
             context.VertexConnections.Add(new Models.VertexConnection()
             {
@@ -199,7 +193,7 @@ namespace CodeRoute.DAL
             });
         }
 
-        public static void AddRouteStatusPresets(this IContext context)
+        public static void AddRouteStatusPresets(this Context context)
         {
             context.RouteStatuses.Add(new Models.RouteStatus()
             {
@@ -220,7 +214,7 @@ namespace CodeRoute.DAL
             });
         }
 
-        public static void AddVertexStatusPresets(this IContext context)
+        public static void AddVertexStatusPresets(this Context context)
         {
             context.VertexStatuses.Add(new Models.VertexStatus()
             {

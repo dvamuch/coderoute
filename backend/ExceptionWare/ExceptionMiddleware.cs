@@ -1,7 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Net;
-using System.Runtime.CompilerServices;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace CodeRoute.ExceptionWare
 {
@@ -23,7 +20,7 @@ namespace CodeRoute.ExceptionWare
             {
                 var path = context.Request.Path;
 
-                WriteError(path, ex.Message);
+                WriteError(path, ex.Message, ex.StackTrace);
 
                 context.Response.StatusCode = 500;
 
@@ -32,17 +29,19 @@ namespace CodeRoute.ExceptionWare
                     statusCode: StatusCodes.Status500InternalServerError,
                     extensions: new Dictionary<string, object>
                     {
-                        { "traceId", Activity.Current?.Id }
+                        { "error", ex.Message },
+                        { "traceId", Activity.Current?.Id },
                     }).ExecuteAsync(context);
             }
         }
 
-        private async void WriteError(string path, string exceptionMessage)
+        private async void WriteError(string path, string exceptionMessage, string stackTrace = "")
         {
             await Console.Out.WriteLineAsync("Пиздец. Я обосрался!");
             await Console.Out.WriteAsync(DateTime.Now.ToString() + "  |  ");
             await Console.Out.WriteLineAsync("Произошла ошибка по пути: " + path);
             await Console.Out.WriteLineAsync(exceptionMessage);
+            await Console.Out.WriteLineAsync(stackTrace);
         }
     }
 }
