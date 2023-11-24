@@ -1,7 +1,5 @@
 ﻿using CodeRoute.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace CodeRoute.DAL
 {
@@ -9,7 +7,10 @@ namespace CodeRoute.DAL
     {
         public Context(DbContextOptions<Context> options) : base(options)
         {
-            if ((this.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists() == false)
+            Database.EnsureDeleted();
+            Database.Migrate();
+            
+            if (Routes.Count() == 0)
             {
                 ResetTestDB();
             }
@@ -17,9 +18,6 @@ namespace CodeRoute.DAL
 
         private void ResetTestDB()
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
-
             this.AddRoutePresets();
             this.AddVertexPresets();
             this.AddVertexConnectionsPresets();
@@ -38,6 +36,7 @@ namespace CodeRoute.DAL
 
             modelBuilder.Entity<User>().HasAlternateKey(u => u.Email);
             modelBuilder.Entity<Models.Route>().HasAlternateKey(r => r.Title);
+            //modelBuilder.Entity<VertexStatus>().Property(p => p.StatusDescription).IsRequired(false);
         }
 
         public DbSet<User> Users { get; set; }

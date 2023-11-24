@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+
 using Npgsql;
 using Prometheus;
 
@@ -27,8 +28,6 @@ namespace CodeRoute
             builder.Services.AddSwaggerGen();
 
             AddContext(builder);
-            //AddTestContext(builder);
-
 
             AddServices(builder);
             AddJWT(builder);
@@ -36,21 +35,11 @@ namespace CodeRoute
             var app = builder.Build();
 
 
-            if (app.Environment.IsDevelopment())
-            {
-                Console.WriteLine("Development");
-            }
-            else
-            {
-                Console.WriteLine("not a Development");
-            }
-
             app.UseMiddleware<ExceptionMiddleware>();
 
             AddMetrics(app);
             AddSwagger(app);
 
-            //Перенаправляет HTTP на HTTPS
             app.UseHttpsRedirection();
             app.UseRouting();
 
@@ -82,7 +71,7 @@ namespace CodeRoute
             builder.Services.AddDbContext<Context>(options =>
             {
                 options.UseNpgsql(connectionStrings);
-            });
+            }, ServiceLifetime.Singleton);
 
             //Проверка подключения
             try
@@ -99,14 +88,6 @@ namespace CodeRoute
             {
                 Console.WriteLine(ex);
             }
-        }
-
-        private static void AddTestContext(WebApplicationBuilder builder)
-        {
-            builder.Services.AddDbContext<TestContext>(options =>
-            {
-                options.UseInMemoryDatabase("code_route");
-            });
         }
 
         private static void AddServices(WebApplicationBuilder builder)

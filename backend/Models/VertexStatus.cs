@@ -9,5 +9,6 @@ namespace CodeRoute.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int StatusId { get; set; }
         public string StatusName { get; set; }
+        //public string StatusDescription { get; set; }
     }
 }
