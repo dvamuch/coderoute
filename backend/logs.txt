@@ -1091,3 +1091,204 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 24.11.2023 20:12:13 :: Information: Hosting environment: Development
 24.11.2023 20:12:13 :: Information: Content root path: D:\Projects\coderoute\backend
 24.11.2023 20:12:21 :: Information: Get route by ID request
+24.11.2023 23:04:13 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:04:14 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:04:14 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:04:14 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:04:14 :: Information: Hosting environment: Development
+24.11.2023 23:04:14 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:04:33 :: Information: Get route by ID request
+24.11.2023 23:15:59 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:15:59 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:15:59 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:15:59 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:15:59 :: Information: Hosting environment: Development
+24.11.2023 23:15:59 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:17:16 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:17:16 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:17:16 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:17:16 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:17:16 :: Information: Hosting environment: Development
+24.11.2023 23:17:16 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:17:59 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:18:00 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:18:00 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:18:00 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:18:00 :: Information: Hosting environment: Development
+24.11.2023 23:18:00 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:18:22 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:18:22 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:18:22 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:18:22 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:18:22 :: Information: Hosting environment: Development
+24.11.2023 23:18:22 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:22:40 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:22:40 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:22:40 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:22:40 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:22:40 :: Information: Hosting environment: Development
+24.11.2023 23:22:40 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:22:49 :: Information: Get all routes request
+24.11.2023 23:22:49 :: Error: Error with add new route in bd
+42P01: отношение "Routes" не существует
+
+POSITION: 7242P01: отношение "Routes" не существует
+
+POSITION: 7224.11.2023 23:23:39 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:23:39 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:23:39 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:23:39 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:23:39 :: Information: Hosting environment: Development
+24.11.2023 23:23:39 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:24:00 :: Information: Get all routes request
+24.11.2023 23:24:11 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:24:11 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:24:11 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:24:11 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:24:11 :: Information: Hosting environment: Development
+24.11.2023 23:24:11 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:24:22 :: Information: Get all routes request
+24.11.2023 23:24:32 :: Information: Get route by ID request
+24.11.2023 23:26:10 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:26:10 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:26:10 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:26:10 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:26:10 :: Information: Hosting environment: Development
+24.11.2023 23:26:10 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:30:13 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:30:13 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:30:13 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:30:13 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:30:13 :: Information: Hosting environment: Development
+24.11.2023 23:30:13 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:31:03 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:31:03 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:31:03 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:31:03 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:31:03 :: Information: Hosting environment: Development
+24.11.2023 23:31:03 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:33:54 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:33:54 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:33:54 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:33:54 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:33:54 :: Information: Hosting environment: Development
+24.11.2023 23:33:54 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:35:00 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:35:00 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:35:00 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:35:00 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:35:00 :: Information: Hosting environment: Development
+24.11.2023 23:35:00 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:36:00 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:36:00 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:36:00 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:36:00 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:36:00 :: Information: Hosting environment: Development
+24.11.2023 23:36:00 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:42:37 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:42:37 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:42:37 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:42:37 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:42:37 :: Information: Hosting environment: Development
+24.11.2023 23:42:37 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:47:03 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:47:04 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:47:04 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:47:04 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:47:04 :: Information: Hosting environment: Development
+24.11.2023 23:47:04 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:47:38 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:47:39 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:47:39 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:47:39 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:47:39 :: Information: Hosting environment: Development
+24.11.2023 23:47:39 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:51:08 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:51:09 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:51:09 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:51:09 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:51:09 :: Information: Hosting environment: Development
+24.11.2023 23:51:09 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:52:41 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:52:41 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:52:41 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:52:41 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:52:41 :: Information: Hosting environment: Development
+24.11.2023 23:52:41 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:52:50 :: Information: Get all routes request
+24.11.2023 23:52:50 :: Error: Error with add new route in bd
+3D000: ���� ������ "code_route" �� ����������3D000: ���� ������ "code_route" �� ����������24.11.2023 23:53:01 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:53:01 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:53:01 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:53:01 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:53:01 :: Information: Hosting environment: Development
+24.11.2023 23:53:01 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:55:31 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:55:31 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:55:31 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:55:31 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:55:31 :: Information: Hosting environment: Development
+24.11.2023 23:55:31 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:56:00 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:56:00 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:56:00 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:56:00 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:56:00 :: Information: Hosting environment: Development
+24.11.2023 23:56:00 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:56:24 :: Information: Get all routes request
+24.11.2023 23:57:18 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:57:18 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:57:18 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:57:18 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:57:18 :: Information: Hosting environment: Development
+24.11.2023 23:57:18 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:58:52 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:58:52 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:58:52 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:58:52 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:58:52 :: Information: Hosting environment: Development
+24.11.2023 23:58:52 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 23:59:19 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 23:59:19 :: Information: Now listening on: http://localhost:5001
+24.11.2023 23:59:19 :: Information: Now listening on: https://localhost:5002
+24.11.2023 23:59:19 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 23:59:19 :: Information: Hosting environment: Development
+24.11.2023 23:59:19 :: Information: Content root path: D:\Projects\coderoute\backend
+25.11.2023 0:00:10 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+25.11.2023 0:00:10 :: Information: Now listening on: http://localhost:5001
+25.11.2023 0:00:10 :: Information: Now listening on: https://localhost:5002
+25.11.2023 0:00:10 :: Information: Application started. Press Ctrl+C to shut down.
+25.11.2023 0:00:10 :: Information: Hosting environment: Development
+25.11.2023 0:00:10 :: Information: Content root path: D:\Projects\coderoute\backend
+25.11.2023 0:00:47 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+25.11.2023 0:00:47 :: Information: Now listening on: http://localhost:5001
+25.11.2023 0:00:47 :: Information: Now listening on: https://localhost:5002
+25.11.2023 0:00:47 :: Information: Application started. Press Ctrl+C to shut down.
+25.11.2023 0:00:47 :: Information: Hosting environment: Development
+25.11.2023 0:00:47 :: Information: Content root path: D:\Projects\coderoute\backend
+25.11.2023 0:06:27 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+25.11.2023 0:06:27 :: Information: Now listening on: http://localhost:5001
+25.11.2023 0:06:27 :: Information: Now listening on: https://localhost:5002
+25.11.2023 0:06:27 :: Information: Application started. Press Ctrl+C to shut down.
+25.11.2023 0:06:27 :: Information: Hosting environment: Development
+25.11.2023 0:06:27 :: Information: Content root path: D:\Projects\coderoute\backend
+25.11.2023 0:07:41 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+25.11.2023 0:07:41 :: Information: Now listening on: http://localhost:5001
+25.11.2023 0:07:41 :: Information: Now listening on: https://localhost:5002
+25.11.2023 0:07:41 :: Information: Application started. Press Ctrl+C to shut down.
+25.11.2023 0:07:41 :: Information: Hosting environment: Development
+25.11.2023 0:07:41 :: Information: Content root path: D:\Projects\coderoute\backend
+25.11.2023 0:07:50 :: Information: Get all routes request
+25.11.2023 0:07:50 :: Error: Error with add new route in bd
+An attempt was made to use the model while it was being created. A DbContext instance cannot be used inside 'OnModelCreating' in any way that makes use of the model that is being created.An attempt was made to use the model while it was being created. A DbContext instance cannot be used inside 'OnModelCreating' in any way that makes use of the model that is being created.25.11.2023 0:08:00 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+25.11.2023 0:08:00 :: Information: Now listening on: http://localhost:5001
+25.11.2023 0:08:00 :: Information: Now listening on: https://localhost:5002
+25.11.2023 0:08:00 :: Information: Application started. Press Ctrl+C to shut down.
+25.11.2023 0:08:00 :: Information: Hosting environment: Development
+25.11.2023 0:08:00 :: Information: Content root path: D:\Projects\coderoute\backend
+25.11.2023 0:10:08 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+25.11.2023 0:10:08 :: Information: Now listening on: http://localhost:5001
+25.11.2023 0:10:08 :: Information: Now listening on: https://localhost:5002
+25.11.2023 0:10:08 :: Information: Application started. Press Ctrl+C to shut down.
+25.11.2023 0:10:08 :: Information: Hosting environment: Development
+25.11.2023 0:10:08 :: Information: Content root path: D:\Projects\coderoute\backend

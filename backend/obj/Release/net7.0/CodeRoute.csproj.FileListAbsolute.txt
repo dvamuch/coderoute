@@ -129,3 +129,8 @@ D:\Projects\coderoute\backend\obj\Release\net7.0\refint\CodeRoute.dll
 D:\Projects\coderoute\backend\obj\Release\net7.0\CodeRoute.pdb
 D:\Projects\coderoute\backend\obj\Release\net7.0\CodeRoute.genruntimeconfig.cache
 D:\Projects\coderoute\backend\obj\Release\net7.0\ref\CodeRoute.dll
+D:\Projects\coderoute\backend\bin\Release\net7.0\Humanizer.dll
+D:\Projects\coderoute\backend\bin\Release\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Projects\coderoute\backend\bin\Release\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Projects\coderoute\backend\bin\Release\net7.0\Mono.TextTemplating.dll
+D:\Projects\coderoute\backend\bin\Release\net7.0\System.CodeDom.dll
