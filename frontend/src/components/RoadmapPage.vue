@@ -2,13 +2,12 @@
 
 import CRMainAndSecondaryNodes from "@/components/UI/CRMainAndSecondaryNodes.vue";
 import {useHelpModalStore} from "@/stores/helpModal";
+import {onMounted, ref} from "vue";
 
 const helpModal = useHelpModalStore();
 
-const result = await fetch("http://localhost:8081/Routes/2");
-console.log(await result.json());
 
-const nodes = [
+const nodes = ref([
   {
     id: 1,
     title: "Интернет",
@@ -112,8 +111,23 @@ const nodes = [
     statusId: 1,
     secondaryNodes: [],
   },
-];
+]);
+const title = ref("Frontend Разработчик");
+const description = ref("Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО");
 
+// const result = await fetch("http://localhost:8081/Routes/2");
+// console.log(await result.json());
+
+onMounted(async () => {
+  const result = await (await fetch("http://localhost:8081/Routes/2")).json();
+  result.nodes.forEach((element) => {
+    element.secondaryNodes = element.secondaryNode;
+  });
+  console.log(result);
+  // nodes.value = result.nodes;
+  title.value = result.roadmap.title;
+  description.value = result.roadmap.description;
+});
 
 </script>
 
