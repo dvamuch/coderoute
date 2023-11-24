@@ -85,7 +85,7 @@ namespace CodeRoute.Services
             {
                 Node node = NodeFromVertex(vertex, vertices);
 
-                node.SecondatyNode = new List<Node>();
+                node.SecondaryNodes = new List<Node>();
 
                 List<Vertex> prevVertices = connections
                     .Where(c => c.CurrentVertexId == vertex.VertexId && 
@@ -96,7 +96,7 @@ namespace CodeRoute.Services
 
                 foreach (var vert in prevVertices)
                 {
-                    node.SecondatyNode.Add(NodeFromVertex(vert, vertices));
+                    node.SecondaryNodes.Add(NodeFromVertex(vert, vertices));
                 }
 
                 nodes.Add(node);
@@ -131,7 +131,7 @@ namespace CodeRoute.Services
                 if (node.StatusId == 4) progress.Finished++;
                 progress.Total++;
 
-                RoadmapProgress secondaryProg = CalcProgress(node.SecondatyNode);
+                RoadmapProgress secondaryProg = CalcProgress(node.SecondaryNodes);
 
                 progress.InProgress += secondaryProg.InProgress;
                 progress.Skipped += secondaryProg.Skipped;
