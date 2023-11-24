@@ -961,3 +961,106 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 23.11.2023 23:28:30 :: Information: Application started. Press Ctrl+C to shut down.
 23.11.2023 23:28:30 :: Information: Hosting environment: Development
 23.11.2023 23:28:30 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:13:40 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:13:40 :: Information: Now listening on: http://localhost:5001
+24.11.2023 19:13:40 :: Information: Now listening on: https://localhost:5002
+24.11.2023 19:13:40 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:13:40 :: Information: Hosting environment: Development
+24.11.2023 19:13:40 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:13:48 :: Information: Get all routes request
+24.11.2023 19:14:59 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:15:00 :: Information: Now listening on: http://localhost:5001
+24.11.2023 19:15:00 :: Information: Now listening on: https://localhost:5002
+24.11.2023 19:15:00 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:15:00 :: Information: Hosting environment: Development
+24.11.2023 19:15:00 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:26:55 :: Warning: Overriding address(es) 'https://localhost:5002, http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:26:55 :: Information: Now listening on: http://localhost:5001
+24.11.2023 19:26:55 :: Information: Now listening on: https://localhost:5002
+24.11.2023 19:26:55 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:26:55 :: Information: Hosting environment: Development
+24.11.2023 19:26:55 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:27:38 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:27:38 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:27:38 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:27:38 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:27:38 :: Information: Hosting environment: Development
+24.11.2023 19:27:38 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:31:23 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:31:23 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:31:23 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:31:23 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:31:23 :: Information: Hosting environment: Development
+24.11.2023 19:31:23 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:32:07 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:32:07 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:32:07 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:32:07 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:32:07 :: Information: Hosting environment: Development
+24.11.2023 19:32:07 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:32:18 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:32:18 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:32:18 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:32:18 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:32:18 :: Information: Hosting environment: Development
+24.11.2023 19:32:18 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:32:37 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:32:37 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:32:37 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:32:37 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:32:37 :: Information: Hosting environment: Development
+24.11.2023 19:32:37 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:33:29 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:33:29 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:33:29 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:33:29 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:33:29 :: Information: Hosting environment: Development
+24.11.2023 19:33:29 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:33:59 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:33:59 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:33:59 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:33:59 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:33:59 :: Information: Hosting environment: Development
+24.11.2023 19:33:59 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:36:41 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:36:41 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:36:41 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:36:41 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:36:41 :: Information: Hosting environment: Development
+24.11.2023 19:36:41 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:42:03 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:42:03 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:42:03 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:42:03 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:42:03 :: Information: Hosting environment: Development
+24.11.2023 19:42:03 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:53:41 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:53:41 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:53:41 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:53:41 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:53:41 :: Information: Hosting environment: Development
+24.11.2023 19:53:41 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:54:20 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:54:20 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:54:20 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:54:20 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:54:20 :: Information: Hosting environment: Development
+24.11.2023 19:54:20 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:54:36 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:54:36 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:54:36 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:54:36 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:54:36 :: Information: Hosting environment: Development
+24.11.2023 19:54:36 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:56:11 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:56:11 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:56:11 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:56:11 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:56:11 :: Information: Hosting environment: Development
+24.11.2023 19:56:11 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 19:57:56 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 19:57:56 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:57:56 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:57:56 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:57:56 :: Information: Hosting environment: Development
+24.11.2023 19:57:56 :: Information: Content root path: D:\Projects\coderoute\backend

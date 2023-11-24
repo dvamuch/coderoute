@@ -113,6 +113,7 @@ namespace CodeRoute
         {
             builder.Services.AddScoped<RouteService>();
             builder.Services.AddScoped<UserService>();
+            builder.Services.AddScoped<VertexService>();
 
             builder.Services.AddScoped<RouteRepository>();
             builder.Services.AddScoped<UserRepository>();
