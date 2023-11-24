@@ -14,7 +14,6 @@ namespace CodeRoute.DAL.Repositories
 
         public IEnumerable<UserVertex> GetAllVertexFromRoute(int routeId, int userId)
         {
-            var test = _context.Vertexes.ToList();
             return _context.UserVertexes
                 .Where(uv => uv.User.UserId == userId)
                 .Include(uv => uv.Vertex)
@@ -24,7 +23,6 @@ namespace CodeRoute.DAL.Repositories
 
         public IEnumerable<Vertex> GetAllVertexFromRoute(int routeId)
         {
-            var test = _context.Vertexes.ToList();
             return _context.Vertexes
                 .Where(v => v.RouteId == routeId);
         }
@@ -32,12 +30,21 @@ namespace CodeRoute.DAL.Repositories
 
         public IEnumerable<VertexConnection> GetAllVertexConnectionsInRoute(int routeId)
         {
-            var t = _context.VertexConnections.ToList();
-
             return _context.VertexConnections
                 .Where(uv => uv.CurrentVertex.RouteId == routeId || uv.CurrentVertex.RouteId == 0)
                 .Include(uv => uv.CurrentVertex)
                 .Include(uv => uv.PreviousVertex);
+        }
+
+
+        public IEnumerable<VertexStatus> GetAllVertexStatuses()
+        {
+            return _context.VertexStatuses;
+        }
+
+        public Vertex GetVertex(int id)
+        {
+            return _context.Vertexes.FirstOrDefault(v => v.VertexId == id);
         }
     }
 }

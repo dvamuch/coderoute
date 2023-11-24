@@ -1,0 +1,15 @@
+24.11.2023 19:14:28 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:14:28 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:14:28 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:14:28 :: Information: Hosting environment: Production
+24.11.2023 19:14:28 :: Information: Content root path: D:\Projects\coderoute\backend\bin\Debug\net7.0
+24.11.2023 19:15:08 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:15:08 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:15:08 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:15:08 :: Information: Hosting environment: Production
+24.11.2023 19:15:08 :: Information: Content root path: D:\Projects\coderoute\backend\bin\Debug\net7.0
+24.11.2023 19:16:20 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 19:16:20 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 19:16:20 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 19:16:20 :: Information: Hosting environment: Production
+24.11.2023 19:16:20 :: Information: Content root path: D:\Projects\coderoute\backend\bin\Debug\net7.0
