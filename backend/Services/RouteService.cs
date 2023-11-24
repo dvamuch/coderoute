@@ -112,7 +112,7 @@ namespace CodeRoute.Services
             {
                 Id = vertex.VertexId,
                 Title = vertex.Name,
-                Status = stat.StatusName,
+                StatusId = stat.StatusId,
             };
 
             return node;
@@ -126,9 +126,9 @@ namespace CodeRoute.Services
 
             foreach (var node in nodes)
             {
-                if (node.Status == "InProgress") progress.InProgress++;
-                if (node.Status == "Skip") progress.Skipped++;
-                if (node.Status == "Done") progress.Finished++;
+                if (node.StatusId == 3) progress.InProgress++;
+                if (node.StatusId == 2) progress.Skipped++;
+                if (node.StatusId == 4) progress.Finished++;
                 progress.Total++;
 
                 RoadmapProgress secondaryProg = CalcProgress(node.SecondatyNode);
