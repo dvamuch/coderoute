@@ -1064,3 +1064,16 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 24.11.2023 19:57:56 :: Information: Application started. Press Ctrl+C to shut down.
 24.11.2023 19:57:56 :: Information: Hosting environment: Development
 24.11.2023 19:57:56 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 20:07:41 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 20:07:41 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 20:07:41 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 20:07:41 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 20:07:41 :: Information: Hosting environment: Development
+24.11.2023 20:07:41 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 20:08:16 :: Warning: Overriding address(es) 'https://192.168.1.64:5002, http://192.168.1.64:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+24.11.2023 20:08:16 :: Information: Now listening on: http://192.168.1.64:5001
+24.11.2023 20:08:16 :: Information: Now listening on: https://192.168.1.64:5002
+24.11.2023 20:08:16 :: Information: Application started. Press Ctrl+C to shut down.
+24.11.2023 20:08:16 :: Information: Hosting environment: Development
+24.11.2023 20:08:16 :: Information: Content root path: D:\Projects\coderoute\backend
+24.11.2023 20:08:24 :: Information: Get route by ID request
