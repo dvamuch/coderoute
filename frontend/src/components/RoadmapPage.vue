@@ -114,6 +114,10 @@ const nodes = ref([
 ]);
 const title = ref("Frontend Разработчик");
 const description = ref("Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО");
+const roadmap = ref({
+  title: "Frontend Разработчик",
+  description: "Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО",
+});
 
 // const result = await fetch("http://localhost:8081/Routes/2");
 // console.log(await result.json());
@@ -135,7 +139,7 @@ onMounted(async () => {
   <main class="crMain flexibleY gapMedium">
     <header class="crHeader">
       <div class="flexibleY gapSmaller">
-        <h2 class="fn-caption"><b>Frontend Разработчик</b></h2>
+        <h2 class="fn-caption"><b>{{ roadmap.title }}</b></h2>
         <p>Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО</p>
       </div>
     </header>
