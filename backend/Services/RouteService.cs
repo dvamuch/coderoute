@@ -141,11 +141,11 @@ namespace CodeRoute.Services
 
             if (progress.Finished == 0)
             {
-                progress.Precent = 0.0f;
+                progress.Percent = 0.0f;
             }
             else
             {
-                progress.Precent = progress.Finished * 1.0f / progress.Total;
+                progress.Percent = progress.Finished * 1.0f / progress.Total;
             }
 
             return progress;
