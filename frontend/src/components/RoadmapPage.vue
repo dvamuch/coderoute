@@ -140,7 +140,7 @@ onMounted(async () => {
     <header class="crHeader">
       <div class="flexibleY gapSmaller">
         <h2 class="fn-caption"><b>{{ roadmap.title }}</b></h2>
-        <p>Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО</p>
+        <p>{{ roadmap.description }}</p>
       </div>
     </header>
 
