@@ -1,7 +1,7 @@
 import {defineStore} from "pinia";
 import {ref} from "vue";
 
-export const useAuthorizationStore = defineStore("authorization", () => {
+export const useAuthorizationModalStore = defineStore("authorizationModal", () => {
   const isShowingLoginModal = ref(false);
   const isShowingRegistrationModal = ref(false);
 

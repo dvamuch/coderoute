@@ -1,5 +1,24 @@
 <script setup>
 
+const props = defineProps({
+  nodeId: {
+    type: Number,
+    required: true,
+  },
+});
+
+import {useNodesStore} from "@/stores/nodes";
+import {computed, onMounted} from "vue";
+
+const nodesStore = useNodesStore();
+
+const nodeObject = computed(() => nodesStore.nodeObjects[props.nodeId]);
+
+onMounted(async () => {
+  await nodesStore.fetchNode(props.nodeId);
+});
+
+
 </script>
 
 <template>
@@ -10,7 +29,7 @@
 
       <div class="flexible">
 
-        <div class="crSelect flexible active">
+        <div class="crSelect flexible">
           <div class="crFormItem crSelectInput button noShrink secondary radSmall hSmall gapMini">
             <div class="sSmallest crFormItem radRound completed filled"></div>
             <div class="grow">Изучил</div>
@@ -45,7 +64,7 @@
       </div>
 
 
-      <h6 class="fn-subcap"><b>Интернет</b></h6>
+      <h6 class="fn-subcap"><b>{{ nodeObject }} {{ props.nodeId }}</b></h6>
       <p class="lhMain">Интернет — это глобальная сеть, которая объединяет огромное количество компьютеров по всему
         земному шару и дает возможность получения доступа к информационным ресурсам.</p>
       <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>
@@ -64,7 +83,6 @@
         </li>
       </ul>
     </div>
-
 
   </div>
 
