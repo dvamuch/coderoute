@@ -2,18 +2,19 @@
 import CRHelpModalSlot from "@/components/UI/CRHelpModalSlot.vue";
 import CRLoginModal from "@/components/UI/CRLoginModalSlot.vue";
 import CRModal from "@/components/UI/CRModal.vue";
-import CRNodeModal from "@/components/UI/CRNodeModalSlot.vue";
-import {useAuthorizationStore} from "@/stores/authorization";
+import CRNodeModalSlot from "@/components/UI/CRNodeModalSlot.vue";
+import {useAuthorizationModalStore} from "@/stores/authorizationModal";
 import {useHelpModalStore} from "@/stores/helpModal";
 import {useNodeModalStore} from "@/stores/nodeModal";
 import {computed} from "vue";
 
-const authorizationStore = useAuthorizationStore();
+const authorizationStore = useAuthorizationModalStore();
 const nodeModalStore = useNodeModalStore();
 const helpModalStore = useHelpModalStore();
 
 const isShowingLoginModal = computed(() => authorizationStore.isShowingLoginModal);
 const isShowingNodeModal = computed(() => nodeModalStore.isShowingNodeModal);
+const nodeIdToShow = computed(() => nodeModalStore.nodeIdToShow);
 const isShowingHelpModal = computed(() => helpModalStore.isShowingHelpModal);
 
 </script>
@@ -26,7 +27,7 @@ const isShowingHelpModal = computed(() => helpModalStore.isShowingHelpModal);
   </transition>
   <transition name="modal">
     <CRModal v-if="isShowingNodeModal" :close-action="nodeModalStore.closeNodeModal">
-      <CRNodeModal></CRNodeModal>
+      <CRNodeModalSlot :node-id="nodeIdToShow"></CRNodeModalSlot>
     </CRModal>
   </transition>
   <transition name="modal">
