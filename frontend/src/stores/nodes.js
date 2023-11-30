@@ -22,11 +22,10 @@ export const useNodesStore = defineStore("nodes", () => {
   };
 
   const fetchNode = async (nodeId) => {
-    console.log('kal')
     if (nodeObjects.value[nodeId]) {
       return;
     }
-    console.log('kal')
+    console.log("kal");
     nodeObjects.value[nodeId] = await (await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/Vertex/${nodeId}`)).json();
   };
 

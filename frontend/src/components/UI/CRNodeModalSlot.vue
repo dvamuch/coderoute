@@ -12,7 +12,10 @@ import {computed, onMounted} from "vue";
 
 const nodesStore = useNodesStore();
 
-const nodeObject = computed(() => nodesStore.nodeObjects[props.nodeId]);
+const nodeObject = computed(() => {
+  console.log(nodesStore.nodeObjects[props.nodeId]);
+  return nodesStore.nodeObjects[props.nodeId] || {};
+});
 
 onMounted(async () => {
   await nodesStore.fetchNode(props.nodeId);
@@ -64,9 +67,10 @@ onMounted(async () => {
       </div>
 
 
-      <h6 class="fn-subcap"><b>{{ nodeObject }} {{ props.nodeId }}</b></h6>
-      <p class="lhMain">Интернет — это глобальная сеть, которая объединяет огромное количество компьютеров по всему
-        земному шару и дает возможность получения доступа к информационным ресурсам.</p>
+      <h6 class="fn-subcap"><b>{{ nodeObject.name }} {{ props.nodeId }}</b></h6>
+<!--      <p class="lhMain">Интернет — это глобальная сеть, которая объединяет огромное количество компьютеров по всему-->
+<!--        земному шару и дает возможность получения доступа к информационным ресурсам.</p>-->
+      <p class="lhMain">{{ nodeObject.markdownPage}}</p>
       <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>
       <ul class="linkedList fn-accent">
         <li class="item">
