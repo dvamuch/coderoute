@@ -46,6 +46,6 @@ services:
   grafana:
     image: grafana/grafana
     ports:
-      - '9090:9090'
+      - '3000:3000'
     depends_on:
       - prometheus
