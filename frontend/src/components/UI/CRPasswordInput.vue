@@ -27,8 +27,8 @@ const reverseShowingPassword = () => {
     <input :type="inputTypeForPassword" :placeholder="props.placeholder"
            class="crFormItem txt secondary hMedium radSmall"/>
     <span class="crFormPlaceholder">{{ props.placeholder }}</span>
-    <span class="crFormIcon right">
-      <span @click="reverseShowingPassword" class="crIcon sMedium" :style="visibilityIconStyle"></span>
-    </span>
+        <span class="crFormIcon right">
+          <span @click="reverseShowingPassword" class="crIcon sMedium" :style="visibilityIconStyle"></span>
+        </span>
   </label>
 </template>
