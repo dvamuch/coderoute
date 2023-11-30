@@ -2,9 +2,9 @@
 
 import CRLogo from "@/components/UI/CRLogo.vue";
 
-import {useAuthorizationStore} from "@/stores/authorization";
+import {useAuthorizationModalStore} from "@/stores/authorizationModal";
 
-const authorizationStore = useAuthorizationStore();
+const authorizationStore = useAuthorizationModalStore();
 const openLoginModal = authorizationStore.openLoginModal;
 </script>
 

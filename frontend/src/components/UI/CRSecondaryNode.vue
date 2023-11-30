@@ -4,7 +4,7 @@ import {useNodeModalStore} from "@/stores/nodeModal";
 import {useNodeStatusStore} from "@/stores/nodeStatus";
 
 const {getNodeClassesByStatusId} = useNodeStatusStore();
-const {openNodeModal} = useNodeModalStore();
+const nodeModalStore = useNodeModalStore();
 
 const props = defineProps({
   title: {
@@ -21,8 +21,14 @@ const props = defineProps({
   },
 });
 
+const openNodeModal = () => {
+  nodeModalStore.openNodeModal(props.id);
+};
+
 </script>
 
 <template>
-  <div class="crFormItem button noShrink radMedium hMedium" :class="getNodeClassesByStatusId(props.statusId)" @click="openNodeModal"> {{ title }}</div>
+  <div class="crFormItem button noShrink radMedium hMedium" :class="getNodeClassesByStatusId(props.statusId)"
+       @click="openNodeModal"> {{ title }}
+  </div>
 </template>

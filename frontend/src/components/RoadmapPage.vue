@@ -2,118 +2,25 @@
 
 import CRMainAndSecondaryNodes from "@/components/UI/CRMainAndSecondaryNodes.vue";
 import {useHelpModalStore} from "@/stores/helpModal";
+import {useNodesStore} from "@/stores/nodes";
+import {computed, onMounted} from "vue";
+import {useRoute} from "vue-router";
+
+const route = useRoute();
 
 const helpModal = useHelpModalStore();
+const nodesStore = useNodesStore();
 
-const result = await fetch("http://localhost:8081/Routes/2");
-console.log(await result.json());
 
-const nodes = [
-  {
-    id: 1,
-    title: "Интернет",
-    statusId: 4,
-    secondaryNodes: [
-      {
-        id: 2, title: "Как работает интернет?",
-        statusId: 4,
-      }, {
-        id: 3,
-        title: "Что такое HTTP?",
-        statusId: 4,
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "HTML",
-    statusId: 3,
-    secondaryNodes: [
-      {
-        id: 5, title: "Основы",
-        statusId: 3,
-      }, {
-        id: 6,
-        title: "Семантическая вёрстка",
-        statusId: 3,
-      },
-    ],
-  },
-  {
-    id: 7,
-    title: "CSS",
-    statusId: 2,
-    secondaryNodes: [
-      {
-        id: 8, title: "Основы",
-        statusId: 2,
-      },
-      {
-        id: 9,
-        title: "Создание макетов",
-        statusId: 1,
-      },
-      {
-        id: 10,
-        title: "Отзывчивый дизайн",
-        statusId: 1,
-      },
-    ],
-  },
-  {
-    id: 11,
-    title: "JavaScript",
-    statusId: 1,
-    secondaryNodes: [
-      {
-        id: 12, title: "Основы",
-        statusId: 1,
-      },
-      {
-        id: 13,
-        title: " DOM",
-        statusId: 1,
-      },
-    ],
-  },
-  {
-    id: 14,
-    title: "Системы контроля версий",
-    statusId: 1,
-    secondaryNodes: [
-      {
-        id: 111,
-        title: "Привет",
-        statusId: 4,
-      },
-    ],
-  },
-  {
-    id: 15,
-    title: "Системы управления пакетами",
-    statusId: 1,
-    secondaryNodes: [],
-  },
-  {
-    id: 16,
-    title: "Выбор Framework",
-    statusId: 1,
-    secondaryNodes: [],
-  },
-  {
-    id: 17,
-    title: "Написание CSS",
-    statusId: 1,
-    secondaryNodes: [],
-  },
-  {
-    id: 18,
-    title: "Архитектура CSS",
-    statusId: 1,
-    secondaryNodes: [],
-  },
-];
+const nodes = computed(() => nodesStore.nodeList);
+const roadmap = computed(() => nodesStore.roadmapInfo);
+const progress = computed(() => nodesStore.roadmapProgress);
 
+onMounted(async () => {
+  await nodesStore.fetchRoadmap(route.params.id);
+});
+
+console.log(process.env);
 
 </script>
 
@@ -121,19 +28,19 @@ const nodes = [
   <main class="crMain flexibleY gapMedium">
     <header class="crHeader">
       <div class="flexibleY gapSmaller">
-        <h2 class="fn-caption"><b>Frontend Разработчик</b></h2>
-        <p>Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО</p>
+        <h2 class="fn-caption"><b>{{ roadmap.title }}</b></h2>
+        <p>{{ roadmap.description }}</p>
       </div>
     </header>
 
     <div class="crProgressHead flexible bg-secondary radRound">
       <div class="flexible grow gapXSmallest">
-        <div class="crFormItem button noShrink completed radSmall filled hSmall">33% пройдено</div>
+        <div class="crFormItem button noShrink completed radSmall filled hSmall">{{ progress.percent }}% пройдено</div>
         <ul class="statList flexible">
-          <li class="item">3 изучено</li>
-          <li class="item">2 в процессе</li>
-          <li class="item">3 пропущено</li>
-          <li class="item">18 всего</li>
+          <li class="item">{{ progress.finished }} изучено</li>
+          <li class="item">{{ progress.inProgress }} в процессе</li>
+          <li class="item">{{ progress.skipped }} пропущено</li>
+          <li class="item">{{ progress.total }} всего</li>
         </ul>
       </div>
       <div class="flexible noShrink gapXSmallest" @click="helpModal.openHelpModal">
