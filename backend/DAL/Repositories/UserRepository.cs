@@ -1,4 +1,5 @@
 ﻿using CodeRoute.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodeRoute.DAL.Repositories
 {
@@ -18,17 +19,17 @@ namespace CodeRoute.DAL.Repositories
             return _context.Users.ToList();
         }
 
-        public User? GetUserByUserName(User user)
+        public async Task<User> GetUserByUserName(User user)
         {
-            return _context.Users.FirstOrDefault(u => u.UserName == user.UserName);
+            return await _context.Users.FirstOrDefaultAsync(u => u.UserName == user.UserName);
         }
 
-        public User AddUser(User user)
+        public async Task<User> AddUser(User user)
         {
             try
             {
-                _context.Users.Add(user);
-                _context.SaveChanges();
+                await _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -46,9 +47,9 @@ namespace CodeRoute.DAL.Repositories
             return user;
         }
 
-        public User FindUser(string username, string usermail)
+        public async Task<User> FindUser(string username, string usermail)
         {
-            return _context.Users.FirstOrDefault(u => u.UserName == username || u.Email == usermail);
+            return await _context.Users.FirstOrDefaultAsync(u => u.UserName == username || u.Email == usermail);
         }
     }
 }

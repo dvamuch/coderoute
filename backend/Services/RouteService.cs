@@ -2,6 +2,7 @@
 using CodeRoute.DTO;
 using CodeRoute.Models;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using System.Collections.Generic;
 
 namespace CodeRoute.Services
 {
@@ -17,9 +18,9 @@ namespace CodeRoute.Services
             _vertexRepository = vertexRepository;
         }
 
-        public List<Models.Route> GetRoutes() 
+        public async Task<List<Models.Route>> GetRoutes() 
         {
-            var result = _routeRepository.GetAllRoutes();
+            var result = await _routeRepository.GetAllRoutes();
             return result;
         }
 
@@ -32,7 +33,7 @@ namespace CodeRoute.Services
                 MarkDownPage = ""
             };
 
-            return _routeRepository.AddRoute(route);
+            return await _routeRepository.AddRoute(route);
         }
 
         internal async Task<RouteInfo> GetRouteByIdForUser(int routId, int userId)
@@ -42,7 +43,7 @@ namespace CodeRoute.Services
 
         internal async Task<RouteInfo> GetRouteById(int routId)
         {
-            Models.Route route = _routeRepository.GetRouteById(routId);
+            Models.Route route = await _routeRepository.GetRouteById(routId);
 
             if (route == null) return null;
 
@@ -52,13 +53,13 @@ namespace CodeRoute.Services
                 Desctiption = route.Desctiption,
             };
 
-            List<Vertex> vertices = _vertexRepository.GetAllVertexFromRoute(routId).ToList();
+            List<Vertex> vertices = (List<Vertex>)await _vertexRepository.GetAllVertexFromRoute(routId);
             if (vertices.Count == 0)
             {
-                vertices = _vertexRepository.GetAllVertexFromRoute(routId).ToList();
+                vertices = (List<Vertex>)await _vertexRepository.GetAllVertexFromRoute(routId);
             }
 
-            List<VertexConnection> connections = _vertexRepository.GetAllVertexConnectionsInRoute(routId).ToList();
+            List<VertexConnection> connections = (List<VertexConnection>)await _vertexRepository.GetAllVertexConnectionsInRoute(routId);
 
             List<Node> nodes = GetNodeList(vertices, connections);
 

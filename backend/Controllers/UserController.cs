@@ -22,13 +22,13 @@ namespace CodeRoute.Controllers
 
         [HttpPost]
         [Route("reg")]
-        public IActionResult RegUser([FromBody] UserLogInfo user)
+        public async Task<IActionResult> RegUser([FromBody] UserLogInfo user)
         {
-            User result = _userService.RegUser(user);
+            User result = await _userService.RegUser(user);
 
             if (result != null)
             {
-                return Ok(new { token = CreateJWT(result) });
+                return Ok();
             }
 
             return BadRequest();
@@ -36,22 +36,25 @@ namespace CodeRoute.Controllers
 
         [HttpPost]
         [Route("auth")]
-        public IActionResult AuthUser([FromBody] UserLogInfo user)
+        public async Task<IActionResult> AuthUser([FromBody] UserLogInfo user)
         {
-            User result = _userService.AuthUser(user);
+            User result = await _userService.AuthUser(user);
 
             if (result == null)
             {
                 return BadRequest("Wrong password");
             }
+            if (result.UserName == null || result.Email == null)
+            {
+                return BadRequest("User doesn't exist");
+            }
 
             return Ok(new { token = CreateJWT(result) });
         }
 
-
         private string CreateJWT(User user)
         {
-            var secretkey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("THIS IS THE SECRET KEY")); // NOTE: SAME KEY AS USED IN Startup.cs FILE
+            var secretkey = AuthOptions.GetSymmetricSecurityKey();
             var credentials = new SigningCredentials(secretkey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[] // NOTE: could also use List<Claim> here

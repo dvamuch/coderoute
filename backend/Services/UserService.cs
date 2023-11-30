@@ -13,7 +13,7 @@ namespace CodeRoute.Services
             _userRepository = userRepository;
         }
 
-        public User RegUser(UserLogInfo user)
+        public async Task<User> RegUser(UserLogInfo user)
         {
             User newUser = new User()
             {
@@ -23,12 +23,15 @@ namespace CodeRoute.Services
                 IsAdmin = false
             };
 
-            return _userRepository.AddUser(newUser);
+            return await _userRepository.AddUser(newUser);
         }
 
-        public User AuthUser(UserLogInfo user)
+        public async Task<User> AuthUser(UserLogInfo user)
         {
-            User db_user = _userRepository.FindUser(user.UserName, user.Email);
+            User db_user = await _userRepository.FindUser(user.UserName, user.Email);
+
+            if (db_user == null)
+                return new User();
 
             if (db_user.Password == user.Password)
             {

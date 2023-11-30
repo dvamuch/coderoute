@@ -12,39 +12,41 @@ namespace CodeRoute.DAL.Repositories
         }
 
 
-        public IEnumerable<UserVertex> GetAllVertexFromRoute(int routeId, int userId)
+        public async Task<IEnumerable<UserVertex>> GetAllVertexFromRoute(int routeId, int userId)
         {
-            return _context.UserVertexes
+            return await _context.UserVertexes
                 .Where(uv => uv.User.UserId == userId)
                 .Include(uv => uv.Vertex)
                 .Include(uv => uv.Status)
-                .Where(uv => uv.Vertex.RouteId == routeId);
+                .Where(uv => uv.Vertex.RouteId == routeId)
+                .ToListAsync();
         }
 
-        public IEnumerable<Vertex> GetAllVertexFromRoute(int routeId)
+        public async Task<IEnumerable<Vertex>> GetAllVertexFromRoute(int routeId)
         {
-            return _context.Vertexes
-                .Where(v => v.RouteId == routeId);
+            return await _context.Vertexes
+                .Where(v => v.RouteId == routeId)
+                .ToListAsync();
         }
 
 
-        public IEnumerable<VertexConnection> GetAllVertexConnectionsInRoute(int routeId)
+        public async Task <IEnumerable<VertexConnection>> GetAllVertexConnectionsInRoute(int routeId)
         {
-            return _context.VertexConnections
+            return await _context.VertexConnections
                 .Where(uv => uv.CurrentVertex.RouteId == routeId || uv.CurrentVertex.RouteId == 0)
                 .Include(uv => uv.CurrentVertex)
-                .Include(uv => uv.PreviousVertex);
+                .Include(uv => uv.PreviousVertex).ToListAsync();
         }
 
 
-        public IEnumerable<VertexStatus> GetAllVertexStatuses()
+        public async Task<IEnumerable<VertexStatus>> GetAllVertexStatuses()
         {
-            return _context.VertexStatuses;
+            return await _context.VertexStatuses.ToListAsync();
         }
 
-        public Vertex GetVertex(int id)
+        public async Task<Vertex> GetVertex(int id)
         {
-            return _context.Vertexes.FirstOrDefault(v => v.VertexId == id);
+            return await _context.Vertexes.FirstOrDefaultAsync(v => v.VertexId == id);
         }
     }
 }
