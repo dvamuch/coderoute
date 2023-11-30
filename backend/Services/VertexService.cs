@@ -11,14 +11,14 @@ namespace CodeRoute.Services
             _vertexRepository = vertexRepository;
         }
 
-        public List<VertexStatus> GetAllVertexStatuses()
+        public async Task<List<VertexStatus>> GetAllVertexStatuses()
         {
-            return _vertexRepository.GetAllVertexStatuses().ToList();
+            return (List<VertexStatus>)await _vertexRepository.GetAllVertexStatuses();
         }
 
-        public Vertex GetVertexById(int id)
+        public async Task<Vertex> GetVertexById(int id)
         {
-            return _vertexRepository.GetVertex(id);
+            return await _vertexRepository.GetVertex(id);
         }
     }
 }

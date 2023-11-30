@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Server.IIS.Core;
 using Microsoft.Extensions.Logging;
 using CodeRoute.Logs;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodeRoute.DAL.Repositories
 {
@@ -15,12 +16,11 @@ namespace CodeRoute.DAL.Repositories
             _logger = logger;
         }
 
-        public List<Models.Route> GetAllRoutes()
+        public async Task<List<Models.Route>> GetAllRoutes()
         {
-            _logger.LogInformation("Get all routes request", null);
             try
             {
-                return _context.Routes.Skip(1).ToList();
+                return await _context.Routes.Skip(1).ToListAsync();
             }
             catch (Exception ex)
             {
@@ -30,19 +30,17 @@ namespace CodeRoute.DAL.Repositories
             return null;
         }
 
-        internal Models.Route? GetRouteById(int id)
+        internal async Task<Models.Route?> GetRouteById(int id)
         {
-            _logger.LogInformation("Get route by ID request", null);
-            return _context.Routes.FirstOrDefault(route => route.RouteId == id && id != 1);
+            return await _context.Routes.FirstOrDefaultAsync(route => route.RouteId == id && id != 1);
         }
 
-        public bool AddRoute(Models.Route route)
+        public async Task<bool> AddRoute(Models.Route route)
         {
-            _logger.LogInformation("Add route request", null);
             try
             {
-                _context.Routes.Add(route);
-                _context.SaveChanges();
+                await _context.Routes.AddAsync(route);
+                await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {

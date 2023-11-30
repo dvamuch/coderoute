@@ -15,9 +15,9 @@ namespace CodeRoute.Controllers
 
 
         [HttpGet(Name = "/getStatusList")]
-        public IActionResult GetStatusList()
+        public async Task<IActionResult> GetStatusList()
         {
-            var res = _vertexService.GetAllVertexStatuses();
+            var res = await _vertexService.GetAllVertexStatuses();
 
             if (res == null || res.Count == 0)
             {
@@ -30,9 +30,9 @@ namespace CodeRoute.Controllers
 
 
         [HttpGet("{vertexId}", Name = "/getVertex")]
-        public IActionResult GetVertexById(int vertexId)
+        public async Task<IActionResult> GetVertexById(int vertexId)
         {
-            var res = _vertexService.GetVertexById(vertexId);
+            var res = await _vertexService.GetVertexById(vertexId);
 
             if (res == null)
             {

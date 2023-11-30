@@ -22,9 +22,9 @@ namespace CodeRoute.Controllers
 
         [HttpPost]
         [Route("reg")]
-        public IActionResult RegUser([FromBody] UserLogInfo user)
+        public async Task<IActionResult> RegUser([FromBody] UserLogInfo user)
         {
-            User result = _userService.RegUser(user);
+            User result = await _userService.RegUser(user);
 
             if (result != null)
             {
@@ -36,9 +36,9 @@ namespace CodeRoute.Controllers
 
         [HttpPost]
         [Route("auth")]
-        public IActionResult AuthUser([FromBody] UserLogInfo user)
+        public async Task<IActionResult> AuthUser([FromBody] UserLogInfo user)
         {
-            User result = _userService.AuthUser(user);
+            User result = await _userService.AuthUser(user);
 
             if (result == null)
             {

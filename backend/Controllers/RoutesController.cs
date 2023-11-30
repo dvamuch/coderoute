@@ -16,11 +16,10 @@ namespace CodeRoute.Controllers
             _routeService = routeService;
         }
 
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Models.Route>>> GetList()
         {
-            return _routeService.GetRoutes();
+            return await _routeService.GetRoutes();
         }
 
         [HttpGet("{routId}/{userId}", Name = "/get")]

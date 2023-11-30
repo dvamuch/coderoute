@@ -1421,3 +1421,13 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 30.11.2023 17:49:59 :: Information: Application started. Press Ctrl+C to shut down.
 30.11.2023 17:49:59 :: Information: Hosting environment: Development
 30.11.2023 17:49:59 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 18:21:23 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 18:21:23 :: Information: Now listening on: http://localhost:5001
+30.11.2023 18:21:23 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 18:21:23 :: Information: Hosting environment: Development
+30.11.2023 18:21:23 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 18:25:30 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 18:25:30 :: Information: Now listening on: http://localhost:5001
+30.11.2023 18:25:30 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 18:25:30 :: Information: Hosting environment: Development
+30.11.2023 18:25:30 :: Information: Content root path: D:\Projects\coderoute\backend
