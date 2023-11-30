@@ -1,17 +1,7 @@
 <script setup>
-import {computed, ref} from "vue";
 
-const isShowingPassword = ref(false);
-const visibilityIconStyle = computed(() => {
-  return isShowingPassword.value ? "--crMsk: url('/icons/visibility_on.svg');" : "--crMsk: url('/icons/visibility_off.svg');";
-});
-const inputTypeForPassword = computed(() => {
-  return isShowingPassword.value ? "text" : "password";
-});
-
-const reverseShowingPassword = () => {
-  isShowingPassword.value = !isShowingPassword.value;
-};
+import CRPasswordInput from "@/components/UI/CRPasswordInput.vue";
+import CRTextInput from "@/components/UI/CRTextInput.vue";
 </script>
 
 <template>
@@ -32,24 +22,14 @@ const reverseShowingPassword = () => {
         <!--              </div>-->
         <!--            </div>-->
         <div class="flexibleY gapSmaller grow">
-          <label class="crFormWrap">
-            <input type="text" placeholder="EMail или логин" class="crFormItem txt secondary hMedium radSmall"/>
-            <span class="crFormPlaceholder">EMail или логин</span>
-          </label>
+          <CRTextInput placeholder="Email или логин"></CRTextInput>
 
-          <label class="crFormWrap">
-            <input :type="inputTypeForPassword" placeholder="Пароль"
-                   class="crFormItem txt secondary hMedium radSmall"/>
-            <span class="crFormPlaceholder">Пароль</span>
-            <span class="crFormIcon right">
-                  <span @click="reverseShowingPassword" class="crIcon sMedium" :style="visibilityIconStyle"></span>
-                </span>
-          </label>
+          <CRPasswordInput></CRPasswordInput>
         </div>
       </div>
 
       <div class="flexibleY gapSmaller">
-        <div class="al-center fn-alert">Неверный email или пароль</div>
+        <!--        <div class="al-center fn-alert">Неверный email или пароль</div>-->
         <div class="flexible gapSmallest">
           <button type="submit" class="crFormItem button secondary filled hLarge radRound grow">Забыл(а) пароль?
           </button>

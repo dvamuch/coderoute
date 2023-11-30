@@ -6,6 +6,7 @@ import {useAuthorizationModalStore} from "@/stores/authorizationModal";
 
 const authorizationStore = useAuthorizationModalStore();
 const openLoginModal = authorizationStore.openLoginModal;
+const openRegistrationModal = authorizationStore.openRegistrationModal;
 </script>
 
 <template>
@@ -23,7 +24,7 @@ const openLoginModal = authorizationStore.openLoginModal;
 
     <ul class="flexible">
       <li class="crFormItem button hMedium transparent" @click="openLoginModal">Войти</li>
-      <li class="crFormItem button primary radRound filled hMedium">Регистрация</li>
+      <li class="crFormItem button primary radRound filled hMedium" @click="openRegistrationModal">Регистрация</li>
     </ul>
 
     <!--    <ul class="flexible">-->
