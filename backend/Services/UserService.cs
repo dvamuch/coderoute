@@ -13,11 +13,10 @@ namespace CodeRoute.Services
             _userRepository = userRepository;
         }
 
-        public bool RegUser(UserLogInfo user)
+        public User RegUser(UserLogInfo user)
         {
             User newUser = new User()
             {
-                UserId = 1,
                 Email = user.Email,
                 Password = user.Password,
                 UserName = user.UserName,
@@ -29,9 +28,14 @@ namespace CodeRoute.Services
 
         public User AuthUser(UserLogInfo user)
         {
-            User newUser = _userRepository.FindUser(user.UserName, user.Email);
+            User db_user = _userRepository.FindUser(user.UserName, user.Email);
 
-            return newUser;
+            if (db_user.Password == user.Password)
+            {
+                return db_user;
+            }
+
+            return null;
         }
     }
 }

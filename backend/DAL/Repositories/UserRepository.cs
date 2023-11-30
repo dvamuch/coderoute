@@ -23,7 +23,7 @@ namespace CodeRoute.DAL.Repositories
             return _context.Users.FirstOrDefault(u => u.UserName == user.UserName);
         }
 
-        public bool AddUser(User user)
+        public User AddUser(User user)
         {
             try
             {
@@ -32,11 +32,18 @@ namespace CodeRoute.DAL.Repositories
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.InnerException, "Ошибка при добавлении нового пользователя", null);
-                return false;
+                if (ex.InnerException != null)
+                {
+                    _logger.LogError(ex.InnerException, "Ошибка при добавлении нового пользователя", null);
+                }
+                else
+                {
+                    _logger.LogError(ex, "Ошибка при добавлении нового пользователя", null);
+                }
+                return null;
             }
 
-            return true;
+            return user;
         }
 
         public User FindUser(string username, string usermail)

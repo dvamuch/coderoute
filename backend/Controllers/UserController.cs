@@ -24,11 +24,11 @@ namespace CodeRoute.Controllers
         [Route("reg")]
         public IActionResult RegUser([FromBody] UserLogInfo user)
         {
-            bool result = _userService.RegUser(user);
+            User result = _userService.RegUser(user);
 
-            if (result)
+            if (result != null)
             {
-                return Ok();
+                return Ok(new { token = CreateJWT(result) });
             }
 
             return BadRequest();
@@ -40,12 +40,12 @@ namespace CodeRoute.Controllers
         {
             User result = _userService.AuthUser(user);
 
-            if (result.Password == user.Password)
+            if (result == null)
             {
-                return Ok(new {token = CreateJWT(result)});
+                return BadRequest("Wrong password");
             }
 
-            return BadRequest();
+            return Ok(new { token = CreateJWT(result) });
         }
 
 

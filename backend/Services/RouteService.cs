@@ -23,7 +23,7 @@ namespace CodeRoute.Services
             return result;
         }
 
-        internal bool AddRoute(Roadmap roadmap)
+        internal async Task<bool> AddRoute(Roadmap roadmap)
         {
             Models.Route route = new Models.Route()
             {
@@ -35,12 +35,12 @@ namespace CodeRoute.Services
             return _routeRepository.AddRoute(route);
         }
 
-        internal RouteInfo GetRouteByIdForUser(int routId, int userId)
+        internal async Task<RouteInfo> GetRouteByIdForUser(int routId, int userId)
         {
             return null;
         }
 
-        internal RouteInfo GetRouteById(int routId)
+        internal async Task<RouteInfo> GetRouteById(int routId)
         {
             Models.Route route = _routeRepository.GetRouteById(routId);
 

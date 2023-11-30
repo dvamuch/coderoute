@@ -5,10 +5,10 @@ namespace CodeRoute.DAL
     {
         public static void AddRoutePresets(this Context context)
         {
-            context.Routes.Add(new Models.Route() { RouteId = 1, Title = "", Desctiption = "", MarkDownPage = "" });
-            context.Routes.Add(new Models.Route() { RouteId = 2, Title = "Frontend Разработчик", Desctiption = "Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО", MarkDownPage = "" });
-            context.Routes.Add(new Models.Route() { RouteId = 3, Title = "Backend Разработчик", Desctiption = "Программист, который пишет серверный код, отвечает за реакцию ресурса на действия пользователя и выдачу информации", MarkDownPage = "" });
-            context.Routes.Add(new Models.Route() { RouteId = 4, Title = "DevOps инженер", Desctiption = "Специалист, который синхронизирует этапы разработки программного продукта", MarkDownPage = "" });
+            context.Routes.Add(new Models.Route() { Title = "", Desctiption = "", MarkDownPage = "" });
+            context.Routes.Add(new Models.Route() { Title = "Frontend Разработчик", Desctiption = "Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО", MarkDownPage = "" });
+            context.Routes.Add(new Models.Route() { Title = "Backend Разработчик", Desctiption = "Программист, который пишет серверный код, отвечает за реакцию ресурса на действия пользователя и выдачу информации", MarkDownPage = "" });
+            context.Routes.Add(new Models.Route() { Title = "DevOps инженер", Desctiption = "Специалист, который синхронизирует этапы разработки программного продукта", MarkDownPage = "" });
         }
 
         public static void AddVertexPresets(this Context context)

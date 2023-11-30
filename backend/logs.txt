@@ -1304,3 +1304,120 @@ An attempt was made to use the model while it was being created. A DbContext ins
 29.11.2023 11:18:21 :: Information: Application started. Press Ctrl+C to shut down.
 29.11.2023 11:18:21 :: Information: Hosting environment: Development
 29.11.2023 11:18:21 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:17:24 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:17:24 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:17:24 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:17:24 :: Information: Hosting environment: Development
+30.11.2023 17:17:24 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:17:48 :: Information: Get all routes request
+30.11.2023 17:20:35 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:20:35 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:20:35 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:20:35 :: Information: Hosting environment: Development
+30.11.2023 17:20:35 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:22:06 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:22:06 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:22:06 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:22:06 :: Information: Hosting environment: Development
+30.11.2023 17:22:06 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:22:20 :: Information: Get all routes request
+30.11.2023 17:23:19 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:23:19 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:23:19 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:23:19 :: Information: Hosting environment: Development
+30.11.2023 17:23:19 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:23:26 :: Information: Add route request
+30.11.2023 17:23:29 :: Information: Add route request
+30.11.2023 17:23:29 :: Error: Error with add new route in bd
+30.11.2023 17:23:48 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Routes_Title"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Routes_Title"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.30.11.2023 17:25:42 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:25:42 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:25:42 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:25:42 :: Information: Hosting environment: Development
+30.11.2023 17:25:42 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:25:55 :: Error: Ошибка при добавлении нового пользователя
+The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.30.11.2023 17:26:03 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.30.11.2023 17:31:21 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:31:21 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:31:21 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:31:21 :: Information: Hosting environment: Development
+30.11.2023 17:31:21 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:31:36 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:31:36 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:31:36 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:31:36 :: Information: Hosting environment: Development
+30.11.2023 17:31:36 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:31:40 :: Information: Get all routes request
+30.11.2023 17:32:05 :: Error: Ошибка при добавлении нового пользователя
+The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.30.11.2023 17:32:10 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.30.11.2023 17:33:30 :: Error: Ошибка при добавлении нового пользователя
+The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.30.11.2023 17:35:00 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:35:01 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:35:01 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:35:01 :: Information: Hosting environment: Development
+30.11.2023 17:35:01 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:36:34 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:36:34 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:36:34 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:36:34 :: Information: Hosting environment: Development
+30.11.2023 17:36:34 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:36:39 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.30.11.2023 17:36:54 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.30.11.2023 17:37:01 :: Error: Ошибка при добавлении нового пользователя
+The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.30.11.2023 17:37:17 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:37:17 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:37:17 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:37:17 :: Information: Hosting environment: Development
+30.11.2023 17:37:17 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:37:22 :: Error: Ошибка при добавлении нового пользователя
+The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.30.11.2023 17:37:32 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.30.11.2023 17:38:03 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:38:03 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:38:03 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:38:03 :: Information: Hosting environment: Development
+30.11.2023 17:38:03 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:40:28 :: Error: Ошибка при добавлении нового пользователя
+The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.30.11.2023 17:44:45 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:44:45 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:44:45 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:44:45 :: Information: Hosting environment: Development
+30.11.2023 17:44:45 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:47:45 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:47:45 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:47:45 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:47:45 :: Information: Hosting environment: Development
+30.11.2023 17:47:45 :: Information: Content root path: D:\Projects\coderoute\backend
+30.11.2023 17:47:49 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.30.11.2023 17:49:59 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+30.11.2023 17:49:59 :: Information: Now listening on: http://localhost:5001
+30.11.2023 17:49:59 :: Information: Application started. Press Ctrl+C to shut down.
+30.11.2023 17:49:59 :: Information: Hosting environment: Development
+30.11.2023 17:49:59 :: Information: Content root path: D:\Projects\coderoute\backend

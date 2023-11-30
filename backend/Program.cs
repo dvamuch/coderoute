@@ -34,13 +34,15 @@ namespace CodeRoute
 
             var app = builder.Build();
 
+            //Need to create context and using migration before starting the server
+            var context = app.Services.GetRequiredService<Context>();
+
 
             app.UseMiddleware<ExceptionMiddleware>();
 
             AddMetrics(app);
             AddSwagger(app);
 
-            app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseAuthentication();
@@ -72,6 +74,7 @@ namespace CodeRoute
             {
                 options.UseNpgsql(connectionStrings);
             }, ServiceLifetime.Singleton);
+
 
             //Проверка подключения
             /*

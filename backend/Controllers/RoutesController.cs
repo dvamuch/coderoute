@@ -18,15 +18,15 @@ namespace CodeRoute.Controllers
 
 
         [HttpGet]
-        public ActionResult<IEnumerable<Models.Route>> GetList()
+        public async Task<ActionResult<IEnumerable<Models.Route>>> GetList()
         {
             return _routeService.GetRoutes();
         }
 
         [HttpGet("{routId}/{userId}", Name = "/get")]
-        public ActionResult<RouteInfo> GetRouteInfoById(int routId, int userId)
+        public async Task<ActionResult<RouteInfo>> GetRouteInfoById(int routId, int userId)
         {
-            var result = _routeService.GetRouteByIdForUser(routId, userId);
+            var result =  await _routeService.GetRouteByIdForUser(routId, userId);
 
             if (result == null)
             {
@@ -37,9 +37,9 @@ namespace CodeRoute.Controllers
         }
 
         [HttpGet("{routId}", Name = "/get2")]
-        public ActionResult<RouteInfo> GetRouteInfoById(int routId)
+        public async Task<ActionResult<RouteInfo>> GetRouteInfoById(int routId)
         {
-            var result = _routeService.GetRouteById(routId);
+            var result = await _routeService.GetRouteById(routId);
 
             if (result == null)
             {
@@ -50,9 +50,9 @@ namespace CodeRoute.Controllers
         }
 
         [HttpPost]
-        public ActionResult<bool> AddRoute([FromBody] Roadmap roadmap)
+        public async Task<ActionResult<bool>> AddRoute([FromBody] Roadmap roadmap)
         {
-            bool result = _routeService.AddRoute(roadmap);
+            bool result = await _routeService.AddRoute(roadmap);
 
             if (result)
             {
