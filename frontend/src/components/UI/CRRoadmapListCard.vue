@@ -11,11 +11,11 @@ const props = defineProps({
   },
   isStarted: {
     type: Boolean,
-    required: true,
+    default: false,
   },
   percentsOfProgress: {
     type: Number,
-    required: true,
+    default: 0,
   },
   roadmapId: {
     type: Number,

@@ -4,6 +4,9 @@ import CRMainAndSecondaryNodes from "@/components/UI/CRMainAndSecondaryNodes.vue
 import {useHelpModalStore} from "@/stores/helpModal";
 import {useNodesStore} from "@/stores/nodes";
 import {computed, onMounted} from "vue";
+import {useRoute} from "vue-router";
+
+const route = useRoute();
 
 const helpModal = useHelpModalStore();
 const nodesStore = useNodesStore();
@@ -14,7 +17,7 @@ const roadmap = computed(() => nodesStore.roadmapInfo);
 const progress = computed(() => nodesStore.roadmapProgress);
 
 onMounted(async () => {
-  await nodesStore.fetchRoadmap(2);
+  await nodesStore.fetchRoadmap(route.params.id);
 });
 
 console.log(process.env);
