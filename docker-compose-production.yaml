@@ -1,0 +1,51 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    ports:
+      - "8081:80"
+    depends_on:
+      postgres:
+        condition: service_healthy
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile-prod
+    volumes:
+      - './frontend:/app'
+      - '/app/node_modules'
+    ports:
+      - "8084:80"
+    depends_on:
+      - backend
+  postgres:
+    image: postgres:14.8-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    ports:
+      - '5438:5432'
+    #    volumes:
+    #      # copy the sql script to create tables
+    #      - ./sql/ns_tg_bot_initialize_script.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 1s
+      timeout: 1s
+      retries: 10
+  prometheus:
+    image: prom/prometheus
+    network_mode: "host"
+    depends_on:
+      - backend
+  grafana:
+    image: grafana/grafana
+    ports:
+      - '3000:3000'
+    depends_on:
+      - prometheus

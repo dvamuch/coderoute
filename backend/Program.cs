@@ -77,7 +77,6 @@ namespace CodeRoute
 
 
             //Проверка подключения
-            /*
             try
             {
                 NpgsqlConnection conn = new NpgsqlConnection(connectionStrings);
@@ -92,7 +91,6 @@ namespace CodeRoute
             {
                 Console.WriteLine(ex);
             }
-            */
         }
 
         private static void AddServices(WebApplicationBuilder builder)

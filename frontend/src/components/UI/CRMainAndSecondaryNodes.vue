@@ -7,7 +7,7 @@ import {computed} from "vue";
 
 const {getNodeClassesByStatusId, getVerticalLineClassesByStatusId} = useNodeStatusStore();
 
-const {openNodeModal} = useNodeModalStore();
+const nodeModalStore = useNodeModalStore();
 
 const props = defineProps({
   title: {
@@ -32,6 +32,9 @@ const props = defineProps({
   },
 });
 
+const openNodeModal = () => {
+  nodeModalStore.openNodeModal(props.id);
+};
 
 const isShowLeft = computed(() => props.indexInArray % 2 === 1);
 const isShowRight = computed(() => props.indexInArray % 2 === 0);
