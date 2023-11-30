@@ -30,6 +30,9 @@ namespace CodeRoute.Services
         {
             User db_user = await _userRepository.FindUser(user.UserName, user.Email);
 
+            if (db_user == null)
+                return new User();
+
             if (db_user.Password == user.Password)
             {
                 return db_user;

@@ -4,14 +4,16 @@ using CodeRoute.DAL.Repositories;
 using CodeRoute.ExceptionWare;
 using CodeRoute.Logs;
 using CodeRoute.Services;
-
+using CodeRoute.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 using Npgsql;
 using Prometheus;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 [assembly: ApiController]
 namespace CodeRoute
@@ -75,7 +77,6 @@ namespace CodeRoute
                 options.UseNpgsql(connectionStrings);
             }, ServiceLifetime.Singleton);
 
-
             //Проверка подключения
             /*
             try
@@ -107,6 +108,8 @@ namespace CodeRoute
 
             builder.Services.AddScoped<Logger<RouteRepository>>();
             builder.Services.AddScoped<Logger<UserRepository>>();
+
+            builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
         }
 
         private static void AddJWT(WebApplicationBuilder builder)

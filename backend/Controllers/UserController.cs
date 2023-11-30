@@ -28,7 +28,7 @@ namespace CodeRoute.Controllers
 
             if (result != null)
             {
-                return Ok(new { token = CreateJWT(result) });
+                return Ok();
             }
 
             return BadRequest();
@@ -44,14 +44,17 @@ namespace CodeRoute.Controllers
             {
                 return BadRequest("Wrong password");
             }
+            if (result.UserName == null || result.Email == null)
+            {
+                return BadRequest("User doesn't exist");
+            }
 
             return Ok(new { token = CreateJWT(result) });
         }
 
-
         private string CreateJWT(User user)
         {
-            var secretkey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("THIS IS THE SECRET KEY")); // NOTE: SAME KEY AS USED IN Startup.cs FILE
+            var secretkey = AuthOptions.GetSymmetricSecurityKey();
             var credentials = new SigningCredentials(secretkey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[] // NOTE: could also use List<Claim> here

@@ -25,7 +25,7 @@ namespace CodeRoute.ExceptionWare
                 context.Response.StatusCode = 500;
 
                 await Results.Problem(
-                    title: "я где-то проебался, сорри",
+                    title: "Ошибка сервера",
                     statusCode: StatusCodes.Status500InternalServerError,
                     extensions: new Dictionary<string, object>
                     {
@@ -37,7 +37,6 @@ namespace CodeRoute.ExceptionWare
 
         private async void WriteError(string path, string exceptionMessage, string stackTrace = "")
         {
-            await Console.Out.WriteLineAsync("Пиздец. Я обосрался!");
             await Console.Out.WriteAsync(DateTime.Now.ToString() + "  |  ");
             await Console.Out.WriteLineAsync("Произошла ошибка по пути: " + path);
             await Console.Out.WriteLineAsync(exceptionMessage);
