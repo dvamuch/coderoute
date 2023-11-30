@@ -2,6 +2,10 @@
 
 import CRPasswordInput from "@/components/UI/CRPasswordInput.vue";
 import CRTextInput from "@/components/UI/CRTextInput.vue";
+import {useAuthorizationModalStore} from "@/stores/authorizationModal";
+
+const authorizationStore = useAuthorizationModalStore();
+const openRegistrationModal = authorizationStore.openRegistrationModal;
 </script>
 
 <template>
@@ -37,7 +41,8 @@ import CRTextInput from "@/components/UI/CRTextInput.vue";
         </div>
       </div>
 
-      <div class="al-center">Еще нет аккаунта? <a class="link" title="" href="#">Зарегистрироваться</a></div>
+      <div class="al-center">Еще нет аккаунта? <a class="link" title="" @click="openRegistrationModal">Зарегистрироваться</a>
+      </div>
     </form>
   </div>
 </template>
