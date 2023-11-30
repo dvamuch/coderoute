@@ -1,5 +1,7 @@
 <script setup>
 
+import CRPasswordInput from "@/components/UI/CRPasswordInput.vue";
+import CRTextInput from "@/components/UI/CRTextInput.vue";
 </script>
 
 <template>
@@ -11,19 +13,11 @@
 
       <div class="flexible gapSmaller">
         <div class="flexibleY gapSmaller grow">
-          <label class="crFormWrap">
-            <input type="text" placeholder="EMail или логин" class="crFormItem txt secondary hMedium radSmall"/>
-            <span class="crFormPlaceholder">EMail или логин</span>
-          </label>
 
-          <label class="crFormWrap">
-            <input :type="inputTypeForPassword" placeholder="Пароль"
-                   class="crFormItem txt secondary hMedium radSmall"/>
-            <span class="crFormPlaceholder">Пароль</span>
-            <span class="crFormIcon right">
-                  <span @click="reverseShowingPassword" class="crIcon sMedium" :style="visibilityIconStyle"></span>
-                </span>
-          </label>
+          <CRTextInput placeholder="Email или логин"></CRTextInput>
+
+          <CRPasswordInput></CRPasswordInput>
+          <CRPasswordInput placeholder="Пароль повторно"></CRPasswordInput>
         </div>
       </div>
 
