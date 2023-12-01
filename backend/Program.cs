@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-
+using Microsoft.OpenApi.Models;
 using Npgsql;
 using Prometheus;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -27,7 +27,12 @@ namespace CodeRoute
             AddLogging(builder);
 
             builder.Services.AddControllers();
-            builder.Services.AddSwaggerGen();
+
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo() { Title = "API V1", Version = "V1.0" });
+                options.SwaggerDoc("v2", new OpenApiInfo() { Title = "API V1", Version = "V2.0" });
+            });
 
             AddContext(builder);
 
@@ -36,9 +41,7 @@ namespace CodeRoute
 
             var app = builder.Build();
 
-            //Need to create context and using migration before starting the server
-            var context = app.Services.GetRequiredService<Context>();
-
+            ConfigureContext(app);
 
             app.UseMiddleware<ExceptionMiddleware>();
 
@@ -51,6 +54,8 @@ namespace CodeRoute
             app.UseAuthorization();
 
             app.MapControllers();
+            
+            
 
             app.UseCors(builder => builder
             .AllowAnyOrigin()
@@ -138,6 +143,22 @@ namespace CodeRoute
                 });
         }
 
+        private static void ConfigureContext(WebApplication app)
+        {
+            //Need to create context and using migration before starting the server
+            //var context = app.Services.GetRequiredService<Context>();
+
+            using var scope = app.Services.CreateScope();
+            var uRep = scope.ServiceProvider.GetRequiredService<UserRepository>();
+
+            //Create special user for anonim visiting routes
+            //uRep.AddUser(new Models.User { UserName = "", Email = "", Password = "", IsAdmin = true });
+
+
+            //Create special vertex for begin of graph
+            var vRep = scope.ServiceProvider.GetRequiredService<VertexRepository>();
+            //vRep.AddVertex(new Models.Vertex() { Name = "", MarkdownPage = "" });
+        }
 
         //Метрики прометеуса
         private static void AddMetrics(WebApplication app)
@@ -150,15 +171,15 @@ namespace CodeRoute
         //Настройа сваггера
         private static void AddSwagger(WebApplication app)
         {
-            app.UseSwagger(c =>
+            app.UseSwagger(options =>
             {
-                c.RouteTemplate = "{documentName}/swagger.json";
+                options.RouteTemplate = "{documentName}/swagger.json";
             });
 
-            app.UseSwaggerUI(c =>
+            app.UseSwaggerUI(options =>
             {
-                c.SwaggerEndpoint("/v1/swagger.json", "v1");
-                c.RoutePrefix = "swagger";
+                options.SwaggerEndpoint("/v1/swagger.json", "v1");
+                options.SwaggerEndpoint("/v2/swagger.json", "v2");
             });
         }
     }

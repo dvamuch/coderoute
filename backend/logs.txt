@@ -1616,3 +1616,430 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 30.11.2023 20:20:53 :: Information: Application started. Press Ctrl+C to shut down.
 30.11.2023 20:20:53 :: Information: Hosting environment: Development
 30.11.2023 20:20:53 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 18:30:21 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 18:30:21 :: Information: Now listening on: http://localhost:5001
+01.12.2023 18:30:21 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 18:30:21 :: Information: Hosting environment: Development
+01.12.2023 18:30:21 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 18:30:49 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 18:30:49 :: Information: Now listening on: http://localhost:5001
+01.12.2023 18:30:49 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 18:30:49 :: Information: Hosting environment: Development
+01.12.2023 18:30:49 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 18:39:13 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 18:39:13 :: Information: Now listening on: http://localhost:5001
+01.12.2023 18:39:13 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 18:39:13 :: Information: Hosting environment: Development
+01.12.2023 18:39:13 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 18:41:45 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 18:41:45 :: Information: Now listening on: http://localhost:5001
+01.12.2023 18:41:45 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 18:41:45 :: Information: Hosting environment: Development
+01.12.2023 18:41:45 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 18:42:16 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 18:42:16 :: Information: Now listening on: http://localhost:5001
+01.12.2023 18:42:16 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 18:42:16 :: Information: Hosting environment: Development
+01.12.2023 18:42:16 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 18:43:02 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 18:43:02 :: Information: Now listening on: http://localhost:5001
+01.12.2023 18:43:02 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 18:43:02 :: Information: Hosting environment: Development
+01.12.2023 18:43:02 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 18:45:20 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 18:45:20 :: Information: Now listening on: http://localhost:5001
+01.12.2023 18:45:20 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 18:45:20 :: Information: Hosting environment: Development
+01.12.2023 18:45:20 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 18:59:47 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 18:59:47 :: Information: Now listening on: http://localhost:5001
+01.12.2023 18:59:47 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 18:59:47 :: Information: Hosting environment: Development
+01.12.2023 18:59:47 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:17:21 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:17:21 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:17:21 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:17:21 :: Information: Hosting environment: Development
+01.12.2023 19:17:21 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:18:22 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:18:23 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:18:23 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:18:23 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:18:23 :: Information: Hosting environment: Development
+01.12.2023 19:18:23 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:22:57 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:22:57 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:22:57 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:22:57 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:22:57 :: Information: Hosting environment: Development
+01.12.2023 19:22:57 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:25:06 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:25:06 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:25:06 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:25:06 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:25:06 :: Information: Hosting environment: Development
+01.12.2023 19:25:06 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:31:19 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:31:20 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:31:20 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:31:20 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:31:20 :: Information: Hosting environment: Development
+01.12.2023 19:31:20 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:37:10 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:37:10 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:37:10 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:37:10 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:37:10 :: Information: Hosting environment: Development
+01.12.2023 19:37:10 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:38:33 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:38:33 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:38:33 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:38:33 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:38:33 :: Information: Hosting environment: Development
+01.12.2023 19:38:33 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:38:48 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:38:49 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:38:49 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:38:49 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:38:49 :: Information: Hosting environment: Development
+01.12.2023 19:38:49 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:39:14 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:39:15 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:39:15 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:39:15 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:39:15 :: Information: Hosting environment: Development
+01.12.2023 19:39:15 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:52:12 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:52:12 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:52:12 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:52:12 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:52:12 :: Information: Hosting environment: Development
+01.12.2023 19:52:12 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:53:31 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:53:31 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:53:31 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:53:31 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:53:31 :: Information: Hosting environment: Development
+01.12.2023 19:53:31 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:54:05 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:54:05 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:54:05 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:54:05 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:54:05 :: Information: Hosting environment: Development
+01.12.2023 19:54:05 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:54:17 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:54:17 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:54:17 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:54:17 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:54:17 :: Information: Hosting environment: Development
+01.12.2023 19:54:17 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 19:54:24 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 19:54:24 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 19:54:24 :: Information: Now listening on: http://localhost:5001
+01.12.2023 19:54:24 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 19:54:24 :: Information: Hosting environment: Development
+01.12.2023 19:54:24 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:02:05 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:02:06 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:02:06 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:02:06 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:02:06 :: Information: Hosting environment: Development
+01.12.2023 20:02:06 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:02:06 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+01.12.2023 20:11:53 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:11:53 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:11:53 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:11:53 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:11:53 :: Information: Hosting environment: Development
+01.12.2023 20:11:53 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:12:00 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:12:00 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:12:00 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:12:00 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:12:00 :: Information: Hosting environment: Development
+01.12.2023 20:12:00 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:12:17 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:12:18 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:12:18 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:12:18 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:12:18 :: Information: Hosting environment: Development
+01.12.2023 20:12:18 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:12:47 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:12:48 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:12:48 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:12:48 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:12:48 :: Information: Hosting environment: Development
+01.12.2023 20:12:48 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:13:10 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:13:10 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:13:10 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:13:10 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:13:10 :: Information: Hosting environment: Development
+01.12.2023 20:13:10 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:13:19 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:13:20 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:13:20 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:13:20 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:13:20 :: Information: Hosting environment: Development
+01.12.2023 20:13:20 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:14:28 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:14:28 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:14:28 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:14:28 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:14:28 :: Information: Hosting environment: Development
+01.12.2023 20:14:28 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:15:03 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:15:04 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:15:04 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:15:04 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:15:04 :: Information: Hosting environment: Development
+01.12.2023 20:15:04 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:15:11 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:15:11 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:15:11 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:15:11 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:15:11 :: Information: Hosting environment: Development
+01.12.2023 20:15:11 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:18:47 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:18:47 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:18:47 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:18:47 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:18:47 :: Information: Hosting environment: Development
+01.12.2023 20:18:47 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:19:00 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:19:00 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:19:00 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:19:00 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:19:00 :: Information: Hosting environment: Development
+01.12.2023 20:19:00 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:21:58 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:21:59 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:21:59 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:21:59 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:21:59 :: Information: Hosting environment: Development
+01.12.2023 20:21:59 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:22:06 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:22:06 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:22:06 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:22:06 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:22:06 :: Information: Hosting environment: Development
+01.12.2023 20:22:06 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:22:21 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:22:21 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:22:21 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:22:21 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:22:21 :: Information: Hosting environment: Development
+01.12.2023 20:22:21 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:24:00 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:24:00 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:24:00 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:24:00 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:24:00 :: Information: Hosting environment: Development
+01.12.2023 20:24:00 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:25:49 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:25:49 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:25:49 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:25:49 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:25:49 :: Information: Hosting environment: Development
+01.12.2023 20:25:49 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:26:01 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:26:01 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:26:01 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:26:01 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:26:01 :: Information: Hosting environment: Development
+01.12.2023 20:26:01 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:26:40 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:26:40 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:26:40 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:26:40 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:26:40 :: Information: Hosting environment: Development
+01.12.2023 20:26:40 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:26:55 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:26:55 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:26:55 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:26:55 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:26:55 :: Information: Hosting environment: Development
+01.12.2023 20:26:55 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:27:13 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:27:13 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:27:13 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:27:13 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:27:13 :: Information: Hosting environment: Development
+01.12.2023 20:27:13 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:27:14 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+01.12.2023 20:27:55 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:27:55 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:27:55 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:27:55 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:27:55 :: Information: Hosting environment: Development
+01.12.2023 20:27:55 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:27:56 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+01.12.2023 20:40:09 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.01.12.2023 20:40:09 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:40:09 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:40:09 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:40:09 :: Information: Hosting environment: Development
+01.12.2023 20:40:09 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:40:10 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+01.12.2023 20:40:55 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 20:40:55 :: Information: Now listening on: http://localhost:5001
+01.12.2023 20:40:55 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 20:40:55 :: Information: Hosting environment: Development
+01.12.2023 20:40:55 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 20:40:55 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+01.12.2023 21:00:15 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 21:00:15 :: Information: Now listening on: http://localhost:5001
+01.12.2023 21:00:15 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 21:00:15 :: Information: Hosting environment: Development
+01.12.2023 21:00:15 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 21:00:16 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+01.12.2023 21:05:03 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+01.12.2023 21:05:03 :: Information: Now listening on: http://localhost:5001
+01.12.2023 21:05:03 :: Information: Application started. Press Ctrl+C to shut down.
+01.12.2023 21:05:03 :: Information: Hosting environment: Development
+01.12.2023 21:05:03 :: Information: Content root path: D:\Projects\coderoute\backend
+01.12.2023 21:05:04 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.

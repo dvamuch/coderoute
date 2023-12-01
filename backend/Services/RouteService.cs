@@ -18,12 +18,41 @@ namespace CodeRoute.Services
             _vertexRepository = vertexRepository;
         }
 
-        public async Task<List<Models.Route>> GetRoutes() 
+        public async Task<List<Roadmap>> GetRoutes(int userId) 
         {
-            var result = await _routeRepository.GetAllRoutes();
-            return result;
+            var routes = await _routeRepository.GetAllRoutes();
+            var maps = new List<Roadmap>();
+
+            foreach (var route in routes)
+            {
+                maps.Add(new Roadmap()
+                {
+                    Desctiption = route.Desctiption,
+                    Title = route.Title,
+                    StatusId = (await _routeRepository.GetStatusByIds(route.RouteId, userId)).RouteStatusId
+                });
+
+                var vertices = await _vertexRepository.GetAllVertexFromRoute(route.RouteId, userId);
+                int started = 0;
+                foreach (var vertex in vertices)
+                {
+                    if (vertex.StatusId != 1)
+                    {
+                        started++;
+                    }
+                }
+
+                maps[maps.Count - 1].Percentage = vertices.Count / 100 * started;
+            }
+
+            return maps;
         }
 
+        public async Task<List<Models.RouteStatus>> GetStatuses()
+        {
+            var result = await _routeRepository.GetStatuses();
+            return result;
+        }
         internal async Task<bool> AddRoute(Roadmap roadmap)
         {
             Models.Route route = new Models.Route()
@@ -38,11 +67,6 @@ namespace CodeRoute.Services
 
         internal async Task<RouteInfo> GetRouteByIdForUser(int routId, int userId)
         {
-            return null;
-        }
-
-        internal async Task<RouteInfo> GetRouteById(int routId)
-        {
             Models.Route route = await _routeRepository.GetRouteById(routId);
 
             if (route == null) return null;
@@ -51,17 +75,16 @@ namespace CodeRoute.Services
             {
                 Title = route.Title,
                 Desctiption = route.Desctiption,
+                StatusId = (await _routeRepository.GetRouteStatusById(routId, userId)).RouteStatusId
             };
 
-            List<Vertex> vertices = (List<Vertex>)await _vertexRepository.GetAllVertexFromRoute(routId);
+            var vertices = await _vertexRepository.GetAllVertexFromRoute(routId, userId);
             if (vertices.Count == 0)
-            {
-                vertices = (List<Vertex>)await _vertexRepository.GetAllVertexFromRoute(routId);
-            }
+                return null;
 
-            List<VertexConnection> connections = (List<VertexConnection>)await _vertexRepository.GetAllVertexConnectionsInRoute(routId);
+            var connections = await _vertexRepository.GetAllVertexConnectionsInRoute(routId);
 
-            List<Node> nodes = GetNodeList(vertices, connections);
+            var nodes = GetNodeList(vertices, connections);
 
             RoadmapProgress progress = CalcProgress(nodes);
 
@@ -75,7 +98,7 @@ namespace CodeRoute.Services
             return info;
         }
 
-        private List<Node> GetNodeList(List<Vertex> vertices, List<VertexConnection> connections)
+        private List<Node> GetNodeList(List<UserVertex> vertices, List<VertexConnection> connections)
         {
             var mainAxisIds = connections.Select(c => c.CurrentVertexId).Distinct().ToList();
             var mainAxis = connections.Select(c => c.CurrentVertex).Distinct().ToList();
@@ -88,12 +111,11 @@ namespace CodeRoute.Services
 
                 node.SecondaryNodes = new List<Node>();
 
-                List<Vertex> prevVertices = connections
+                var prevVertices = connections
                     .Where(c => c.CurrentVertexId == vertex.VertexId && 
                                 !mainAxisIds.Contains(c.PreviousVertexId) && 
                                 c.PreviousVertexId != specialValue)
-                    .Select(c => c.PreviousVertex)
-                    .ToList();
+                    .Select(c => c.PreviousVertex);
 
                 foreach (var vert in prevVertices)
                 {
@@ -106,14 +128,13 @@ namespace CodeRoute.Services
             return nodes;
         }
 
-        private Node NodeFromVertex(Vertex vertex, IEnumerable<Vertex> vertices)
+        private Node NodeFromVertex(Vertex vertex, List<UserVertex> userStatuses)
         {
-            VertexStatus stat = new VertexStatus() { StatusId = 1, StatusName = "Не изучено" };
             Node node = new Node()
             {
                 Id = vertex.VertexId,
                 Title = vertex.Name,
-                StatusId = stat.StatusId,
+                StatusId = userStatuses.FirstOrDefault(uv => uv.VertexId == vertex.VertexId).Status.StatusId,
             };
 
             return node;

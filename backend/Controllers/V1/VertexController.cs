@@ -1,10 +1,11 @@
 ﻿using CodeRoute.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CodeRoute.Controllers
+namespace CodeRoute.Controllers.V1
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class VertexController : Controller
     {
         private VertexService _vertexService;
@@ -14,7 +15,7 @@ namespace CodeRoute.Controllers
         }
 
 
-        [HttpGet(Name = "/getStatusList")]
+        [HttpGet(Name = "/Statuses")]
         public async Task<IActionResult> GetStatusList()
         {
             var res = await _vertexService.GetAllVertexStatuses();

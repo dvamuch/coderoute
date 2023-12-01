@@ -11,8 +11,21 @@ namespace CodeRoute.DAL.Repositories
             _context = context;
         }
 
+        public async Task<bool> AddVertex(Vertex vertex)
+        {
+            try
+            {
+                await _context.Vertexes.AddAsync(vertex);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
-        public async Task<IEnumerable<UserVertex>> GetAllVertexFromRoute(int routeId, int userId)
+        public async Task<List<UserVertex>> GetAllVertexFromRoute(int routeId, int userId)
         {
             return await _context.UserVertexes
                 .Where(uv => uv.User.UserId == userId)
@@ -22,7 +35,7 @@ namespace CodeRoute.DAL.Repositories
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Vertex>> GetAllVertexFromRoute(int routeId)
+        public async Task<List<Vertex>> GetAllVertexFromRoute(int routeId)
         {
             return await _context.Vertexes
                 .Where(v => v.RouteId == routeId)
@@ -30,12 +43,13 @@ namespace CodeRoute.DAL.Repositories
         }
 
 
-        public async Task <IEnumerable<VertexConnection>> GetAllVertexConnectionsInRoute(int routeId)
+        public async Task <List<VertexConnection>> GetAllVertexConnectionsInRoute(int routeId)
         {
             return await _context.VertexConnections
                 .Where(uv => uv.CurrentVertex.RouteId == routeId || uv.CurrentVertex.RouteId == 0)
                 .Include(uv => uv.CurrentVertex)
-                .Include(uv => uv.PreviousVertex).ToListAsync();
+                .Include(uv => uv.PreviousVertex)
+                .ToListAsync();
         }
 
 

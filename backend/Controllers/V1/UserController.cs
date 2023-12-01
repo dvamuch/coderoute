@@ -7,15 +7,16 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
-namespace CodeRoute.Controllers
+namespace CodeRoute.Controllers.V1
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class UserController : ControllerBase
     {
         private UserService _userService;
 
-        public UserController(UserService userService) 
+        public UserController(UserService userService)
         {
             _userService = userService;
         }
@@ -66,10 +67,10 @@ namespace CodeRoute.Controllers
 			};
 
             var token = new JwtSecurityToken(
-                issuer: AuthOptions.ISSUER, 
-                audience: AuthOptions.AUDIENCE, 
-                claims: claims, 
-                expires: DateTime.Now.AddMinutes(60), 
+                issuer: AuthOptions.ISSUER,
+                audience: AuthOptions.AUDIENCE,
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(60),
                 signingCredentials: credentials);
             return new JwtSecurityTokenHandler().WriteToken(token);
         }

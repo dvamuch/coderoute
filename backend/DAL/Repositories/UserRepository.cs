@@ -26,10 +26,37 @@ namespace CodeRoute.DAL.Repositories
 
         public async Task<User> AddUser(User user)
         {
+            using var transaction = _context.Database.BeginTransaction();
             try
             {
                 await _context.Users.AddAsync(user);
                 await _context.SaveChangesAsync();
+
+
+                var routes = _context.Routes.ToList();
+                foreach (var route in routes)
+                {
+                    _context.UserRoutes.Add(new UserRoute()
+                    {
+                        RouteId = route.RouteId,
+                        UserId = user.UserId,
+                        RouteStatusId = 1, // Не начат
+                    });
+                }
+
+                var vertices = _context.Vertexes.ToList();
+                foreach (var vertex in vertices)
+                {
+                    _context.UserVertexes.Add(new UserVertex()
+                    {
+                        UserId = user.UserId,
+                        VertexId = vertex.VertexId,
+                        StatusId = 1, // Не изучено
+                    });
+                }
+
+                await _context.SaveChangesAsync();
+                transaction.Commit();
             }
             catch (Exception ex)
             {

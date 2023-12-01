@@ -10,6 +10,6 @@ namespace CodeRoute.Models
         public Route Route { get; set; }
 
         public int RouteStatusId { get; set; }
-        public RouteStatus RouteStatus { get; set; }
+        public RouteStatus? RouteStatus { get; set; }
     }
 }
