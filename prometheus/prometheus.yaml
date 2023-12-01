@@ -34,4 +34,4 @@ scrape_configs:
     metrics_path: /metrics
     scheme: http
     static_configs:
-      - targets: ["51.250.15.220:8081"]
+      - targets: ["158.160.101.111:8081"]
