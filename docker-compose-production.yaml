@@ -44,7 +44,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
-      - prometheus_data_volume:/prometheus
     depends_on:
       - backend
   grafana:
