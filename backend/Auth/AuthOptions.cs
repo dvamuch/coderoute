@@ -1,4 +1,5 @@
 ﻿using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 
 namespace CodeRoute.Auth
@@ -12,5 +13,7 @@ namespace CodeRoute.Auth
             new SymmetricSecurityKey(Encoding.UTF8.GetBytes(KEY));
 
         private const string KEY = "mysupersecret_secretkey!123";   // ключ для шифрации
+
+
     }
 }

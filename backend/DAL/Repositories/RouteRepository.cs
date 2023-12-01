@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Server.IIS.Core;
-using Microsoft.Extensions.Logging;
-using CodeRoute.Logs;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace CodeRoute.DAL.Repositories
 {
@@ -72,10 +69,40 @@ namespace CodeRoute.DAL.Repositories
         }
 
 
-        public async Task<Models.RouteStatus?> GetRouteStatusById(int routeId, int userId)
+        public async Task<int?> GetRouteStatusById(int routeId, int userId)
         {
             var userRoutes = await _context.UserRoutes.FirstOrDefaultAsync(ur => ur.RouteId == routeId && ur.UserId == userId);
-            return userRoutes.RouteStatus;
+            return userRoutes.RouteStatusId;
+        }
+
+
+        public async Task<bool> ChangeRouteStatus(int routeId, int statusId, int userId)
+        {
+            try
+            {
+                var userRoute = await _context.UserRoutes.FirstOrDefaultAsync(ur => ur.RouteId == routeId && ur.UserId == userId);
+                if (userRoute == null)
+                {
+                    await _context.UserRoutes.AddAsync(new Models.UserRoute()
+                    {
+                        UserId = userId,
+                        RouteId = routeId,
+                        RouteStatusId = statusId
+                    });
+                }
+                else
+                {
+                    userRoute.RouteStatusId = statusId;
+                }
+
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error with add new route in bd", null);
+                return false;
+            }
         }
 
         public async Task<bool> AddRoute(Models.Route route)

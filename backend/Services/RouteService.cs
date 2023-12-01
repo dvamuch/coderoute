@@ -2,7 +2,6 @@
 using CodeRoute.DTO;
 using CodeRoute.Models;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
-using System.Collections.Generic;
 
 namespace CodeRoute.Services
 {
@@ -53,6 +52,18 @@ namespace CodeRoute.Services
             var result = await _routeRepository.GetStatuses();
             return result;
         }
+
+        public async Task<bool> ChangeStatus(int routeId, int statusId, int userId)
+        {
+            if (userId == specialValue) // user with id = 1 is special and he should not change statuses
+            {
+                return false;
+            }
+
+            var result = await _routeRepository.ChangeRouteStatus(routeId, statusId, userId);
+            return result;
+        }
+
         internal async Task<bool> AddRoute(Roadmap roadmap)
         {
             Models.Route route = new Models.Route()
@@ -75,7 +86,7 @@ namespace CodeRoute.Services
             {
                 Title = route.Title,
                 Desctiption = route.Desctiption,
-                StatusId = (await _routeRepository.GetRouteStatusById(routId, userId)).RouteStatusId
+                StatusId = await _routeRepository.GetRouteStatusById(routId, userId)
             };
 
             var vertices = await _vertexRepository.GetAllVertexFromRoute(routId, userId);
@@ -148,8 +159,8 @@ namespace CodeRoute.Services
 
             foreach (var node in nodes)
             {
-                if (node.StatusId == 3) progress.InProgress++;
                 if (node.StatusId == 2) progress.Skipped++;
+                if (node.StatusId == 3) progress.InProgress++;
                 if (node.StatusId == 4) progress.Finished++;
                 progress.Total++;
 
@@ -163,11 +174,12 @@ namespace CodeRoute.Services
 
             if (progress.Finished == 0)
             {
-                progress.Percent = 0.0f;
+                progress.Percent = 0;
             }
             else
             {
-                progress.Percent = progress.Finished * 1.0f / progress.Total;
+                var res = (progress.Finished + progress.Skipped) * 100.0f / progress.Total;
+                progress.Percent = Convert.ToInt32(res);
             }
 
             return progress;

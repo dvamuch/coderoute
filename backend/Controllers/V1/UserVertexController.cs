@@ -7,20 +7,21 @@ namespace CodeRoute.Controllers.V1
     [ApiController]
     [Route("api/v1/[controller]")]
     [ApiExplorerSettings(GroupName = "v1")]
-    public class UserRouteController : ControllerBase
+    public class UserVertexController : ControllerBase
     {
-        private readonly RouteService _routeService;
+        private readonly VertexService _vertexService;
 
-        public UserRouteController(RouteService routeService)
+        public UserVertexController(VertexService vertexService)
         {
-            _routeService = routeService;
+            _vertexService = vertexService;
         }
 
-        [HttpPost("{routeId}/{statusId}")]
-        public async Task<ActionResult<bool>> ChangeVertexStatus(int routeId, int statusId)
+
+        [HttpPost("{vertexId}/{statusId}")]
+        public async Task<ActionResult<bool>> ChangeRouteStatus(int vertexId, int statusId)
         {
             int userId = await this.ParseToken();
-            bool result = await _routeService.ChangeStatus(routeId, statusId, userId);
+            bool result = await _vertexService.ChangeStatus(vertexId, statusId, userId);
 
             if (result)
             {

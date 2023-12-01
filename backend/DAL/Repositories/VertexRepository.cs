@@ -62,5 +62,33 @@ namespace CodeRoute.DAL.Repositories
         {
             return await _context.Vertexes.FirstOrDefaultAsync(v => v.VertexId == id);
         }
+
+        public async Task<bool> ChangeRouteStatus(int vertexId, int statusId, int userId)
+        {
+            try
+            {
+                var userVertex = await _context.UserVertexes.FirstOrDefaultAsync(ur => ur.VertexId == vertexId && ur.UserId == userId);
+                if (userVertex == null)
+                {
+                    await _context.UserRoutes.AddAsync(new UserRoute()
+                    {
+                        UserId = userId,
+                        RouteId = vertexId,
+                        RouteStatusId = statusId
+                    });
+                }
+                else
+                {
+                    userVertex.StatusId = statusId;
+                }
+
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

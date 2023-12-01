@@ -29,7 +29,6 @@ namespace CodeRoute.Controllers.V1
         }
 
 
-
         [HttpGet("{vertexId}", Name = "/getVertex")]
         public async Task<IActionResult> GetVertexById(int vertexId)
         {
@@ -42,5 +41,6 @@ namespace CodeRoute.Controllers.V1
 
             return Ok(res);
         }
+
     }
 }
