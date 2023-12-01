@@ -20,5 +20,16 @@ namespace CodeRoute.Services
         {
             return await _vertexRepository.GetVertex(id);
         }
+
+        public async Task<bool> ChangeStatus(int vertexId, int statusId, int userId)
+        {
+            if (userId == 1) // user with id = 1 is special and he should not change statuses
+            {
+                return false;
+            }
+
+            var result = await _vertexRepository.ChangeRouteStatus(vertexId, statusId, userId);
+            return result;
+        }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CodeRoute.Controllers
+namespace CodeRoute.Controllers.V2
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v2/[controller]")]
+    [ApiExplorerSettings(GroupName = "v2")]
     public class TestController : ControllerBase
     {
         public TestController()
@@ -20,7 +21,7 @@ namespace CodeRoute.Controllers
         [HttpGet("2", Name = "/get02")]
         public IEnumerable<string> GetList2()
         {
-            return new List<string>() { "one\n", "two\n"};
+            return new List<string>() { "one\n", "two\n" };
         }
 
         [HttpGet("3", Name = "/get03")]

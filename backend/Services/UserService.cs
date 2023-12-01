@@ -1,6 +1,6 @@
-﻿using CodeRoute.DAL.Repositories;
-using CodeRoute.DTO;
+﻿using CodeRoute.DTO;
 using CodeRoute.Models;
+using CodeRoute.DAL.Repositories;
 
 namespace CodeRoute.Services
 {

@@ -2,7 +2,6 @@
 using CodeRoute.DTO;
 using CodeRoute.Models;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
-using System.Collections.Generic;
 
 namespace CodeRoute.Services
 {
@@ -18,9 +17,50 @@ namespace CodeRoute.Services
             _vertexRepository = vertexRepository;
         }
 
-        public async Task<List<Models.Route>> GetRoutes() 
+        public async Task<List<Roadmap>> GetRoutes(int userId) 
         {
-            var result = await _routeRepository.GetAllRoutes();
+            var routes = await _routeRepository.GetAllRoutes();
+            var maps = new List<Roadmap>();
+
+            foreach (var route in routes)
+            {
+                maps.Add(new Roadmap()
+                {
+                    Desctiption = route.Desctiption,
+                    Title = route.Title,
+                    StatusId = (await _routeRepository.GetStatusByIds(route.RouteId, userId)).RouteStatusId
+                });
+
+                var vertices = await _vertexRepository.GetAllVertexFromRoute(route.RouteId, userId);
+                int started = 0;
+                foreach (var vertex in vertices)
+                {
+                    if (vertex.StatusId != 1)
+                    {
+                        started++;
+                    }
+                }
+
+                maps[maps.Count - 1].Percentage = vertices.Count / 100 * started;
+            }
+
+            return maps;
+        }
+
+        public async Task<List<Models.RouteStatus>> GetStatuses()
+        {
+            var result = await _routeRepository.GetStatuses();
+            return result;
+        }
+
+        public async Task<bool> ChangeStatus(int routeId, int statusId, int userId)
+        {
+            if (userId == specialValue) // user with id = 1 is special and he should not change statuses
+            {
+                return false;
+            }
+
+            var result = await _routeRepository.ChangeRouteStatus(routeId, statusId, userId);
             return result;
         }
 
@@ -38,11 +78,6 @@ namespace CodeRoute.Services
 
         internal async Task<RouteInfo> GetRouteByIdForUser(int routId, int userId)
         {
-            return null;
-        }
-
-        internal async Task<RouteInfo> GetRouteById(int routId)
-        {
             Models.Route route = await _routeRepository.GetRouteById(routId);
 
             if (route == null) return null;
@@ -51,17 +86,16 @@ namespace CodeRoute.Services
             {
                 Title = route.Title,
                 Desctiption = route.Desctiption,
+                StatusId = await _routeRepository.GetRouteStatusById(routId, userId)
             };
 
-            List<Vertex> vertices = (List<Vertex>)await _vertexRepository.GetAllVertexFromRoute(routId);
+            var vertices = await _vertexRepository.GetAllVertexFromRoute(routId, userId);
             if (vertices.Count == 0)
-            {
-                vertices = (List<Vertex>)await _vertexRepository.GetAllVertexFromRoute(routId);
-            }
+                return null;
 
-            List<VertexConnection> connections = (List<VertexConnection>)await _vertexRepository.GetAllVertexConnectionsInRoute(routId);
+            var connections = await _vertexRepository.GetAllVertexConnectionsInRoute(routId);
 
-            List<Node> nodes = GetNodeList(vertices, connections);
+            var nodes = GetNodeList(vertices, connections);
 
             RoadmapProgress progress = CalcProgress(nodes);
 
@@ -75,7 +109,7 @@ namespace CodeRoute.Services
             return info;
         }
 
-        private List<Node> GetNodeList(List<Vertex> vertices, List<VertexConnection> connections)
+        private List<Node> GetNodeList(List<UserVertex> vertices, List<VertexConnection> connections)
         {
             var mainAxisIds = connections.Select(c => c.CurrentVertexId).Distinct().ToList();
             var mainAxis = connections.Select(c => c.CurrentVertex).Distinct().ToList();
@@ -88,12 +122,11 @@ namespace CodeRoute.Services
 
                 node.SecondaryNodes = new List<Node>();
 
-                List<Vertex> prevVertices = connections
+                var prevVertices = connections
                     .Where(c => c.CurrentVertexId == vertex.VertexId && 
                                 !mainAxisIds.Contains(c.PreviousVertexId) && 
                                 c.PreviousVertexId != specialValue)
-                    .Select(c => c.PreviousVertex)
-                    .ToList();
+                    .Select(c => c.PreviousVertex);
 
                 foreach (var vert in prevVertices)
                 {
@@ -106,14 +139,13 @@ namespace CodeRoute.Services
             return nodes;
         }
 
-        private Node NodeFromVertex(Vertex vertex, IEnumerable<Vertex> vertices)
+        private Node NodeFromVertex(Vertex vertex, List<UserVertex> userStatuses)
         {
-            VertexStatus stat = new VertexStatus() { StatusId = 1, StatusName = "Не изучено" };
             Node node = new Node()
             {
                 Id = vertex.VertexId,
                 Title = vertex.Name,
-                StatusId = stat.StatusId,
+                StatusId = userStatuses.FirstOrDefault(uv => uv.VertexId == vertex.VertexId).Status.StatusId,
             };
 
             return node;
@@ -127,8 +159,8 @@ namespace CodeRoute.Services
 
             foreach (var node in nodes)
             {
-                if (node.StatusId == 3) progress.InProgress++;
                 if (node.StatusId == 2) progress.Skipped++;
+                if (node.StatusId == 3) progress.InProgress++;
                 if (node.StatusId == 4) progress.Finished++;
                 progress.Total++;
 
@@ -142,11 +174,12 @@ namespace CodeRoute.Services
 
             if (progress.Finished == 0)
             {
-                progress.Percent = 0.0f;
+                progress.Percent = 0;
             }
             else
             {
-                progress.Percent = progress.Finished * 1.0f / progress.Total;
+                var res = (progress.Finished + progress.Skipped) * 100.0f / progress.Total;
+                progress.Percent = Convert.ToInt32(res);
             }
 
             return progress;
