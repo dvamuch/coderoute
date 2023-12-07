@@ -58,6 +58,7 @@ const statusIdToName = {
 export const useNodeStatusStore = defineStore("nodeStatus", () => {
 
   const getNodeClassesByStatusId = (statusId) => {
+    console.log(statusIdToNodeClasses[statusId]);
     return statusIdToNodeClasses[statusId];
   };
 
@@ -71,6 +72,10 @@ export const useNodeStatusStore = defineStore("nodeStatus", () => {
 
   const getNameByStatusId = (statusId) => {
     return statusIdToName[statusId];
+  };
+
+  const getOtherStatuses = (statusId) => {
+    
   };
 
   return {getNodeClassesByStatusId, getLineClassesByStatusId, getVerticalLineClassesByStatusId, getNameByStatusId};

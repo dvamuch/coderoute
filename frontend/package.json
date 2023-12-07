@@ -12,6 +12,7 @@
     "pinia": "^2.1.7",
     "vue": "^3.2.26",
     "vue-jwt-decode": "^0.1.0",
+    "vue-mobile-detection": "^2.0.1",
     "vue-router": "^4.2.5",
     "vue3-clickout": "^1.1.1"
   },

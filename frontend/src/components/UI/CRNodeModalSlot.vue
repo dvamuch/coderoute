@@ -9,10 +9,12 @@ const props = defineProps({
 
 import {useAuthorizationStore} from "@/stores/authorization";
 import {useNodesStore} from "@/stores/nodes";
+import {useNodeStatusStore} from "@/stores/nodeStatus";
 import {computed, onMounted, ref} from "vue";
 
 const nodesStore = useNodesStore();
 const authorizationStore = useAuthorizationStore();
+const nodeStatusStore = useNodeStatusStore();
 
 const nodeObject = computed(() => {
   console.log(11, nodesStore.nodeObjects[props.nodeId]);
@@ -28,6 +30,10 @@ onMounted(async () => {
 
 const isStatusChangeUlActive = ref(false);
 
+const changeNodeStatus = async () => {
+
+};
+
 </script>
 
 <template>
@@ -40,8 +46,9 @@ const isStatusChangeUlActive = ref(false);
 
         <div v-if="isAuthorized" class="crSelect flexible" :class="{active: isStatusChangeUlActive}">
           <div class="crFormItem crSelectInput button noShrink secondary radSmall hSmall gapMini">
-            <div class="sSmallest crFormItem radRound completed filled"></div>
-            <div class="grow">Изучил</div>
+            <div class="sSmallest crFormItem radRound"
+                 :class="nodeStatusStore.getNodeClassesByStatusId(nodeObject.statusId)"></div>
+            <div class="grow"> {{ nodeStatusStore.getNameByStatusId(nodeObject.statusId) }}</div>
           </div>
           <div class="crFormItem crSelectButton button noShrink primary filled radSmall hSmall gapMini"
                @click="isStatusChangeUlActive = !isStatusChangeUlActive">

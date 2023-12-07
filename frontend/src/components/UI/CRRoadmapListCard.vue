@@ -37,7 +37,7 @@ const props = defineProps({
 <!--        <p>{{ "/roadmaps/" + props.roadmapId }}</p>-->
         <router-link title="" :to="'/roadmaps/' + props.roadmapId"
                      class="crFormItem button noShrink primary radRound filled hMedium">
-          Продолжить
+          {{isStarted? "Продолжить" : "Ознакомиться"}}
         </router-link>
       </div>
     </li>

@@ -1,4 +1,5 @@
 import {useAuthorizationStore} from "@/stores/authorization";
+import userFetcher from "@/use/fetcher";
 import {defineStore} from "pinia";
 import {computed, ref} from "vue";
 
@@ -10,6 +11,7 @@ export const useNodesStore = defineStore("nodes", () => {
   const isFetched = ref(false);
   const fetchedRoadmapId = ref(-1);
   const authorizationStore = useAuthorizationStore();
+  const fetcher = userFetcher();
   const isAuthorized = computed(() => authorizationStore.isAuthorized);
   const jwtToken = computed(() => authorizationStore.jwtToken);
 
@@ -20,15 +22,8 @@ export const useNodesStore = defineStore("nodes", () => {
 
     const options = {};
 
-    console.log(1, jwtToken.value, isAuthorized.value);
-    if (isAuthorized.value) {
-      options.headers = {
-        Authorization: `Bearer ${jwtToken.value}`,
-      };
-      console.log(2, jwtToken.value);
-    }
 
-    const result = await (await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Routes/${roadmapId}`, options)).json();
+    const result = await fetcher.fetchJson(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Routes/${roadmapId}`);
     nodeList.value = result.nodes;
     roadmapInfo.value = result.roadmap;
     roadmapProgress.value = result.progress;
@@ -40,7 +35,7 @@ export const useNodesStore = defineStore("nodes", () => {
     if (nodeObjects.value[nodeId]) {
       return;
     }
-    nodeObjects.value[nodeId] = await (await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Vertex/${nodeId}`)).json();
+    nodeObjects.value[nodeId] = await fetcher.fetchJson(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Vertex/${nodeId}`);
   };
 
   const updateStatus = async (nodeId, statusId) => {

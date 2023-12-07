@@ -1,12 +1,16 @@
 <script setup>
 
 import CRRoadmapListGroup from "@/components/UI/CRRoadmapListGroup.vue";
+import userFetcher from "@/use/fetcher";
 import {onMounted, ref} from "vue";
+
+const fetcher = userFetcher();
 
 const developerRoadmapList = ref([]);
 
 onMounted(async () => {
-  developerRoadmapList.value = await (await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Routes`)).json();
+
+  developerRoadmapList.value = await fetcher.fetchJson(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Routes`);
 });
 
 </script>

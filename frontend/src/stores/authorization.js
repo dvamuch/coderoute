@@ -1,9 +1,8 @@
-import useLocalStorage from "@/use/localStorage";
+import useMyLocalStorage from "@/use/myLocalStorage";
 import {defineStore} from "pinia";
 import {computed, ref} from "vue";
 import VueJwtDecode from "vue-jwt-decode";
 
-const {get, has, set} = useLocalStorage();
 
 export const useAuthorizationStore = defineStore("authorization", () => {
     const userObject = ref({
@@ -11,6 +10,8 @@ export const useAuthorizationStore = defineStore("authorization", () => {
       userLogin: null,
       userId: null,
     });
+
+    const myLocalStorage = useMyLocalStorage();
 
     const isAuthorized = computed(() => !!userObject.value?.userLogin);
     const jwtToken = computed(() => userObject.value?.jwtToken);
@@ -37,9 +38,18 @@ export const useAuthorizationStore = defineStore("authorization", () => {
     };
 
     const checkAuth = () => {
-      if (has("user")) {
-        userObject.value = get("user");
+      if (myLocalStorage.has("user")) {
+        userObject.value = myLocalStorage.get("user");
       }
+    };
+
+    const deauthenticateUser = () => {
+      userObject.value = {
+        jwtToken: null,
+        userLogin: null,
+        userId: null,
+      };
+      myLocalStorage.remove("user");
     };
 
     const authenticateUser = async (loginOrEmail, password) => {
@@ -65,7 +75,7 @@ export const useAuthorizationStore = defineStore("authorization", () => {
           userId: user.nameid,
         };
 
-        set("user", userObject.value);
+        myLocalStorage.set("user", userObject.value);
 
         console.log("Вы авторизовались!");
         console.log("userObject", userObject.value);
@@ -83,6 +93,7 @@ export const useAuthorizationStore = defineStore("authorization", () => {
       jwtToken,
       userLogin,
       checkAuth,
+      deauthenticateUser,
     };
   },
 );

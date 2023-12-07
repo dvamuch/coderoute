@@ -22,9 +22,9 @@ const props = defineProps({
     <ul class="crCards x2 gapSmaller">
       <CRRoadmapListCard v-for="roadmapElement in props.roadmapList" v-bind:key="roadmapElement.roadmapId"
                          :title="roadmapElement.title"
-                         :roadmap-id="roadmapElement.routeId" :percents-of-progress="roadmapElement.progress"
-                         :is-started="roadmapElement.isStarted"
-                         :description="roadmapElement.desctiption"></CRRoadmapListCard>
+                         :roadmap-id="roadmapElement.routeId" :percents-of-progress="roadmapElement.percentage"
+                         :is-started="!!roadmapElement.percentage"
+                         :description="roadmapElement.description"></CRRoadmapListCard>
       <CRRoadmapRecommendCard></CRRoadmapRecommendCard>
     </ul>
   </section>
