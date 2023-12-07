@@ -28,7 +28,7 @@ namespace CodeRoute.Services
                 {
                     Desctiption = route.Desctiption,
                     Title = route.Title,
-                    StatusId = (await _routeRepository.GetStatusByIds(route.RouteId, userId)).RouteStatusId
+                    StatusId = (await _routeRepository.GetStatusIdByIds(route.RouteId, userId))
                 });
 
                 var vertices = await _vertexRepository.GetAllVertexFromRoute(route.RouteId, userId);

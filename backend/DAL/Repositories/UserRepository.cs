@@ -26,7 +26,7 @@ namespace CodeRoute.DAL.Repositories
 
         public async Task<User> AddUser(User user)
         {
-            using var transaction = _context.Database.BeginTransaction();
+            using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
                 await _context.Users.AddAsync(user);
@@ -56,7 +56,7 @@ namespace CodeRoute.DAL.Repositories
                 }
 
                 await _context.SaveChangesAsync();
-                transaction.Commit();
+                await transaction.CommitAsync();
             }
             catch (Exception ex)
             {
@@ -74,9 +74,9 @@ namespace CodeRoute.DAL.Repositories
             return user;
         }
 
-        public async Task<User> FindUser(string username, string usermail)
+        public async Task<User> FindUser(string username)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.UserName == username || u.Email == usermail);
+            return await _context.Users.FirstOrDefaultAsync(u => u.UserName == username || u.Email == username);
         }
     }
 }
