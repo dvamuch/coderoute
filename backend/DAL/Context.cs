@@ -35,7 +35,6 @@ namespace CodeRoute.DAL
             modelBuilder.Entity<UserVertex>().HasKey(ur => new { ur.UserId, ur.VertexId });
             modelBuilder.Entity<VertexConnection>().HasKey(ur => new { ur.CurrentVertexId, ur.PreviousVertexId });
 
-            modelBuilder.Entity<User>().HasAlternateKey(u => u.Email);
             modelBuilder.Entity<Models.Route>().HasAlternateKey(r => r.Title);
             //modelBuilder.Entity<VertexStatus>().Property(p => p.StatusDescription).IsRequired(false);
         }
