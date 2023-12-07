@@ -2227,3 +2227,21 @@ An error occurred while saving the entity changes. See the inner exception for d
 07.12.2023 14:14:07 :: Information: Hosting environment: Development
 07.12.2023 14:14:07 :: Information: Content root path: D:\Projects\coderoute\backend
 07.12.2023 14:14:08 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+07.12.2023 14:30:37 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+07.12.2023 14:30:37 :: Information: Now listening on: http://localhost:5001
+07.12.2023 14:30:37 :: Information: Application started. Press Ctrl+C to shut down.
+07.12.2023 14:30:37 :: Information: Hosting environment: Development
+07.12.2023 14:30:37 :: Information: Content root path: D:\Projects\coderoute\backend
+07.12.2023 14:30:37 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+07.12.2023 14:31:02 :: Error: Ошибка при добавлении нового пользователя
+The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.The instance of entity type 'User' cannot be tracked because another instance with the same key value for {'Email'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.07.12.2023 14:32:24 :: Error: Ошибка при добавлении нового пользователя
+23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.23505: повторяющееся значение ключа нарушает ограничение уникальности "AK_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.07.12.2023 14:36:12 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+07.12.2023 14:36:12 :: Information: Now listening on: http://localhost:5001
+07.12.2023 14:36:12 :: Information: Application started. Press Ctrl+C to shut down.
+07.12.2023 14:36:12 :: Information: Hosting environment: Development
+07.12.2023 14:36:12 :: Information: Content root path: D:\Projects\coderoute\backend
+07.12.2023 14:36:13 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.

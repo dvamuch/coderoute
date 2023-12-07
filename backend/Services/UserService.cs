@@ -23,6 +23,15 @@ namespace CodeRoute.Services
                 IsAdmin = false
             };
 
+
+            var users = _userRepository.GetAllUsers();
+
+            if (users.FirstOrDefault(u => u.Email == user.Email) != null)
+            {
+                return null;
+            }
+
+
             return await _userRepository.AddUser(newUser);
         }
 
