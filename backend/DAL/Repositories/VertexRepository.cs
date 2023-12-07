@@ -63,6 +63,16 @@ namespace CodeRoute.DAL.Repositories
             return await _context.Vertexes.FirstOrDefaultAsync(v => v.VertexId == id);
         }
 
+        public async Task<int> GetVertexStatusByUser(int id, int userId)
+        {
+            var uv = await _context.UserVertexes.FirstOrDefaultAsync(v => v.VertexId == id && v.UserId == userId);
+            if (uv == null)
+            {
+                return 1;
+            }
+            return uv.StatusId;
+        }
+
         public async Task<bool> ChangeRouteStatus(int vertexId, int statusId, int userId)
         {
             try
