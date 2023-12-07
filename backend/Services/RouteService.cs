@@ -42,7 +42,15 @@ namespace CodeRoute.Services
                     }
                 }
 
-                maps[maps.Count - 1].Percentage = vertices.Count() / 100 * started;
+                if (vertices.Count > 0)
+                {
+                    float a = started * 100.0f / vertices.Count();
+                    maps[maps.Count - 1].Percentage = Convert.ToInt32(a);
+                }
+                else
+                {
+                    maps[maps.Count - 1].Percentage = 0;
+                }
             }
 
             return maps;
@@ -173,11 +181,7 @@ namespace CodeRoute.Services
                 progress.Total += secondaryProg.Total;
             }
 
-            if (progress.Finished == 0)
-            {
-                progress.Percent = 0;
-            }
-            else
+            if (progress.Total != 0)
             {
                 var res = (progress.Finished + progress.Skipped) * 100.0f / progress.Total;
                 progress.Percent = Convert.ToInt32(res);
