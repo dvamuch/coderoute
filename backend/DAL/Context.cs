@@ -7,7 +7,7 @@ namespace CodeRoute.DAL
     {
         public Context(DbContextOptions<Context> options) : base(options)
         {
-            
+            /*
             Database.EnsureDeleted();
             Database.Migrate();
             
@@ -15,6 +15,7 @@ namespace CodeRoute.DAL
             {
                 ResetTestDB();
             }
+            */
         }
 
         private void ResetTestDB()
