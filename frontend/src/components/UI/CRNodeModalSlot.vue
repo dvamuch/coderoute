@@ -7,15 +7,19 @@ const props = defineProps({
   },
 });
 
+import {useAuthorizationStore} from "@/stores/authorization";
 import {useNodesStore} from "@/stores/nodes";
 import {computed, onMounted} from "vue";
 
 const nodesStore = useNodesStore();
+const authorizationStore = useAuthorizationStore();
 
 const nodeObject = computed(() => {
   console.log(nodesStore.nodeObjects[props.nodeId]);
   return nodesStore.nodeObjects[props.nodeId] || {};
 });
+
+const isAuthorized = computed(() => authorizationStore.isAuthorized);
 
 onMounted(async () => {
   await nodesStore.fetchNode(props.nodeId);
@@ -32,7 +36,7 @@ onMounted(async () => {
 
       <div class="flexible">
 
-        <div class="crSelect flexible">
+        <div v-if="isAuthorized" class="crSelect flexible">
           <div class="crFormItem crSelectInput button noShrink secondary radSmall hSmall gapMini">
             <div class="sSmallest crFormItem radRound completed filled"></div>
             <div class="grow">Изучил</div>
@@ -63,29 +67,26 @@ onMounted(async () => {
             </ul>
           </div>
         </div>
-
       </div>
 
 
       <h6 class="fn-subcap"><b>{{ nodeObject.name }}</b></h6>
-<!--      <p class="lhMain">Интернет — это глобальная сеть, которая объединяет огромное количество компьютеров по всему-->
-<!--        земному шару и дает возможность получения доступа к информационным ресурсам.</p>-->
-      <p class="lhMain">{{ nodeObject.markdownPage}}</p>
-      <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>
-      <ul class="linkedList fn-accent">
-        <li class="item">
-          <a title="" href="#" class="link">Как работает интернет?</a>
-        </li>
-        <li class="item">
-          <a title="" href="#" class="link">Интернет в деталях</a>
-        </li>
-        <li class="item">
-          <a title="" href="#" class="link">Введение в интернет</a>
-        </li>
-        <li class="item">
-          <a title="" href="#" class="link">Как работает Web?</a>
-        </li>
-      </ul>
+      <p class="lhMain">{{ nodeObject.markdownPage }}</p>
+      <!--      <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>-->
+      <!--      <ul class="linkedList fn-accent">-->
+      <!--        <li class="item">-->
+      <!--          <a title="" href="#" class="link">Как работает интернет?</a>-->
+      <!--        </li>-->
+      <!--        <li class="item">-->
+      <!--          <a title="" href="#" class="link">Интернет в деталях</a>-->
+      <!--        </li>-->
+      <!--        <li class="item">-->
+      <!--          <a title="" href="#" class="link">Введение в интернет</a>-->
+      <!--        </li>-->
+      <!--        <li class="item">-->
+      <!--          <a title="" href="#" class="link">Как работает Web?</a>-->
+      <!--        </li>-->
+      <!--      </ul>-->
     </div>
 
   </div>

@@ -18,7 +18,9 @@ const password = ref("");
 const passwordRepeat = ref("");
 
 const registerUser = async () => {
-  console.log(await authorizationStore.registerUser(email, login, password));
+  await authorizationStore.registerUser(email.value, login.value, password.value);
+  await authorizationStore.authenticateUser(login.value, password.value);
+  authorizationModalStore.closeLoginAndRegistrationModal();
 };
 </script>
 

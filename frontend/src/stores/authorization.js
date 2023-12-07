@@ -1,15 +1,16 @@
-import {useAuthorizationModalStore} from "@/stores/authorizationModal";
 import {defineStore} from "pinia";
 import {ref} from "vue";
+import VueJwtDecode from "vue-jwt-decode";
 
 export const useAuthorizationStore = defineStore("authorization", () => {
-    const authorizationModalStore = useAuthorizationModalStore();
-
     const jwtToken = ref("");
     const isAuthorized = ref(false);
+    const userLogin = ref("");
 
     const registerUser = async (email, login, password) => {
-      const result = await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/User/reg`, {
+      console.log(email, login, password);
+
+      const result = await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/User/reg`, {
         method: "POST",
         body: JSON.stringify({
           email: email,
@@ -21,15 +22,15 @@ export const useAuthorizationStore = defineStore("authorization", () => {
         },
       });
 
-      return result;
+      console.log(result);
+      console.log(await result.text());
     };
 
-    const authenticateUser = async (email, login, password) => {
-      const result = await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/User/auth`, {
+    const authenticateUser = async (loginOrEmail, password) => {
+      const result = await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/User/auth`, {
         method: "POST",
         body: JSON.stringify({
-          email: email,
-          userName: login,
+          login: loginOrEmail,
           password: password,
         }),
         headers: {
@@ -40,8 +41,9 @@ export const useAuthorizationStore = defineStore("authorization", () => {
       if (result.status === 200) {
         jwtToken.value = (await result.json()).token;
         isAuthorized.value = true;
+        userLogin.value = VueJwtDecode.decode(jwtToken.value).sub;
 
-        authorizationModalStore.closeLoginAndRegistrationModal();
+        console.log("Вы авторизовались!");
         console.log(jwtToken.value);
       } else {
         console.log("Ты еблан");
@@ -52,6 +54,8 @@ export const useAuthorizationStore = defineStore("authorization", () => {
       isAuthorized,
       registerUser,
       authenticateUser,
+      userLogin,
+      jwtToken
     };
   },
 );

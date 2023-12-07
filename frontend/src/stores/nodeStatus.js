@@ -48,6 +48,13 @@ const statusIdToVerticalLineClasses = {
   },
 };
 
+const statusIdToName = {
+  1: "Не изучаю",
+  2: "В процессе",
+  3: "Попустил",
+  4: "Изучил",
+};
+
 export const useNodeStatusStore = defineStore("nodeStatus", () => {
 
   const getNodeClassesByStatusId = (statusId) => {
@@ -62,5 +69,9 @@ export const useNodeStatusStore = defineStore("nodeStatus", () => {
     return statusIdToVerticalLineClasses[statusId];
   };
 
-  return {getNodeClassesByStatusId, getLineClassesByStatusId, getVerticalLineClassesByStatusId};
+  const getNameByStatusId = (statusId) => {
+    return statusIdToName[statusId];
+  };
+
+  return {getNodeClassesByStatusId, getLineClassesByStatusId, getVerticalLineClassesByStatusId, getNameByStatusId};
 });
