@@ -26,9 +26,14 @@ namespace CodeRoute.Services
             return await _userRepository.AddUser(newUser);
         }
 
-        public async Task<User> AuthUser(UserLogInfo user)
+        public async Task<User> AuthUser(UserAuthInfo user)
         {
-            User db_user = await _userRepository.FindUser(user.UserName, user.Email);
+            if (user.Login == null || user.Login == "")
+            {
+                return new User();
+            }
+
+            User db_user = await _userRepository.FindUser(user.Login);
 
             if (db_user == null)
                 return new User();
