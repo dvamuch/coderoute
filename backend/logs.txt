@@ -2347,3 +2347,27 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 07.12.2023 17:24:10 :: Information: Hosting environment: Development
 07.12.2023 17:24:10 :: Information: Content root path: D:\Projects\coderoute\backend
 07.12.2023 17:24:11 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+07.12.2023 18:17:59 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+07.12.2023 18:17:59 :: Information: Now listening on: http://localhost:5001
+07.12.2023 18:17:59 :: Information: Application started. Press Ctrl+C to shut down.
+07.12.2023 18:17:59 :: Information: Hosting environment: Development
+07.12.2023 18:17:59 :: Information: Content root path: D:\Projects\coderoute\backend
+07.12.2023 18:18:00 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+07.12.2023 18:18:43 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+07.12.2023 18:18:43 :: Information: Now listening on: http://localhost:5001
+07.12.2023 18:18:43 :: Information: Application started. Press Ctrl+C to shut down.
+07.12.2023 18:18:43 :: Information: Hosting environment: Development
+07.12.2023 18:18:43 :: Information: Content root path: D:\Projects\coderoute\backend
+07.12.2023 18:18:44 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+07.12.2023 18:19:36 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+07.12.2023 18:19:36 :: Information: Now listening on: http://localhost:5001
+07.12.2023 18:19:36 :: Information: Application started. Press Ctrl+C to shut down.
+07.12.2023 18:19:36 :: Information: Hosting environment: Development
+07.12.2023 18:19:36 :: Information: Content root path: D:\Projects\coderoute\backend
+07.12.2023 18:19:36 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+07.12.2023 18:23:27 :: Warning: Overriding address(es) 'http://localhost:5001'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+07.12.2023 18:23:27 :: Information: Now listening on: http://localhost:5001
+07.12.2023 18:23:27 :: Information: Application started. Press Ctrl+C to shut down.
+07.12.2023 18:23:27 :: Information: Hosting environment: Development
+07.12.2023 18:23:27 :: Information: Content root path: D:\Projects\coderoute\backend
+07.12.2023 18:23:28 :: Warning: Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
