@@ -20,7 +20,6 @@ onMounted(async () => {
   await nodesStore.fetchRoadmap(route.params.id);
 });
 
-console.log(process.env);
 
 </script>
 

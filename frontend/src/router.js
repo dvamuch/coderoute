@@ -1,7 +1,9 @@
 import MainPage from "@/components/MainPage.vue";
 import RoadmapListPage from "@/components/RoadmapListPage.vue";
 import RoadmapPage from "@/components/RoadmapPage.vue";
+import {useAuthorizationStore} from "@/stores/authorization";
 import {createRouter, createWebHashHistory} from "vue-router";
+
 
 const routes = [
   {path: "/", component: MainPage},
@@ -14,4 +16,10 @@ const router = createRouter({
   routes,
 });
 
-export {router};
+router.beforeEach(() => {
+  const authorizationStore = useAuthorizationStore();
+
+  authorizationStore.checkAuth();
+});
+
+export default router;

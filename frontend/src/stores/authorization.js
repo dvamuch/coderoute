@@ -1,11 +1,21 @@
+import useLocalStorage from "@/use/localStorage";
 import {defineStore} from "pinia";
-import {ref} from "vue";
+import {computed, ref} from "vue";
 import VueJwtDecode from "vue-jwt-decode";
 
+const {get, has, set} = useLocalStorage();
+
 export const useAuthorizationStore = defineStore("authorization", () => {
-    const jwtToken = ref("");
-    const isAuthorized = ref(false);
-    const userLogin = ref("");
+    const userObject = ref({
+      jwtToken: null,
+      userLogin: null,
+      userId: null,
+    });
+
+    const isAuthorized = computed(() => !!userObject.value?.userLogin);
+    const jwtToken = computed(() => userObject.value?.jwtToken);
+    const userLogin = computed(() => userObject.value?.userLogin);
+
 
     const registerUser = async (email, login, password) => {
       console.log(email, login, password);
@@ -26,6 +36,12 @@ export const useAuthorizationStore = defineStore("authorization", () => {
       console.log(await result.text());
     };
 
+    const checkAuth = () => {
+      if (has("user")) {
+        userObject.value = get("user");
+      }
+    };
+
     const authenticateUser = async (loginOrEmail, password) => {
       const result = await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/User/auth`, {
         method: "POST",
@@ -39,12 +55,21 @@ export const useAuthorizationStore = defineStore("authorization", () => {
       });
 
       if (result.status === 200) {
-        jwtToken.value = (await result.json()).token;
-        isAuthorized.value = true;
-        userLogin.value = VueJwtDecode.decode(jwtToken.value).sub;
+        const json = await result.json();
+        const user = VueJwtDecode.decode(json.token);
+        console.log(json, user);
+
+        userObject.value = {
+          jwtToken: json.token,
+          userLogin: user.sub,
+          userId: user.nameid,
+        };
+
+        set("user", userObject.value);
 
         console.log("Вы авторизовались!");
-        console.log(jwtToken.value);
+        console.log("userObject", userObject.value);
+        console.log("jwtToken", jwtToken.value);
       } else {
         console.log("Ты еблан");
       }
@@ -54,8 +79,10 @@ export const useAuthorizationStore = defineStore("authorization", () => {
       isAuthorized,
       registerUser,
       authenticateUser,
+      userObject,
+      jwtToken,
       userLogin,
-      jwtToken
+      checkAuth,
     };
   },
 );

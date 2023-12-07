@@ -1,6 +1,6 @@
 import {useAuthorizationStore} from "@/stores/authorization";
 import {defineStore} from "pinia";
-import {ref} from "vue";
+import {computed, ref} from "vue";
 
 export const useNodesStore = defineStore("nodes", () => {
   const nodeList = ref([]);
@@ -10,6 +10,8 @@ export const useNodesStore = defineStore("nodes", () => {
   const isFetched = ref(false);
   const fetchedRoadmapId = ref(-1);
   const authorizationStore = useAuthorizationStore();
+  const isAuthorized = computed(() => authorizationStore.isAuthorized);
+  const jwtToken = computed(() => authorizationStore.jwtToken);
 
   const fetchRoadmap = async (roadmapId) => {
     if (isFetched.value && roadmapId === fetchedRoadmapId.value) {
@@ -18,13 +20,15 @@ export const useNodesStore = defineStore("nodes", () => {
 
     const options = {};
 
-    if (authorizationStore.isAuthorized) {
+    console.log(1, jwtToken.value, isAuthorized.value);
+    if (isAuthorized.value) {
       options.headers = {
-        Authentication: `Bearer ${authorizationStore.jwtToken}`,
+        Authorization: `Bearer ${jwtToken.value}`,
       };
+      console.log(2, jwtToken.value);
     }
 
-    const result = await (await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Routes/${roadmapId}`)).json();
+    const result = await (await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Routes/${roadmapId}`, options)).json();
     nodeList.value = result.nodes;
     roadmapInfo.value = result.roadmap;
     roadmapProgress.value = result.progress;

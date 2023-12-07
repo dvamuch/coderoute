@@ -4,13 +4,13 @@ const statusIdToNodeClasses = {
   1: { // new
     primary: true,
   },
-  2: { // in_progress
-    filled: true,
-    primary: true,
-  },
-  3: { // skipped
+  2: { // skipped
     filled: true,
     secondary2: true,
+  },
+  3: { // in_progress
+    filled: true,
+    primary: true,
   },
   4: { // done
     filled: true,
@@ -22,11 +22,11 @@ const statusIdToLineClasses = {
   1: { // new
     "fn-accent": true,
   },
-  2: { // in_progress
-    "fn-primary": true,
-  },
-  3: { // skipped
+  2: { // skipped
     "fn-secondary2": true,
+  },
+  3: { // in_progress
+    "fn-primary": true,
   },
   4: { // done
     "fn-completed": true,
@@ -37,11 +37,11 @@ const statusIdToVerticalLineClasses = {
   1: { // new
     "bg-accent": true,
   },
-  2: { // in_progress
-    "bg-primary": true,
-  },
-  3: { // skipped
+  2: { // skipped
     "bg-secondary2": true,
+  },
+  3: { // in_progress
+    "bg-primary": true,
   },
   4: { // done
     "bg-completed": true,
@@ -50,8 +50,8 @@ const statusIdToVerticalLineClasses = {
 
 const statusIdToName = {
   1: "Не изучаю",
-  2: "В процессе",
-  3: "Попустил",
+  2: "Попустил",
+  3: "В процессе",
   4: "Изучил",
 };
 

@@ -9,13 +9,13 @@ const props = defineProps({
 
 import {useAuthorizationStore} from "@/stores/authorization";
 import {useNodesStore} from "@/stores/nodes";
-import {computed, onMounted} from "vue";
+import {computed, onMounted, ref} from "vue";
 
 const nodesStore = useNodesStore();
 const authorizationStore = useAuthorizationStore();
 
 const nodeObject = computed(() => {
-  console.log(nodesStore.nodeObjects[props.nodeId]);
+  console.log(11, nodesStore.nodeObjects[props.nodeId]);
   return nodesStore.nodeObjects[props.nodeId] || {};
 });
 
@@ -23,8 +23,10 @@ const isAuthorized = computed(() => authorizationStore.isAuthorized);
 
 onMounted(async () => {
   await nodesStore.fetchNode(props.nodeId);
+  console.log(2, nodesStore.nodeObjects);
 });
 
+const isStatusChangeUlActive = ref(false);
 
 </script>
 
@@ -36,12 +38,13 @@ onMounted(async () => {
 
       <div class="flexible">
 
-        <div v-if="isAuthorized" class="crSelect flexible">
+        <div v-if="isAuthorized" class="crSelect flexible" :class="{active: isStatusChangeUlActive}">
           <div class="crFormItem crSelectInput button noShrink secondary radSmall hSmall gapMini">
             <div class="sSmallest crFormItem radRound completed filled"></div>
             <div class="grow">Изучил</div>
           </div>
-          <div class="crFormItem crSelectButton button noShrink primary filled radSmall hSmall gapMini">
+          <div class="crFormItem crSelectButton button noShrink primary filled radSmall hSmall gapMini"
+               @click="isStatusChangeUlActive = !isStatusChangeUlActive">
             <div>Обновить статус</div>
             <div class="crSelectArrow">df</div>
           </div>
@@ -69,9 +72,8 @@ onMounted(async () => {
         </div>
       </div>
 
-
-      <h6 class="fn-subcap"><b>{{ nodeObject.name }}</b></h6>
-      <p class="lhMain">{{ nodeObject.markdownPage }}</p>
+      <h6 class="fn-subcap"><b>{{ nodeObject.title }}</b></h6>
+      <p class="lhMain">{{ nodeObject.description }}</p>
       <!--      <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>-->
       <!--      <ul class="linkedList fn-accent">-->
       <!--        <li class="item">-->
