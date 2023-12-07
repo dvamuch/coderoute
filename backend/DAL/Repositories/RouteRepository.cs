@@ -43,7 +43,7 @@ namespace CodeRoute.DAL.Repositories
         }
 
 
-        public async Task<Models.RouteStatus> GetStatusByIds(int routeId, int userId)
+        public async Task<int> GetStatusIdByIds(int routeId, int userId)
         {
             try
             {
@@ -51,7 +51,12 @@ namespace CodeRoute.DAL.Repositories
                     .Include(ur => ur.RouteStatus)
                     .FirstOrDefaultAsync(ur => ur.RouteId == routeId && ur.UserId == userId);
 
-                return userRoute.RouteStatus;
+                if (userRoute == null)
+                {
+                    return 0;
+                }
+
+                return userRoute.RouteStatus.RouteStatusId;
 
             }
             catch (Exception ex)
@@ -59,7 +64,7 @@ namespace CodeRoute.DAL.Repositories
                 _logger.LogError(ex, "Error with get status by ids", null);
             }
 
-            return null;
+            return 0;
         }
 
 
@@ -107,10 +112,21 @@ namespace CodeRoute.DAL.Repositories
 
         public async Task<bool> AddRoute(Models.Route route)
         {
+            using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
                 await _context.Routes.AddAsync(route);
                 await _context.SaveChangesAsync();
+
+                await _context.UserRoutes.AddAsync(new Models.UserRoute()
+                {
+                    RouteId = _context.Routes.OrderBy(r => r.RouteId).LastOrDefault().RouteId,
+                    UserId = 1,
+                    RouteStatusId = 1
+                });
+
+                await _context.SaveChangesAsync();
+                await transaction.CommitAsync();
             }
             catch (Exception ex)
             {

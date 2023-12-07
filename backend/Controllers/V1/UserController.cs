@@ -37,7 +37,7 @@ namespace CodeRoute.Controllers.V1
 
         [HttpPost]
         [Route("auth")]
-        public async Task<IActionResult> AuthUser([FromBody] UserLogInfo user)
+        public async Task<IActionResult> AuthUser([FromBody] UserAuthInfo user)
         {
             User result = await _userService.AuthUser(user);
 
@@ -45,6 +45,7 @@ namespace CodeRoute.Controllers.V1
             {
                 return BadRequest("Wrong password");
             }
+
             if (result.UserName == null || result.Email == null)
             {
                 return BadRequest("User doesn't exist");
