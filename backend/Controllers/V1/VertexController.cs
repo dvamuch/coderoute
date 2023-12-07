@@ -6,7 +6,7 @@ namespace CodeRoute.Controllers.V1
     [ApiController]
     [Route("api/v1/[controller]")]
     [ApiExplorerSettings(GroupName = "v1")]
-    public class VertexController : Controller
+    public class VertexController : ControllerBase
     {
         private VertexService _vertexService;
         public VertexController(VertexService vertexService)
@@ -31,7 +31,9 @@ namespace CodeRoute.Controllers.V1
         [HttpGet("{vertexId}", Name = "/getVertex")]
         public async Task<IActionResult> GetVertexById(int vertexId)
         {
-            var res = await _vertexService.GetVertexById(vertexId);
+            int userId = await this.ParseToken();
+
+            var res = await _vertexService.GetVertexById(vertexId, userId);
 
             if (res == null)
             {

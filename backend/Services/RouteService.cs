@@ -26,6 +26,7 @@ namespace CodeRoute.Services
             {
                 maps.Add(new Roadmap()
                 {
+                    RouteId = route.RouteId,
                     Desctiption = route.Desctiption,
                     Title = route.Title,
                     StatusId = (await _routeRepository.GetStatusIdByIds(route.RouteId, userId))
@@ -41,7 +42,7 @@ namespace CodeRoute.Services
                     }
                 }
 
-                maps[maps.Count - 1].Percentage = vertices.Count / 100 * started;
+                maps[maps.Count - 1].Percentage = vertices.Count() / 100 * started;
             }
 
             return maps;
@@ -90,7 +91,7 @@ namespace CodeRoute.Services
             };
 
             var vertices = await _vertexRepository.GetAllVertexFromRoute(routId, userId);
-            if (vertices.Count == 0)
+            if (vertices.Count() == 0)
                 return null;
 
             var connections = await _vertexRepository.GetAllVertexConnectionsInRoute(routId);
