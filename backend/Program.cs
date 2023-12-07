@@ -153,7 +153,7 @@ namespace CodeRoute
             var uRep = scope.ServiceProvider.GetRequiredService<UserRepository>();
 
             //Create special user for anonim visiting routes
-            //uRep.AddUser(new Models.User { UserName = "", Email = "", Password = "", IsAdmin = true });
+            uRep.AddUser(new Models.User { UserName = "", Email = "", Password = "", IsAdmin = true });
 
 
             //Create special vertex for begin of graph
