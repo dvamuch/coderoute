@@ -4,9 +4,9 @@ import CRLogo from "@/components/UI/CRLogo.vue";
 
 import {useAuthorizationModalStore} from "@/stores/authorizationModal";
 
-const authorizationStore = useAuthorizationModalStore();
-const openLoginModal = authorizationStore.openLoginModal;
-const openRegistrationModal = authorizationStore.openRegistrationModal;
+const authorizationModalStore = useAuthorizationModalStore();
+const openLoginModal = authorizationModalStore.openLoginModal;
+const openRegistrationModal = authorizationModalStore.openRegistrationModal;
 </script>
 
 <template>

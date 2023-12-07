@@ -3,9 +3,18 @@
 import CRPasswordInput from "@/components/UI/CRPasswordInput.vue";
 import CRTextInput from "@/components/UI/CRTextInput.vue";
 import {useAuthorizationModalStore} from "@/stores/authorizationModal";
+import {ref} from "vue";
 
 const authorizationStore = useAuthorizationModalStore();
 const openRegistrationModal = authorizationStore.openRegistrationModal;
+
+const password = ref("");
+const login = ref("");
+
+const afdsfsa = () => {
+  console.log(login.value);
+  console.log(password.value);
+};
 </script>
 
 <template>
@@ -26,9 +35,8 @@ const openRegistrationModal = authorizationStore.openRegistrationModal;
         <!--              </div>-->
         <!--            </div>-->
         <div class="flexibleY gapSmaller grow">
-          <CRTextInput placeholder="Email или логин"></CRTextInput>
-
-          <CRPasswordInput></CRPasswordInput>
+          <CRTextInput placeholder="Email или логин" v-model:text="login"></CRTextInput>
+          <CRPasswordInput v-model:password="password"></CRPasswordInput>
         </div>
       </div>
 
@@ -37,7 +45,8 @@ const openRegistrationModal = authorizationStore.openRegistrationModal;
         <div class="flexible gapSmallest">
           <button type="submit" class="crFormItem button secondary filled hLarge radRound grow">Забыл(а) пароль?
           </button>
-          <button class="crFormItem button primary filled hLarge radRound grow">Войти в CodeRoute</button>
+          <button class="crFormItem button primary filled hLarge radRound grow" @click="afdsfsa">Войти в CodeRoute
+          </button>
         </div>
       </div>
 

@@ -2,10 +2,24 @@
 
 import CRPasswordInput from "@/components/UI/CRPasswordInput.vue";
 import CRTextInput from "@/components/UI/CRTextInput.vue";
+import {useAuthorizationStore} from "@/stores/authorization";
 import {useAuthorizationModalStore} from "@/stores/authorizationModal";
+import {ref} from "vue";
 
-const authorizationStore = useAuthorizationModalStore();
-const openLoginModal = authorizationStore.openLoginModal;
+const authorizationModalStore = useAuthorizationModalStore();
+const authorizationStore = useAuthorizationStore();
+
+const openLoginModal = authorizationModalStore.openLoginModal;
+
+
+const email = ref("");
+const login = ref("");
+const password = ref("");
+const passwordRepeat = ref("");
+
+const registerUser = async () => {
+  console.log(await authorizationStore.registerUser(email, login, password));
+};
 </script>
 
 <template>
@@ -18,18 +32,20 @@ const openLoginModal = authorizationStore.openLoginModal;
       <div class="flexible gapSmaller">
         <div class="flexibleY gapSmaller grow">
 
-          <CRTextInput placeholder="Имя пользователя"></CRTextInput>
-          <CRTextInput placeholder="Email"></CRTextInput>
+          <CRTextInput placeholder="Имя пользователя" v-model:text="login"></CRTextInput>
+          <CRTextInput placeholder="Email" v-model:text="email"></CRTextInput>
 
-          <CRPasswordInput></CRPasswordInput>
-          <CRPasswordInput placeholder="Пароль повторно"></CRPasswordInput>
+          <CRPasswordInput v-model:password="password"></CRPasswordInput>
+          <CRPasswordInput v-model:password="passwordRepeat" placeholder="Пароль повторно"></CRPasswordInput>
         </div>
       </div>
 
       <div class="flexibleY gapSmaller">
         <div class="al-center fn-alert">Неверный email или пароль</div>
         <div class="flexible gapSmallest">
-          <button class="crFormItem button primary filled hLarge radRound grow">Зарегистрироваться</button>
+          <button class="crFormItem button primary filled hLarge radRound grow" @click="registerUser">
+            Зарегистрироваться
+          </button>
         </div>
       </div>
 

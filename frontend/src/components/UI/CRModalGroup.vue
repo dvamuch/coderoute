@@ -9,12 +9,12 @@ import {useHelpModalStore} from "@/stores/helpModal";
 import {useNodeModalStore} from "@/stores/nodeModal";
 import {computed} from "vue";
 
-const authorizationStore = useAuthorizationModalStore();
+const authorizationModalStore = useAuthorizationModalStore();
 const nodeModalStore = useNodeModalStore();
 const helpModalStore = useHelpModalStore();
 
-const isShowingLoginModal = computed(() => authorizationStore.isShowingLoginModal);
-const isShowingRegistrationModal = computed(() => authorizationStore.isShowingRegistrationModal);
+const isShowingLoginModal = computed(() => authorizationModalStore.isShowingLoginModal);
+const isShowingRegistrationModal = computed(() => authorizationModalStore.isShowingRegistrationModal);
 const isShowingNodeModal = computed(() => nodeModalStore.isShowingNodeModal);
 const nodeIdToShow = computed(() => nodeModalStore.nodeIdToShow);
 const isShowingHelpModal = computed(() => helpModalStore.isShowingHelpModal);
@@ -23,12 +23,12 @@ const isShowingHelpModal = computed(() => helpModalStore.isShowingHelpModal);
 
 <template>
   <transition name="modal">
-    <CRModal v-if="isShowingLoginModal" :close-action="authorizationStore.closeLoginAndRegistrationModal">
+    <CRModal v-if="isShowingLoginModal" :close-action="authorizationModalStore.closeLoginAndRegistrationModal">
       <CRLoginModalSlot></CRLoginModalSlot>
     </CRModal>
   </transition>
   <transition name="modal">
-    <CRModal v-if="isShowingRegistrationModal" :close-action="authorizationStore.closeLoginAndRegistrationModal">
+    <CRModal v-if="isShowingRegistrationModal" :close-action="authorizationModalStore.closeLoginAndRegistrationModal">
       <CRRegistrationModalSlot></CRRegistrationModalSlot>
     </CRModal>
   </transition>

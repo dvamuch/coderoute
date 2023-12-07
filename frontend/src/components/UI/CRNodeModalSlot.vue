@@ -67,7 +67,7 @@ onMounted(async () => {
       </div>
 
 
-      <h6 class="fn-subcap"><b>{{ nodeObject.name }} {{ props.nodeId }}</b></h6>
+      <h6 class="fn-subcap"><b>{{ nodeObject.name }}</b></h6>
 <!--      <p class="lhMain">Интернет — это глобальная сеть, которая объединяет огромное количество компьютеров по всему-->
 <!--        земному шару и дает возможность получения доступа к информационным ресурсам.</p>-->
       <p class="lhMain">{{ nodeObject.markdownPage}}</p>
