@@ -1,6 +1,8 @@
 ﻿using CodeRoute.DAL.Repositories;
 using CodeRoute.DTO;
 using CodeRoute.Models;
+using Microsoft.AspNetCore.Components.Routing;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 
 namespace CodeRoute.Services
@@ -17,43 +19,58 @@ namespace CodeRoute.Services
             _vertexRepository = vertexRepository;
         }
 
-        public async Task<List<Roadmap>> GetRoutes(int userId) 
+        public async Task<List<RoutesWithDirections>> GetRoutes(int userId) 
         {
-            var routes = await _routeRepository.GetAllRoutes();
-            var maps = new List<Roadmap>();
+            //var routes = await _routeRepository.GetAllRoutes();
+            var result = new List<RoutesWithDirections>();
 
-            foreach (var route in routes)
+            var directRoutes = await _routeRepository.GetRoutesWithDirections();
+
+            foreach (var direction in directRoutes)
             {
-                maps.Add(new Roadmap()
-                {
-                    RouteId = route.RouteId,
-                    Description = route.Description,
-                    Title = route.Title,
-                    StatusId = (await _routeRepository.GetStatusIdByIds(route.RouteId, userId))
-                });
+                var routes = await _routeRepository.GetRoutesByDirection(direction.DirectionId);
+                var roads = new List<Roadmap>();
 
-                var vertices = await _vertexRepository.GetAllVertexFromRoute(route.RouteId, userId);
-                int started = 0;
-                foreach (var vertex in vertices)
+                foreach (var route in routes)
                 {
-                    if (vertex.StatusId != 1)
+                    var road = new Roadmap()
                     {
-                        started++;
+                        RouteId = route.RouteId,
+                        Description = route.Description,
+                        Title = route.Title,
+                        StatusId = (await _routeRepository.GetStatusIdByIds(route.RouteId, userId))
+                    };
+
+                    var vertices = await _vertexRepository.GetAllVertexFromRoute(route.RouteId, userId);
+                    int started = 0;
+                    foreach (var vertex in vertices)
+                    {
+                        if (vertex.StatusId != 1)
+                        {
+                            started++;
+                        }
                     }
+
+                    if (vertices.Count() > 0)
+                    {
+                        float a = started * 100.0f / vertices.Count();
+                        road.Percentage = Convert.ToInt32(a);
+                    }
+                    else
+                    {
+                        road.Percentage = 0;
+                    }
+                    roads.Add(road);
                 }
 
-                if (vertices.Count > 0)
+                result.Add(new RoutesWithDirections()
                 {
-                    float a = started * 100.0f / vertices.Count();
-                    maps[maps.Count - 1].Percentage = Convert.ToInt32(a);
-                }
-                else
-                {
-                    maps[maps.Count - 1].Percentage = 0;
-                }
+                    Direction = direction.Direction.DirectionName,
+                    Routes = roads,
+                });
             }
 
-            return maps;
+            return result;
         }
 
         public async Task<List<Models.RouteStatus>> GetStatuses()

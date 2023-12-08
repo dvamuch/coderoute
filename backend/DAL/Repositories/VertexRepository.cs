@@ -35,6 +35,7 @@ namespace CodeRoute.DAL.Repositories
                 .ToListAsync();
         }
 
+
         public async Task<List<Vertex>> GetAllVertexFromRoute(int routeId)
         {
             return await _context.Vertexes

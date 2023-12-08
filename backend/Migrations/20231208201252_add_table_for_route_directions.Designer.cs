@@ -2,6 +2,7 @@
 using CodeRoute.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -10,9 +11,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CodeRoute.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20231208201252_add_table_for_route_directions")]
+    partial class add_table_for_route_directions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,6 +51,8 @@ namespace CodeRoute.Migrations
 
                     b.HasKey("DirectionId", "RouteId");
 
+                    b.HasIndex("RouteId");
+
                     b.ToTable("DirectionRoutes");
                 });
 
@@ -78,12 +83,6 @@ namespace CodeRoute.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("DirectionRouteDirectionId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("DirectionRouteRouteId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("MarkDownPage")
                         .IsRequired()
                         .HasColumnType("text");
@@ -95,8 +94,6 @@ namespace CodeRoute.Migrations
                     b.HasKey("RouteId");
 
                     b.HasAlternateKey("Title");
-
-                    b.HasIndex("DirectionRouteDirectionId", "DirectionRouteRouteId");
 
                     b.ToTable("Routes");
                 });
@@ -250,7 +247,15 @@ namespace CodeRoute.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("CodeRoute.Models.Route", "Route")
+                        .WithMany()
+                        .HasForeignKey("RouteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Direction");
+
+                    b.Navigation("Route");
                 });
 
             modelBuilder.Entity("CodeRoute.Models.RelatedRoutes", b =>
@@ -270,17 +275,6 @@ namespace CodeRoute.Migrations
                     b.Navigation("CurrentRoute");
 
                     b.Navigation("RelatedRoute");
-                });
-
-            modelBuilder.Entity("CodeRoute.Models.Route", b =>
-                {
-                    b.HasOne("CodeRoute.Models.DirectionRoute", "DirectionRoute")
-                        .WithMany("Routes")
-                        .HasForeignKey("DirectionRouteDirectionId", "DirectionRouteRouteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DirectionRoute");
                 });
 
             modelBuilder.Entity("CodeRoute.Models.UserRoute", b =>
@@ -354,11 +348,6 @@ namespace CodeRoute.Migrations
                     b.Navigation("CurrentVertex");
 
                     b.Navigation("PreviousVertex");
-                });
-
-            modelBuilder.Entity("CodeRoute.Models.DirectionRoute", b =>
-                {
-                    b.Navigation("Routes");
                 });
 #pragma warning restore 612, 618
         }

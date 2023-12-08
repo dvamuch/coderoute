@@ -23,7 +23,7 @@ namespace CodeRoute.Controllers.V1
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Roadmap>>> GetList()
+        public async Task<ActionResult<List<RoutesWithDirections>>> GetList()
         {
             int userId = await this.ParseToken();
             return await _routeService.GetRoutes(userId);
