@@ -114,7 +114,7 @@ const statusList = [
 export const useNodeStatusStore = defineStore("nodeStatus", () => {
 
   const getNodeClassesByStatusId = (statusId) => {
-    console.log(statusIdToNodeClasses[statusId]);
+    // console.log(statusIdToNodeClasses[statusId]);
     return statusIdToNodeClasses[statusId];
   };
 

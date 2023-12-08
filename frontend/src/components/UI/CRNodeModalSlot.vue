@@ -1,5 +1,11 @@
 <script setup>
 
+import CRSelectStatus from "@/components/UI/CRSelect.vue";
+import {useAuthorizationStore} from "@/stores/authorization";
+import {useNodesStore} from "@/stores/nodes";
+import {useNodeStatusStore} from "@/stores/nodeStatus";
+import {computed, onMounted, ref} from "vue";
+
 const props = defineProps({
   nodeId: {
     type: Number,
@@ -7,27 +13,14 @@ const props = defineProps({
   },
 });
 
-import CRSelectStatus from "@/components/UI/CRSelect.vue";
-import {useAuthorizationStore} from "@/stores/authorization";
-import {useNodesStore} from "@/stores/nodes";
-import {useNodeStatusStore} from "@/stores/nodeStatus";
-import {computed, onMounted, ref} from "vue";
-
 const nodesStore = useNodesStore();
 const authorizationStore = useAuthorizationStore();
 const nodeStatusStore = useNodeStatusStore();
 
-const nodeObject = computed(() => {
-  const newNodeObject = nodesStore.nodeObjects[props.nodeId];
-  const defaultNodeObject = {
-    title: "",
-    description: "",
-    statusId: 1,
-  };
-  status.value = newNodeObject?.statusId || 1;
-
-  // console.log(11, newNodeObject);
-  return newNodeObject || defaultNodeObject;
+const nodeObject = ref({
+  title: "",
+  description: "",
+  statusId: 1,
 });
 
 const isAuthorized = computed(() => authorizationStore.isAuthorized);
@@ -35,6 +28,9 @@ const isAuthorized = computed(() => authorizationStore.isAuthorized);
 onMounted(async () => {
   // console.log(2, props.nodeId);
   await nodesStore.fetchNode(props.nodeId);
+  const newNodeObject = nodesStore.nodeObjects[props.nodeId];
+  nodeObject.value = newNodeObject;
+  status.value = newNodeObject?.statusId || 1;
 });
 
 
@@ -62,25 +58,7 @@ const status = ref(1);
       </div>
 
       <h6 class="fn-subcap"><b>{{ nodeObject.title }}</b></h6>
-      <div class="flexibleY gapXSmallest" v-html="nodeObject.description">
-
-      </div>
-      <!--      <p class="lhMain" >{{ nodeObject.description }}</p>-->
-      <!--            <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>-->
-      <!--            <ul class="linkedList fn-accent">-->
-      <!--              <li class="item">-->
-      <!--                <a title="" href="#" class="link">Как работает интернет?</a>-->
-      <!--              </li>-->
-      <!--              <li class="item">-->
-      <!--                <a title="" href="#" class="link">Интернет в деталях</a>-->
-      <!--              </li>-->
-      <!--              <li class="item">-->
-      <!--                <a title="" href="#" class="link">Введение в интернет</a>-->
-      <!--              </li>-->
-      <!--              <li class="item">-->
-      <!--                <a title="" href="#" class="link">Как работает Web?</a>-->
-      <!--              </li>-->
-      <!--            </ul>-->
+      <div class="flexibleY gapXSmallest" v-html="nodeObject.description"></div>
     </div>
 
   </div>

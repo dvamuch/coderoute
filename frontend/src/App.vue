@@ -15,14 +15,13 @@
 <script>
 import FooterComponent from "@/components/UI/CRFooter.vue";
 import HeaderComponent from "@/components/UI/CRHeader.vue";
-import CRLogo from "@/components/UI/CRLogo.vue";
 import CRMobilePlaceholder from "@/components/UI/CRMobilePlaceholder.vue";
 import CRModalGroup from "@/components/UI/CRModalGroup.vue";
 import {defineComponent} from "vue";
 
 
 export default defineComponent({
-  components: {CRMobilePlaceholder, CRLogo, CRModalGroup, FooterComponent, HeaderComponent},
+  components: {CRMobilePlaceholder, CRModalGroup, FooterComponent, HeaderComponent},
 });
 </script>
 
