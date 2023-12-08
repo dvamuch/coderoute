@@ -35,11 +35,11 @@ const registerUser = async () => {
       <div class="flexible gapSmaller">
         <div class="flexibleY gapSmaller grow">
 
-          <CRTextInput placeholder="Имя пользователя" v-model:text="login"></CRTextInput>
-          <CRTextInput placeholder="Email" v-model:text="email"></CRTextInput>
+          <CRTextInput placeholder="Имя пользователя" v-model:text="login" :is-valid="true"></CRTextInput>
+          <CRTextInput placeholder="Email" v-model:text="email" :is-valid="true"></CRTextInput>
 
-          <CRPasswordInput v-model:password="password"></CRPasswordInput>
-          <CRPasswordInput v-model:password="passwordRepeat" placeholder="Пароль повторно"></CRPasswordInput>
+          <CRPasswordInput v-model:password="password" :is-valid="true"></CRPasswordInput>
+          <CRPasswordInput v-model:password="passwordRepeat" placeholder="Пароль повторно" :is-valid="true"></CRPasswordInput>
         </div>
       </div>
 
