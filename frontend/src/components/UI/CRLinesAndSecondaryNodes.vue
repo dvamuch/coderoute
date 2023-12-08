@@ -15,10 +15,6 @@ const props = defineProps({
     type: Array,
     required: true,
   },
-  parentNodeId: {
-    type: Number,
-    required: true,
-  },
 });
 
 const isShowLeft = computed(() => props.indexInArray % 2 === 1);
@@ -30,7 +26,7 @@ const isShowRight = computed(() => props.indexInArray % 2 === 0);
     <div class="buttons">
       <CRSecondaryNode v-for="secondaryNode in secondaryNodes" v-bind:key="secondaryNode.id"
                        :title="secondaryNode.title" :id="secondaryNode.id"
-                       :status-id="secondaryNode.statusId" :parent-node-id="props.parentNodeId"></CRSecondaryNode>
+                       :status-id="secondaryNode.statusId"></CRSecondaryNode>
     </div>
 
     <div class="lines">
@@ -62,7 +58,7 @@ const isShowRight = computed(() => props.indexInArray % 2 === 0);
     <div class="buttons">
       <CRSecondaryNode v-for="secondaryNode in secondaryNodes" v-bind:key="secondaryNode.id"
                        :title="secondaryNode.title" :id="secondaryNode.id"
-                       :status-id="secondaryNode.statusId" :parent-node-id="props.parentNodeId"></CRSecondaryNode>
+                       :status-id="secondaryNode.statusId"></CRSecondaryNode>
     </div>
   </div>
 </template>

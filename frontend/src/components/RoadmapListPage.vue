@@ -23,6 +23,8 @@ onMounted(async () => {
       </div>
     </header>
 
-    <CRRoadmapListGroup :roadmap-list="developerRoadmapList" profession-name=""></CRRoadmapListGroup>
+    <CRRoadmapListGroup :roadmap-list="developerRoadmapList" profession-name="Разработка"></CRRoadmapListGroup>
+    <CRRoadmapListGroup :roadmap-list="developerRoadmapList" profession-name="Аналитика"></CRRoadmapListGroup>
+    <CRRoadmapListGroup :roadmap-list="developerRoadmapList" profession-name="Дизайн"></CRRoadmapListGroup>
   </main>
 </template>

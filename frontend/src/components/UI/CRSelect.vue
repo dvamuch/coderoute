@@ -34,6 +34,7 @@ const changeItem = (newId) => {
 
     <div class="crSelect flexible" :class="{active: expanded}">
       <div class="crFormItem crSelectInput button noShrink secondary radSmall hSmall gapMini" style="min-width: 180px;">
+        <!--   Захардкоженная ширина     -->
         <div class="sSmallest crFormItem radRound" :class="currentClass"></div>
         <div class="grow"> {{ currentTitle }}</div>
       </div>

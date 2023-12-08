@@ -19,14 +19,10 @@ const props = defineProps({
     type: Number,
     required: true,
   },
-  parentNodeId: {
-    type: Number,
-    required: true,
-  },
 });
 
 const openNodeModal = () => {
-  nodeModalStore.openNodeModal(props.id, props.parentNodeId);
+  nodeModalStore.openNodeModal(props.id);
 };
 
 </script>

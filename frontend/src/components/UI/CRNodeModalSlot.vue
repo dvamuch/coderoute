@@ -5,9 +5,6 @@ const props = defineProps({
     type: Number,
     required: true,
   },
-  parentNodeId: {
-    required: true,
-  },
 });
 
 import CRSelectStatus from "@/components/UI/CRSelect.vue";
@@ -43,7 +40,7 @@ onMounted(async () => {
 
 const changeNodeStatus = async (newStatusId) => {
   console.log(newStatusId);
-  await nodesStore.updateStatus(props.parentNodeId, props.nodeId, newStatusId);
+  await nodesStore.updateStatus(props.nodeId, newStatusId);
 };
 
 const status = ref(1);
@@ -66,21 +63,21 @@ const status = ref(1);
 
       <h6 class="fn-subcap"><b>{{ nodeObject.title }}</b></h6>
       <p class="lhMain">{{ nodeObject.description }}</p>
-      <!--      <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>-->
-      <!--      <ul class="linkedList fn-accent">-->
-      <!--        <li class="item">-->
-      <!--          <a title="" href="#" class="link">Как работает интернет?</a>-->
-      <!--        </li>-->
-      <!--        <li class="item">-->
-      <!--          <a title="" href="#" class="link">Интернет в деталях</a>-->
-      <!--        </li>-->
-      <!--        <li class="item">-->
-      <!--          <a title="" href="#" class="link">Введение в интернет</a>-->
-      <!--        </li>-->
-      <!--        <li class="item">-->
-      <!--          <a title="" href="#" class="link">Как работает Web?</a>-->
-      <!--        </li>-->
-      <!--      </ul>-->
+<!--            <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>-->
+<!--            <ul class="linkedList fn-accent">-->
+<!--              <li class="item">-->
+<!--                <a title="" href="#" class="link">Как работает интернет?</a>-->
+<!--              </li>-->
+<!--              <li class="item">-->
+<!--                <a title="" href="#" class="link">Интернет в деталях</a>-->
+<!--              </li>-->
+<!--              <li class="item">-->
+<!--                <a title="" href="#" class="link">Введение в интернет</a>-->
+<!--              </li>-->
+<!--              <li class="item">-->
+<!--                <a title="" href="#" class="link">Как работает Web?</a>-->
+<!--              </li>-->
+<!--            </ul>-->
     </div>
 
   </div>

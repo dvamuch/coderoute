@@ -50,14 +50,14 @@ const statusIdToVerticalLineClasses = {
 
 const statuses = [
   {
-    id: 1,
-    name: "Не изучаю",
-    class: ["primary"],
-  },
-  {
     id: 2,
     name: "Пропустил",
     class: ["filled", "secondary2"],
+  },
+  {
+    id: 1,
+    name: "Не изучаю",
+    class: ["primary"],
   },
   {
     id: 3,

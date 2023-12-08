@@ -26,7 +26,8 @@ const registerUser = async () => {
 
 <template>
   <div class="flexibleY gapMedium">
-    <h6 class="fn-subcap al-center"><b>Создать аккаунт</b></h6>
+    <h6 class="fn-subcap al-center" style="font-family: 'NT Somic Bold', Arial, Helvetica, sans-serif;"><b>Создать
+      аккаунт</b></h6>
 
     <form class="flexibleY gapSmall">
 

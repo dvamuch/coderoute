@@ -6,7 +6,7 @@
 
   <div class="flexibleY gapMedium">
     <div class="flexibleY gapXSmallest">
-      <h6 class="fn-subcap"><b>Отслеживание прогресса</b></h6>
+      <h2 class="fn-caption"><b>Отслеживание прогресса</b></h2>
       <p class="lhMain">Для отслеживания прогресса обновляй статус каждого блока в его меню.</p>
       <p class="lhMain">Все доступные статусы блоков:</p>
       <ul class="borderedList">

@@ -10,8 +10,8 @@ export const useNodesStore = defineStore("nodes", () => {
   const isFetched = ref(false);
   const fetchedRoadmapId = ref(-1);
   const fetcher = userFetcher();
-  const fetchRoadmap = async (roadmapId) => {
-    if (isFetched.value && roadmapId === fetchedRoadmapId.value) {
+  const fetchRoadmap = async (roadmapId, refresh = false) => {
+    if (isFetched.value && roadmapId === fetchedRoadmapId.value && !refresh) {
       return;
     }
 
@@ -30,22 +30,16 @@ export const useNodesStore = defineStore("nodes", () => {
     nodeObjects.value[nodeId] = await fetcher.fetchJson(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Vertex/${nodeId}`);
   };
 
-  const updateStatus = async (parentNodeId, nodeId, statusId) => {
+  const updateStatus = async (nodeId, statusId) => {
     const options = {
       method: "POST",
     };
     nodeObjects.value[nodeId].statusId = statusId;
 
     await fetcher.myFetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/UserVertex/${nodeId}/${statusId}`, options);
+    console.log();
+    await fetchRoadmap(fetchedRoadmapId.value, true);
 
-    if (parentNodeId) {
-      const parentNodeIndex = nodeList.value.findIndex((element) => element.id === parentNodeId);
-      const nodeIndex = nodeList.value[parentNodeIndex].secondaryNodes.findIndex((element) => element.id === nodeId);
-      nodeList.value[parentNodeIndex].secondaryNodes[nodeIndex].statusId = statusId;
-    } else {
-      const nodeIndex = nodeList.value.findIndex((element) => element.id === nodeId);
-      nodeList.value[nodeIndex].statusId = statusId;
-    }
   };
 
   return {nodeList, roadmapInfo, roadmapProgress, nodeObjects, fetchRoadmap, fetchNode, updateStatus};
