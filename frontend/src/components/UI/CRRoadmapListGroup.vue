@@ -18,7 +18,8 @@ const props = defineProps({
 
 <template>
   <section class="flexibleY gapSmall wmxAltContent">
-    <h3 class="fn-subcap"><b> {{ props.professionName}}</b></h3>
+    <h3 class="fn-subcap" style="font-family: 'NT Somic Medium', Arial, Helvetica, sans-serif;"><b>
+      {{ props.professionName }}</b></h3>
     <ul class="crCards x2 gapSmaller">
       <CRRoadmapListCard v-for="roadmapElement in props.roadmapList" v-bind:key="roadmapElement.roadmapId"
                          :title="roadmapElement.title"

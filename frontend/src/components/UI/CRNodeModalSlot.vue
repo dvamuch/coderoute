@@ -62,22 +62,25 @@ const status = ref(1);
       </div>
 
       <h6 class="fn-subcap"><b>{{ nodeObject.title }}</b></h6>
-      <p class="lhMain">{{ nodeObject.description }}</p>
-<!--            <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>-->
-<!--            <ul class="linkedList fn-accent">-->
-<!--              <li class="item">-->
-<!--                <a title="" href="#" class="link">Как работает интернет?</a>-->
-<!--              </li>-->
-<!--              <li class="item">-->
-<!--                <a title="" href="#" class="link">Интернет в деталях</a>-->
-<!--              </li>-->
-<!--              <li class="item">-->
-<!--                <a title="" href="#" class="link">Введение в интернет</a>-->
-<!--              </li>-->
-<!--              <li class="item">-->
-<!--                <a title="" href="#" class="link">Как работает Web?</a>-->
-<!--              </li>-->
-<!--            </ul>-->
+      <div class="flexibleY gapXSmallest" v-html="nodeObject.description">
+
+      </div>
+      <!--      <p class="lhMain" >{{ nodeObject.description }}</p>-->
+      <!--            <p class="lhMain">Чтобы узнать больше, изучите следующие материалы:</p>-->
+      <!--            <ul class="linkedList fn-accent">-->
+      <!--              <li class="item">-->
+      <!--                <a title="" href="#" class="link">Как работает интернет?</a>-->
+      <!--              </li>-->
+      <!--              <li class="item">-->
+      <!--                <a title="" href="#" class="link">Интернет в деталях</a>-->
+      <!--              </li>-->
+      <!--              <li class="item">-->
+      <!--                <a title="" href="#" class="link">Введение в интернет</a>-->
+      <!--              </li>-->
+      <!--              <li class="item">-->
+      <!--                <a title="" href="#" class="link">Как работает Web?</a>-->
+      <!--              </li>-->
+      <!--            </ul>-->
     </div>
 
   </div>
