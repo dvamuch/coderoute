@@ -10,12 +10,29 @@ const authorizationModalStore = useAuthorizationModalStore();
 const authorizationStore = useAuthorizationStore();
 const openRegistrationModal = authorizationModalStore.openRegistrationModal;
 
-const password = ref("");
-const login = ref("");
+const formData = ref({
+  password: "",
+  login: "",
+});
 
 const authenticateUser = async () => {
-  await authorizationStore.authenticateUser(login.value, password.value);
+  await authorizationStore.authenticateUser(formData.value.login, formData.value.password);
   authorizationModalStore.closeLoginAndRegistrationModal();
+};
+
+const isValid = ref({password: true, login: true});
+
+const validate = (fieldName) => {
+  const rules = {
+    password: (v) => {
+      return v.length > 6;
+    },
+    login: (v) => {
+      return v.length > 3;
+    },
+  };
+
+  isValid.value[fieldName] = rules[fieldName](formData.value[fieldName]);
 };
 </script>
 
@@ -24,8 +41,9 @@ const authenticateUser = async () => {
   <div class="flexibleY gapMedium">
     <h6 class="fn-subcap al-center"><b>Войти в аккаунт</b></h6>
 
-    <form class="flexibleY gapSmall">
+    <form class="flexibleY gapSmall" @submit="authenticateUser">
 
+      {{ isValid }}
 
       <div class="flexible gapSmaller">
         <!--            <div class="noShrink">-->
@@ -37,17 +55,19 @@ const authenticateUser = async () => {
         <!--              </div>-->
         <!--            </div>-->
         <div class="flexibleY gapSmaller grow">
-          <CRTextInput placeholder="Email или логин" v-model:text="login"></CRTextInput>
-          <CRPasswordInput v-model:password="password"></CRPasswordInput>
+          <CRTextInput placeholder="Email или логин" v-model:text="formData.login"
+                       @update:text="validate('login')"></CRTextInput>
+          <CRPasswordInput v-model:password="formData.password"
+                           @update:password="validate('password', )"></CRPasswordInput>
         </div>
       </div>
 
       <div class="flexibleY gapSmaller">
         <!--        <div class="al-center fn-alert">Неверный email или пароль</div>-->
         <div class="flexible gapSmallest">
-          <button type="submit" class="crFormItem button secondary filled hLarge radRound grow">Забыл(а) пароль?
+          <button class="crFormItem button secondary filled hLarge radRound grow">Забыл(а) пароль?
           </button>
-          <button class="crFormItem button primary filled hLarge radRound grow" @click="authenticateUser">Войти в
+          <button type="submit" class="crFormItem button primary filled hLarge radRound grow" @click="authenticateUser">Войти в
             CodeRoute
           </button>
         </div>

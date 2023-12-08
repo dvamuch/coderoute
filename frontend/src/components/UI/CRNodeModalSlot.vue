@@ -7,6 +7,7 @@ const props = defineProps({
   },
 });
 
+import CRSelectStatus from "@/components/UI/CRSelect.vue";
 import {useAuthorizationStore} from "@/stores/authorization";
 import {useNodesStore} from "@/stores/nodes";
 import {useNodeStatusStore} from "@/stores/nodeStatus";
@@ -24,15 +25,17 @@ const nodeObject = computed(() => {
 const isAuthorized = computed(() => authorizationStore.isAuthorized);
 
 onMounted(async () => {
+  console.log(2, props.nodeId);
   await nodesStore.fetchNode(props.nodeId);
-  console.log(2, nodesStore.nodeObjects);
 });
 
-const isStatusChangeUlActive = ref(false);
 
-const changeNodeStatus = async () => {
-
+const changeNodeStatus = async (newStatusId) => {
+  console.log(newStatusId);
 };
+
+const status = ref(1);
+// const status = computed(() => nodeObject.value.statusId);
 
 </script>
 
@@ -41,42 +44,13 @@ const changeNodeStatus = async () => {
   <div class="flexibleY gapMedium">
     <div class="flexibleY gapXSmallest">
 
-
+      <!--      {{ status}}-->
+      <!--      {{ nodeStatusStore.statuses}}-->
       <div class="flexible">
-
-        <div v-if="isAuthorized" class="crSelect flexible" :class="{active: isStatusChangeUlActive}">
-          <div class="crFormItem crSelectInput button noShrink secondary radSmall hSmall gapMini">
-            <div class="sSmallest crFormItem radRound"
-                 :class="nodeStatusStore.getNodeClassesByStatusId(nodeObject.statusId)"></div>
-            <div class="grow"> {{ nodeStatusStore.getNameByStatusId(nodeObject.statusId) }}</div>
-          </div>
-          <div class="crFormItem crSelectButton button noShrink primary filled radSmall hSmall gapMini"
-               @click="isStatusChangeUlActive = !isStatusChangeUlActive">
-            <div>Обновить статус</div>
-            <div class="crSelectArrow">df</div>
-          </div>
-
-          <div class="crSelectContent bg-background">
-            <ul class="borderedList">
-              <li class="item flexible gapMini link">
-                <div class="sSmallest crFormItem radRound secondary2 filled"></div>
-                <div>Пропустил</div>
-              </li>
-              <li class="item flexible gapMini link">
-                <div class="sSmallest crFormItem radRound primary"></div>
-                <div>Не изучаю</div>
-              </li>
-              <li class="item flexible gapMini link">
-                <div class="sSmallest crFormItem radRound primary filled"></div>
-                <div>В процессе</div>
-              </li>
-              <li class="item flexible gapMini link">
-                <div class="sSmallest crFormItem radRound completed filled"></div>
-                <div>Изучил</div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <template v-if="isAuthorized">
+          <CRSelectStatus :items="nodeStatusStore.statuses" v-model="status"
+                          @update:model-value="changeNodeStatus"></CRSelectStatus>
+        </template>
       </div>
 
       <h6 class="fn-subcap"><b>{{ nodeObject.title }}</b></h6>

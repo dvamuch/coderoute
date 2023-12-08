@@ -48,12 +48,68 @@ const statusIdToVerticalLineClasses = {
   },
 };
 
+const statuses = [
+  {
+    id: 1,
+    name: "Не изучаю",
+    class: ["primary"],
+  },
+  {
+    id: 2,
+    name: "Пропустил",
+    class: ["filled", "secondary2"],
+  },
+  {
+    id: 3,
+    name: "В процессе",
+    class: ["filled", "primary"],
+  },
+  {
+    id: 4,
+    name: "Изучил",
+    class: ["filled", "completed"],
+  },
+];
+
 const statusIdToName = {
   1: "Не изучаю",
   2: "Попустил",
   3: "В процессе",
   4: "Изучил",
 };
+const statusList = [
+  {
+    id: 1,
+    name: "Не изучаю",
+    nodeClasses: {
+      primary: true,
+    },
+  },
+  {
+    id: 2,
+    name: "Пропустил",
+    nodeClasses: {
+      filled: true,
+      secondary2: true,
+    },
+  },
+  {
+    id: 3,
+    name: "В процессе",
+    nodeClasses: {
+      filled: true,
+      primary: true,
+    },
+  },
+  {
+    id: 4,
+    name: "Изучил",
+    nodeClasses: {
+      filled: true,
+      completed: true,
+    },
+  },
+];
 
 export const useNodeStatusStore = defineStore("nodeStatus", () => {
 
@@ -75,8 +131,15 @@ export const useNodeStatusStore = defineStore("nodeStatus", () => {
   };
 
   const getOtherStatuses = (statusId) => {
-    
+    return statusList.filter(({id}) => id !== statusId);
   };
 
-  return {getNodeClassesByStatusId, getLineClassesByStatusId, getVerticalLineClassesByStatusId, getNameByStatusId};
+  return {
+    getNodeClassesByStatusId,
+    getLineClassesByStatusId,
+    getVerticalLineClassesByStatusId,
+    getNameByStatusId,
+    getOtherStatuses,
+    statuses,
+  };
 });

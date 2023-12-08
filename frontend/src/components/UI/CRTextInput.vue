@@ -19,7 +19,7 @@ const text = ref("");
 <template>
   <label class="crFormWrap">
     <input type="text" :placeholder="props.placeholder" class="crFormItem txt secondary hMedium radSmall" v-model="text"
-           @change="$emit('update:text', $event.target.value)"/>
+           @input="$emit('update:text', $event.target.value)"/>
     <span class="crFormPlaceholder">{{ props.placeholder }}</span>
   </label>
 </template>
