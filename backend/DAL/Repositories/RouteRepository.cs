@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CodeRoute.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodeRoute.DAL.Repositories
 {
@@ -42,6 +43,29 @@ namespace CodeRoute.DAL.Repositories
             return null;
         }
 
+        public async Task<List<Direction>> GetAllDirections()
+        {
+            return await _context.Directions.ToListAsync();
+        }
+
+        public async Task<List<Models.Route>> GetRoutesByDirection(int directId)
+        {
+            return await _context.DirectionRoutes
+                .Include(dr =>dr.Route)
+                .Where(dr => dr.DirectionId == directId)
+                .Select(dr => dr.Route)
+                .ToListAsync();
+        }
+
+        public async Task<List<DirectionRoute>> GetRoutesWithDirections()
+        {
+            return await _context.DirectionRoutes
+                .Include(dr => dr.Direction)
+                .Include(dr => dr.Route)
+                .GroupBy(dr => dr.Direction)
+                .Select(g => g.First())
+                .ToListAsync();
+        }
 
         public async Task<int> GetStatusIdByIds(int routeId, int userId)
         {

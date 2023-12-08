@@ -7,24 +7,16 @@ namespace CodeRoute.DAL
     {
         public Context(DbContextOptions<Context> options) : base(options)
         {
+            
             Database.EnsureDeleted();
             Database.Migrate();
             
             if (Routes.Count() == 0)
             {
-                ResetTestDB();
+                this.AddAllPresets();
+                this.SaveChanges();
             }
-        }
-
-        private void ResetTestDB()
-        {
-            this.AddRoutePresets();
-            this.AddVertexPresets();
-            this.AddVertexConnectionsPresets();
-            this.AddRouteStatusPresets();
-            this.AddVertexStatusPresets();
-
-            this.SaveChanges();
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -33,6 +25,8 @@ namespace CodeRoute.DAL
             modelBuilder.Entity<RelatedRoutes>().HasKey(ur => new { ur.CurrentRouteId, ur.RelatedRouteId });
             modelBuilder.Entity<UserVertex>().HasKey(ur => new { ur.UserId, ur.VertexId });
             modelBuilder.Entity<VertexConnection>().HasKey(ur => new { ur.CurrentVertexId, ur.PreviousVertexId });
+            modelBuilder.Entity<DirectionRoute>().HasKey(dr => new { dr.DirectionId, dr.RouteId });
+
 
             modelBuilder.Entity<Models.Route>().HasAlternateKey(r => r.Title);
             //modelBuilder.Entity<VertexStatus>().Property(p => p.StatusDescription).IsRequired(false);
@@ -47,5 +41,7 @@ namespace CodeRoute.DAL
         public DbSet<Vertex> Vertexes { get; set; }
         public DbSet<VertexStatus> VertexStatuses { get; set; }
         public DbSet<VertexConnection> VertexConnections { get; set; }
+        public DbSet<Direction> Directions { get; set; }
+        public DbSet<DirectionRoute> DirectionRoutes { get; set; }
     }
 }

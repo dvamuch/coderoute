@@ -5,12 +5,41 @@ namespace CodeRoute.DAL
 {
     public static class PresetsForContext 
     {
+
+        public static void AddAllPresets(this Context context)
+        {
+            context.AddRoutePresets();
+            context.AddRouteDirectionsPresets();
+            context.AddVertexPresets();
+            context.AddVertexConnectionsPresets();
+            context.AddRouteStatusPresets();
+            context.AddVertexStatusPresets();
+        }
+
         public static void AddRoutePresets(this Context context)
         {
             context.Routes.Add(new Models.Route() { Title = "", Description = "", MarkDownPage = "" });
             context.Routes.Add(new Models.Route() { Title = "Frontend Разработчик", Description = "Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО", MarkDownPage = "" });
             context.Routes.Add(new Models.Route() { Title = "Backend Разработчик", Description = "Программист, который пишет серверный код, отвечает за реакцию ресурса на действия пользователя и выдачу информации", MarkDownPage = "" });
-            context.Routes.Add(new Models.Route() { Title = "DevOps инженер", Description = "Специалист, который синхронизирует этапы разработки программного продукта", MarkDownPage = "" });
+            context.Routes.Add(new Models.Route() { Title = "Бизнес-аналитик", Description = "Специалист, изучающий и оптимизирующий бизнес-процессы", MarkDownPage = "" });
+            context.Routes.Add(new Models.Route() { Title = "UX-дизайнер", Description = "Специалист, проектирующий удобные для пользователь интерфейсы", MarkDownPage = "" });
+
+            context.SaveChanges();
+        }
+
+        public static void AddRouteDirectionsPresets(this Context context)
+        {
+            context.Directions.Add(new Models.Direction() { DirectionId = 1, DirectionName = "Разработка" });
+            context.Directions.Add(new Models.Direction() { DirectionId = 2, DirectionName = "Аналитика" });
+            context.Directions.Add(new Models.Direction() { DirectionId = 3, DirectionName = "Дизайн" });
+
+
+            context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 1, RouteId = 2 });
+            context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 1, RouteId = 3 });
+            context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 2, RouteId = 4 });
+            context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 3, RouteId = 5 });
+
+            context.SaveChanges();
         }
 
         public static void AddVertexPresets(this Context context)
@@ -68,7 +97,7 @@ namespace CodeRoute.DAL
                 VertexId = 7,
                 RouteId = 2,
                 Name = "Cемантическая верстка",
-                MarkdownPage = "<p class=\"lhMain\">Семантический элемент четко описывает его значение как для браузера, так и для разработчика. В HTML семантический элемент - это тип элементов, которые могут использоваться для определения различных частей веб-страницы, таких как <form>, <table>, <article>, <header>, <footer>,и т.д.</p>\r\n<p class=\"lhMain\">Посетите следующие ресурсы, чтобы узнать больше:</p>\r\n<ul class=\"linkedList fn-accent\">\r\n  <li class=\"item\">\r\n    <a title=\"\" href=\"https://gist.github.com/semyonnaumov/b5a0631b2f34437f7928093c52fafa46\" class=\"link\">Краткий конспект по HTML</a>\r\n  </li>\r\n  <li class=\"item\">\r\n    <a title=\"\" href=\"https://html5book.ru/html-tags/\" class=\"link\">HTML-теги</a>\r\n  </li>\r\n</ul>"
+                MarkdownPage = "<p class=\"lhMain\">Семантический элемент четко описывает его значение как для браузера, так и для разработчика. В HTML семантический элемент - это тип элементов, которые могут использоваться для определения различных частей веб-страницы, таких как &lt;form&gt;, &lt;table&gt;, &lt;article&gt;, &lt;header&gt;, &lt;footer&gt;,и т.д.</p>\r\n<p class=\"lhMain\">Посетите следующие ресурсы, чтобы узнать больше:</p>\r\n<ul class=\"linkedList fn-accent\">\r\n  <li class=\"item\">\r\n    <a title=\"\" href=\"https://gist.github.com/semyonnaumov/b5a0631b2f34437f7928093c52fafa46\" class=\"link\">Краткий конспект по HTML</a>\r\n  </li>\r\n  <li class=\"item\">\r\n    <a title=\"\" href=\"https://html5book.ru/html-tags/\" class=\"link\">HTML-теги</a>\r\n  </li>\r\n</ul>"
             });
 
             context.Vertexes.Add(new Models.Vertex()
