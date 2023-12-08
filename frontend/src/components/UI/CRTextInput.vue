@@ -22,10 +22,9 @@ const text = ref("");
 </script>
 
 <template>
-  {{ props.isValid }}
   <label class="crFormWrap">
-    <input type="text" :placeholder="props.placeholder" class="crFormItem txt hMedium radSmall primary"
-           :class="{alert: !props.isValid, primary: props.isValid}"
+    <input type="text" :placeholder="props.placeholder"
+           :class="{alert: !props.isValid, secondary: props.isValid}" class="crFormItem txt hMedium radSmall "
            v-model="text"
            @input="$emit('update:text', $event.target.value)"/>
     <span class="crFormPlaceholder">{{ props.placeholder }}</span>

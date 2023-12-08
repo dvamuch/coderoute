@@ -615,6 +615,27 @@ h2 {
     cursor: pointer;
 }
 
+
+.bg-alert,
+.crFormItem.alert,
+.crFormItem.alert ~ .crFormIcon .crIcon {
+    background-color: rgba(var(--alert-500), 1);
+    border-color: rgba(var(--alert-500), 1) !important;
+}
+
+.crFormItem.alert:is(:hover, :active, :focus) {
+    background-color: rgba(var(--alert-600), 1) ;
+    border-color: rgba(var(--alert-600), 1) !important;
+}
+
+.crFormItem.txt.alert:not(:placeholder-shown) + .crFormPlaceholder {
+    color: rgba(var(--alert-600), 1) !important;
+}
+
+.fn-alert {
+    color: rgba(var(--alert-600), 1) !important;
+}
+
 .bg-primary,
 .crFormItem.primary,
 .crFormItem.txt:focus:focus:focus,
@@ -695,25 +716,6 @@ h2 {
     color: rgba(var(--accent-500), 1);
 }
 
-.bg-alert,
-.crFormItem.alert,
-.crFormItem.alert ~ .crFormIcon .crIcon {
-    background-color: rgba(var(--alert-500), 1);
-    border-color: rgba(var(--alert-500), 1);
-}
-
-.crFormItem.alert:is(:hover, :active) {
-    background-color: rgba(var(--alert-600), 1);
-    border-color: rgba(var(--alert-600), 1);
-}
-
-.crFormItem.txt.alert:not(:placeholder-shown) + .crFormPlaceholder {
-    color: rgba(var(--alert-600), 1);
-}
-
-.fn-alert {
-    color: rgba(var(--alert-600), 1);
-}
 
 .bg-completed,
 .crFormItem.completed,

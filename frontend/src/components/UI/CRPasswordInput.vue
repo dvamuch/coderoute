@@ -6,6 +6,11 @@ const props = defineProps({
     type: String,
     default: "Пароль",
   },
+  isValid: {
+    type: Boolean,
+    default: false,
+    required: true,
+  },
 });
 const emits = defineEmits([
   "update:password",
@@ -31,6 +36,7 @@ const reverseShowingPassword = () => {
   <label class="crFormWrap">
     <input :type="inputTypeForPassword" :placeholder="props.placeholder" v-model="password"
            @input="emits('update:password', $event.target.value)"
+           :class="{alert: !props.isValid}"
            class="crFormItem txt secondary hMedium radSmall"/>
     <span class="crFormPlaceholder">{{ props.placeholder }}</span>
     <span class="crFormIcon right">
