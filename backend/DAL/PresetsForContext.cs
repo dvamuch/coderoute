@@ -28,7 +28,7 @@ namespace CodeRoute.DAL
                 VertexId = 2,
                 RouteId = 2,
                 Name = "Интернет",
-                MarkdownPage = "Интернет — это глобальная сеть, которая объединяет огромное количество компьютеров по всему земному шару и дает возможность получения доступа к информационным ресурсам."
+                MarkdownPage = "<p class=\"lhMain\">Интернет - это глобальная сеть, которая объединяет огромное количество компьютеров по всему миру и дает возможность получения доступа к различным ресурсам и сервисам</p>\r\n<p class=\"lhMain\">осетите следующие ресурсы, чтобы узнать больше:</p>\r\n<ul class=\"linkedList fn-accent\">\r\n  <li class=\"item\">\r\n    <a title=\"\" href=\"https://ru.wikipedia.org/wiki/Интернет\" class=\"link\">Интернет</a>\r\n  </li>\r\n  <li class=\"item\">\r\n    <a title=\"\" href=\"https://habr.com/ru/articles/709210/\" class=\"link\">Основы Интернета</a>\r\n  </li>\r\n</ul>"
             });
 
             context.Vertexes.Add(new Models.Vertex()
@@ -36,7 +36,7 @@ namespace CodeRoute.DAL
                 VertexId = 3,
                 RouteId = 2,
                 Name = "Как работает интернет?",
-                MarkdownPage = "Интернет - это глобальная сеть компьютеров, соединенных друг с другом, которые взаимодействуют посредством стандартизированного набора протоколов."
+                MarkdownPage = "<p class=\"lhMain\">Интернет - это глобальная сеть компьютеров, соединенных друг с другом, которые взаимодействуют посредством стандартизированного набора протоколов.</p>\r\n<p class=\"lhMain\">осетите следующие ресурсы, чтобы узнать больше:</p>\r\n<ul class=\"linkedList fn-accent\">\r\n  <li class=\"item\">\r\n    <a title=\"\" href=\"https://habr.com/ru/companies/ruvds/articles/720704/\" class=\"link\">Как работает Web</a>\r\n  </li>\r\n</ul>"
             });
 
             context.Vertexes.Add(new Models.Vertex()
