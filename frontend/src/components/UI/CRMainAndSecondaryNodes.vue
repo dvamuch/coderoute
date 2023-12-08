@@ -33,7 +33,7 @@ const props = defineProps({
 });
 
 const openNodeModal = () => {
-  nodeModalStore.openNodeModal(props.id);
+  nodeModalStore.openNodeModal(props.id, null);
 };
 
 const isShowLeft = computed(() => props.indexInArray % 2 === 1);
@@ -46,7 +46,7 @@ const isShowRight = computed(() => props.indexInArray % 2 === 0);
 
     <div class="section side left">
       <CRLinesAndSecondaryNodes v-if="isShowLeft" :secondary-nodes="secondaryNodes"
-                                :index-in-array="indexInArray">
+                                :index-in-array="indexInArray" :parent-node-id="props.id">
       </CRLinesAndSecondaryNodes>
     </div>
 
@@ -60,7 +60,7 @@ const isShowRight = computed(() => props.indexInArray % 2 === 0);
 
     <div class="section side right">
       <CRLinesAndSecondaryNodes v-if="isShowRight" :secondary-nodes="secondaryNodes"
-                                :index-in-array="indexInArray">
+                                :index-in-array="indexInArray" :parent-node-id="props.id">
       </CRLinesAndSecondaryNodes>
     </div>
 

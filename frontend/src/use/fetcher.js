@@ -9,8 +9,11 @@ export default function userFetcher() {
 
   const fetchJson = async (url, options = {}) => {
 
-    // console.log(isAuthorized.value)
+    const result = await myFetch(url, options);
+    return await result.json();
+  };
 
+  const myFetch = async (url, options = {}) => {
     if (isAuthorized.value) {
       options.headers = {
         Authorization: `Bearer ${jwtToken.value}`,
@@ -25,10 +28,11 @@ export default function userFetcher() {
       result = await fetch(url, options);
     }
 
-    return await result.json();
+    return result;
   };
 
   return {
     fetchJson,
+    myFetch,
   };
 }

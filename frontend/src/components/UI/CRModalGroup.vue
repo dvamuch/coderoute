@@ -17,6 +17,7 @@ const isShowingLoginModal = computed(() => authorizationModalStore.isShowingLogi
 const isShowingRegistrationModal = computed(() => authorizationModalStore.isShowingRegistrationModal);
 const isShowingNodeModal = computed(() => nodeModalStore.isShowingNodeModal);
 const nodeIdToShow = computed(() => nodeModalStore.nodeIdToShow);
+const parentNodeIdToShow = computed(() => nodeModalStore.parentNodeIdToShow);
 const isShowingHelpModal = computed(() => helpModalStore.isShowingHelpModal);
 
 </script>
@@ -34,7 +35,7 @@ const isShowingHelpModal = computed(() => helpModalStore.isShowingHelpModal);
   </transition>
   <transition name="modal">
     <CRModal v-if="isShowingNodeModal" :close-action="nodeModalStore.closeNodeModal">
-      <CRNodeModalSlot :node-id="nodeIdToShow"></CRNodeModalSlot>
+      <CRNodeModalSlot :node-id="nodeIdToShow" :parent-node-id="parentNodeIdToShow"></CRNodeModalSlot>
     </CRModal>
   </transition>
   <transition name="modal">

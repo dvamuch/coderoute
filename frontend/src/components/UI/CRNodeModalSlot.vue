@@ -5,6 +5,9 @@ const props = defineProps({
     type: Number,
     required: true,
   },
+  parentNodeId: {
+    required: true,
+  },
 });
 
 import CRSelectStatus from "@/components/UI/CRSelect.vue";
@@ -18,24 +21,32 @@ const authorizationStore = useAuthorizationStore();
 const nodeStatusStore = useNodeStatusStore();
 
 const nodeObject = computed(() => {
-  console.log(11, nodesStore.nodeObjects[props.nodeId]);
-  return nodesStore.nodeObjects[props.nodeId] || {};
+  const newNodeObject = nodesStore.nodeObjects[props.nodeId];
+  const defaultNodeObject = {
+    title: "",
+    description: "",
+    statusId: 1,
+  };
+  status.value = newNodeObject?.statusId || 1;
+
+  // console.log(11, newNodeObject);
+  return newNodeObject || defaultNodeObject;
 });
 
 const isAuthorized = computed(() => authorizationStore.isAuthorized);
 
 onMounted(async () => {
-  console.log(2, props.nodeId);
+  // console.log(2, props.nodeId);
   await nodesStore.fetchNode(props.nodeId);
 });
 
 
 const changeNodeStatus = async (newStatusId) => {
   console.log(newStatusId);
+  await nodesStore.updateStatus(props.parentNodeId, props.nodeId, newStatusId);
 };
 
 const status = ref(1);
-// const status = computed(() => nodeObject.value.statusId);
 
 </script>
 

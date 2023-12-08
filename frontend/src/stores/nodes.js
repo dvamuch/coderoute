@@ -30,11 +30,22 @@ export const useNodesStore = defineStore("nodes", () => {
     nodeObjects.value[nodeId] = await fetcher.fetchJson(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Vertex/${nodeId}`);
   };
 
-  const updateStatus = async (nodeId, statusId) => {
+  const updateStatus = async (parentNodeId, nodeId, statusId) => {
     const options = {
       method: "POST",
     };
-    await (await fetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Vertex/${nodeId}/${statusId}`, options)).json();
+    nodeObjects.value[nodeId].statusId = statusId;
+
+    await fetcher.myFetch(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/UserVertex/${nodeId}/${statusId}`, options);
+
+    if (parentNodeId) {
+      const parentNodeIndex = nodeList.value.findIndex((element) => element.id === parentNodeId);
+      const nodeIndex = nodeList.value[parentNodeIndex].secondaryNodes.findIndex((element) => element.id === nodeId);
+      nodeList.value[parentNodeIndex].secondaryNodes[nodeIndex].statusId = statusId;
+    } else {
+      const nodeIndex = nodeList.value.findIndex((element) => element.id === nodeId);
+      nodeList.value[nodeIndex].statusId = statusId;
+    }
   };
 
   return {nodeList, roadmapInfo, roadmapProgress, nodeObjects, fetchRoadmap, fetchNode, updateStatus};
