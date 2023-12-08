@@ -3,7 +3,6 @@ export default {
     el.clickOutsideEvent = function (event) {
       if (!(el === event.target || el.contains(event.target))) {
         binding.value(event, el);
-        console.log(event, el);
       }
     };
     setTimeout(() => document.body.addEventListener("click", el.clickOutsideEvent), 0);

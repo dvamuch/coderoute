@@ -12,7 +12,7 @@ defineProps({
 <template>
   <div class="crModalWrap scrollHide">
     <div class="absFill modalToggle"></div>
-    <div class="crModalWindow" v-click-out="fsfsdf">
+    <div class="crModalWindow" v-click-out="closeAction">
 
       <slot>
         <p>Модальное окно</p>

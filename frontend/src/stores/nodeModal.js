@@ -11,7 +11,6 @@ export const useNodeModalStore = defineStore("nodeModal", () => {
   };
 
   const closeNodeModal = () => {
-    console.log('ddddddddd')
     isShowingNodeModal.value = false;
   };
 

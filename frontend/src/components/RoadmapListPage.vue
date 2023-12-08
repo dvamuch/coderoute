@@ -6,11 +6,10 @@ import {onMounted, ref} from "vue";
 
 const fetcher = userFetcher();
 
-const developerRoadmapList = ref([]);
+const roadmapGroupList = ref([]);
 
 onMounted(async () => {
-
-  developerRoadmapList.value = await fetcher.fetchJson(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Routes`);
+  roadmapGroupList.value = await fetcher.fetchJson(`http://${process.env.VUE_APP_BACKEND_HOST}/api/v1/Routes`);
 });
 
 </script>
@@ -23,8 +22,8 @@ onMounted(async () => {
       </div>
     </header>
 
-    <CRRoadmapListGroup :roadmap-list="developerRoadmapList" profession-name="Разработка"></CRRoadmapListGroup>
-    <CRRoadmapListGroup :roadmap-list="developerRoadmapList" profession-name="Аналитика"></CRRoadmapListGroup>
-    <CRRoadmapListGroup :roadmap-list="developerRoadmapList" profession-name="Дизайн"></CRRoadmapListGroup>
+    <CRRoadmapListGroup v-for="roadmapGroup in roadmapGroupList" :roadmap-list="roadmapGroup.routes" :profession-name="roadmapGroup.direction"></CRRoadmapListGroup>
+<!--    <CRRoadmapListGroup :roadmap-list="oadmapList" profession-name="Аналитика"></CRRoadmapListGroup>-->
+<!--    <CRRoadmapListGroup :roadmap-list="oadmapList" profession-name="Дизайн"></CRRoadmapListGroup>-->
   </main>
 </template>
