@@ -14,7 +14,6 @@ namespace CodeRoute.DAL
             {
                 ResetTestDB();
             }
-
         }
 
         private void ResetTestDB()

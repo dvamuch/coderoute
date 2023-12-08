@@ -27,7 +27,7 @@ namespace CodeRoute.Services
                 maps.Add(new Roadmap()
                 {
                     RouteId = route.RouteId,
-                    Description = route.Desctiption,
+                    Description = route.Description,
                     Title = route.Title,
                     StatusId = (await _routeRepository.GetStatusIdByIds(route.RouteId, userId))
                 });
@@ -78,7 +78,7 @@ namespace CodeRoute.Services
             Models.Route route = new Models.Route()
             {
                 Title = roadmap.Title,
-                Desctiption = roadmap.Description,
+                Description = roadmap.Description,
                 MarkDownPage = ""
             };
 
@@ -94,7 +94,7 @@ namespace CodeRoute.Services
             Roadmap map = new Roadmap()
             {
                 Title = route.Title,
-                Description = route.Desctiption,
+                Description = route.Description,
                 StatusId = await _routeRepository.GetRouteStatusById(routId, userId)
             };
 

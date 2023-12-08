@@ -9,7 +9,7 @@ namespace CodeRoute.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RouteId { get; set; }
         public string Title { get; set; }
-        public string Desctiption { get; set; }
+        public string Description { get; set; }
         public string MarkDownPage { get; set; }
     }
 }
