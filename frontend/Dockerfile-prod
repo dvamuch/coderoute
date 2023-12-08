@@ -6,8 +6,8 @@ WORKDIR /app
 COPY . .
 # install node modules and build assets
 RUN npm install
-RUN npm run build
 RUN npm audit fix --force
+RUN npm run build
 
 # nginx state for serving content
 FROM nginx:alpine
