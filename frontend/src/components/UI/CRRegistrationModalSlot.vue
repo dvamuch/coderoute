@@ -44,7 +44,7 @@ const registerUser = async () => {
       </div>
 
       <div class="flexibleY gapSmaller">
-        <div class="al-center fn-alert">Неверный email или пароль</div>
+<!--        <div class="al-center fn-alert">Неверный email или пароль</div>-->
         <div class="flexible gapSmallest">
           <button type="submit" class="crFormItem button primary filled hLarge radRound grow" @click="registerUser">
             Зарегистрироваться
