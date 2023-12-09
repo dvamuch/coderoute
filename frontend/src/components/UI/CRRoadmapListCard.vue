@@ -35,7 +35,7 @@ const props = defineProps({
           <div v-if="isStarted">{{ props.percentsOfProgress }}% пройдено</div>
         </div>
 <!--        <p>{{ "/roadmaps/" + props.roadmapId }}</p>-->
-        <router-link title="" :to="'/roadmaps/' + props.roadmapId"
+        <router-link title="" to="/roadmaps/2"
                      class="crFormItem button noShrink primary radRound filled hMedium">
           {{isStarted? "Продолжить" : "Ознакомиться"}}
         </router-link>
