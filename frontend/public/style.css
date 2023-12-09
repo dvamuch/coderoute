@@ -1287,5 +1287,14 @@ html {
     background-color: currentColor;
 }
 
+/* Transition animation */
 
+.modal-enter-active,
+.modal-leave-active {
+    transition: opacity 200ms ease-out;
+}
 
+.modal-enter-from,
+.modal-leave-to {
+    opacity: 0;
+}
