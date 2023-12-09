@@ -20,7 +20,7 @@ namespace CodeRoute.DAL
         {
             context.Routes.Add(new Models.Route() { Title = "", Description = "", MarkDownPage = "" });
             context.Routes.Add(new Models.Route() { Title = "Frontend Разработчик", Description = "Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО", MarkDownPage = "" });
-            context.Routes.Add(new Models.Route() { Title = "Backend Разработчик", Description = "Программист, который пишет серверный код, отвечает за реакцию ресурса на действия пользователя и выдачу информации", MarkDownPage = "" });
+            //context.Routes.Add(new Models.Route() { Title = "Backend Разработчик", Description = "Программист, который пишет серверный код, отвечает за реакцию ресурса на действия пользователя и выдачу информации", MarkDownPage = "" });
             context.Routes.Add(new Models.Route() { Title = "Бизнес-аналитик", Description = "Специалист, изучающий и оптимизирующий бизнес-процессы", MarkDownPage = "" });
             context.Routes.Add(new Models.Route() { Title = "UX-дизайнер", Description = "Специалист, проектирующий удобные для пользователь интерфейсы", MarkDownPage = "" });
 
@@ -35,9 +35,9 @@ namespace CodeRoute.DAL
 
 
             context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 1, RouteId = 2 });
-            context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 1, RouteId = 3 });
-            context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 2, RouteId = 4 });
-            context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 3, RouteId = 5 });
+            //context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 1, RouteId = 3 });
+            context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 2, RouteId = 3 });
+            context.DirectionRoutes.Add(new Models.DirectionRoute() { DirectionId = 3, RouteId = 4 });
 
             context.SaveChanges();
         }
