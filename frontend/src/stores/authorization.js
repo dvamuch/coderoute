@@ -81,7 +81,7 @@ export const useAuthorizationStore = defineStore("authorization", () => {
         console.log("userObject", userObject.value);
         console.log("jwtToken", jwtToken.value);
       } else {
-        console.log("Ты еблан");
+        console.log("Ошибка авторизации");
       }
     };
 

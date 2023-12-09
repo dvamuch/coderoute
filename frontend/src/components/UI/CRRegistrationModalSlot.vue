@@ -26,7 +26,8 @@ const registerUser = async () => {
 
 <template>
   <div class="flexibleY gapMedium">
-    <h6 class="fn-subcap al-center"><b>Создать аккаунт</b></h6>
+    <h6 class="fn-subcap al-center" style="font-family: 'NT Somic Bold', Arial, Helvetica, sans-serif;"><b>Создать
+      аккаунт</b></h6>
 
     <form class="flexibleY gapSmall">
 
@@ -34,18 +35,18 @@ const registerUser = async () => {
       <div class="flexible gapSmaller">
         <div class="flexibleY gapSmaller grow">
 
-          <CRTextInput placeholder="Имя пользователя" v-model:text="login"></CRTextInput>
-          <CRTextInput placeholder="Email" v-model:text="email"></CRTextInput>
+          <CRTextInput placeholder="Имя пользователя" v-model:text="login" :is-valid="true"></CRTextInput>
+          <CRTextInput placeholder="Email" v-model:text="email" :is-valid="true"></CRTextInput>
 
-          <CRPasswordInput v-model:password="password"></CRPasswordInput>
-          <CRPasswordInput v-model:password="passwordRepeat" placeholder="Пароль повторно"></CRPasswordInput>
+          <CRPasswordInput v-model:password="password" :is-valid="true"></CRPasswordInput>
+          <CRPasswordInput v-model:password="passwordRepeat" placeholder="Пароль повторно" :is-valid="true"></CRPasswordInput>
         </div>
       </div>
 
       <div class="flexibleY gapSmaller">
         <div class="al-center fn-alert">Неверный email или пароль</div>
         <div class="flexible gapSmallest">
-          <button class="crFormItem button primary filled hLarge radRound grow" @click="registerUser">
+          <button type="submit" class="crFormItem button primary filled hLarge radRound grow" @click="registerUser">
             Зарегистрироваться
           </button>
         </div>

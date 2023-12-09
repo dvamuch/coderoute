@@ -28,7 +28,7 @@ const props = defineProps({
 <template>
   <ul class="crCards x2 gapSmaller">
     <li class="crCard flexibleY stretch gapXSmallest">
-      <h4 class="fn-adv"><b>{{ props.title }}</b></h4>
+      <h4 class="fn-adv" style="font-family: 'NT Somic Medium', Arial, Helvetica, sans-serif"><b>{{ props.title }}</b></h4>
       <p class="lhMain">{{ props.description }}</p>
       <div class="flexible flex-bottom">
         <div class="fn-completed grow">
