@@ -25,7 +25,9 @@ const isValid = computed(() => {
 });
 const notifications = computed(() => validator.notifications.value);
 const isOk = computed(() => validator.isOk.value);
-const isAuthorized = computed(() => authorizationStore.isAuthorized.value);
+const isAuthorized = computed(() => {
+  return authorizationStore.isAuthorized
+});
 
 const validate = () => {
   const rules = [
@@ -41,8 +43,13 @@ const validate = () => {
     },
     {
       fieldNames: ["login"],
-      rule: (v) => v.match(/^[a-zA-Z]+$/),
-      notification: "nonLatinSymbolsInLogin",
+      rule: (v) => v.length < 20,
+      notification: "longLogin",
+    },
+    {
+      fieldNames: ["login"],
+      rule: (v) => v.match(/^(?=.*[A-Za-z0-9]$)[A-Za-z][A-Za-z\d.-]{0,19}$/),
+      notification: "wrongSymbolsInLogin",
     },
     {
       fieldNames: ["email"],
@@ -104,8 +111,6 @@ const registerUser = async () => {
       <div class="flexible gapSmaller">
         <div class="flexibleY gapSmaller grow">
 
-          {{ isValid }}
-          {{ notifications }}
 
           <CRTextInput placeholder="Имя пользователя" v-model:text="formData.login" :is-valid="isValid.login"
                        @update:text="validate"></CRTextInput>
@@ -120,7 +125,14 @@ const registerUser = async () => {
       </div>
 
       <div class="flexibleY gapSmaller">
-        <div class="al-center fn-alert">Неверный email или пароль</div>
+        <div class="al-center fn-alert" v-if="notifications?.wrongCredentials">Неверный email или пароль</div>
+        <div class="al-center fn-alert" v-if="notifications?.emptyInputs">Есть пустые поля</div>
+        <div class="al-center fn-alert" v-if="notifications?.wrongSymbolsInLogin">Логин содержит недопустимые символы</div>
+        <div class="al-center fn-alert" v-if="notifications?.smallLogin">Логин слишком короткий</div>
+        <div class="al-center fn-alert" v-if="notifications?.longLogin">Логин слишком длинный</div>
+        <div class="al-center fn-alert" v-if="notifications?.smallPassword">Пароль слишком короткий</div>
+        <div class="al-center fn-alert" v-if="notifications?.longPassword">Пароль слишком короткий</div>
+        <div class="al-center fn-alert" v-if="notifications?.passwordsNotEqual">Пароли не совпадают</div>
         <div class="flexible gapSmallest">
           <button type="submit" class="crFormItem button primary filled hLarge radRound grow" @click="registerUser">
             Зарегистрироваться

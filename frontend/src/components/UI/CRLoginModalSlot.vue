@@ -21,7 +21,9 @@ const isValid = computed(() => {
 });
 const notifications = computed(() => validator.notifications.value);
 const isOk = computed(() => validator.isOk.value);
-const isAuthorized = computed(() => authorizationStore.isAuthorized.value);
+const isAuthorized = computed(() => {
+  return authorizationStore.isAuthorized
+});
 
 const validate = () => {
   const rules = [
@@ -44,6 +46,7 @@ const authenticateUser = async () => {
   }
   await authorizationStore.authenticateUser(formData.value.login, formData.value.password);
 
+  console.log(2112, isAuthorized.value)
   if (!isAuthorized.value) {
     notifications.value["wrongCredentials"] = true;
     return;
