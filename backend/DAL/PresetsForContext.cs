@@ -19,7 +19,7 @@ namespace CodeRoute.DAL
         public static void AddRoutePresets(this Context context)
         {
             context.Routes.Add(new Models.Route() { Title = "", Description = "", MarkDownPage = "" });
-            context.Routes.Add(new Models.Route() { Title = "Frontend Разработчик", Description = "Специалист, отвечающий за создание пользовательского интерфейса сайта, приложения или ПО", MarkDownPage = "" });
+            context.Routes.Add(new Models.Route() { Title = "Frontend Разработчик", Description = "Специалист, отвечающий за создание пользовательского интерфейса", MarkDownPage = "" });
             //context.Routes.Add(new Models.Route() { Title = "Backend Разработчик", Description = "Программист, который пишет серверный код, отвечает за реакцию ресурса на действия пользователя и выдачу информации", MarkDownPage = "" });
             context.Routes.Add(new Models.Route() { Title = "Бизнес-аналитик", Description = "Специалист, изучающий и оптимизирующий бизнес-процессы", MarkDownPage = "" });
             context.Routes.Add(new Models.Route() { Title = "UX-дизайнер", Description = "Специалист, проектирующий удобные для пользователь интерфейсы", MarkDownPage = "" });
