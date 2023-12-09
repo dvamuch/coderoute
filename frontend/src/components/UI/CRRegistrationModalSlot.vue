@@ -4,22 +4,91 @@ import CRPasswordInput from "@/components/UI/CRPasswordInput.vue";
 import CRTextInput from "@/components/UI/CRTextInput.vue";
 import {useAuthorizationStore} from "@/stores/authorization";
 import {useAuthorizationModalStore} from "@/stores/authorizationModal";
-import {ref} from "vue";
+import useValidator from "@/use/validator";
+import {computed, ref} from "vue";
 
 const authorizationModalStore = useAuthorizationModalStore();
 const authorizationStore = useAuthorizationStore();
 
 const openLoginModal = authorizationModalStore.openLoginModal;
+const validator = useValidator();
 
 
-const email = ref("");
-const login = ref("");
-const password = ref("");
-const passwordRepeat = ref("");
+const formData = ref({
+  email: "",
+  login: "",
+  password: "",
+  passwordRepeat: "",
+});
+const isValid = computed(() => {
+  return validator.isValid.value || {password: true, login: true, email: true, passwordRepeat: true};
+});
+const notifications = computed(() => validator.notifications.value);
+const isOk = computed(() => validator.isOk.value);
+const isAuthorized = computed(() => authorizationStore.isAuthorized.value);
+
+const validate = () => {
+  const rules = [
+    {
+      fieldNames: ["login", "email", "password", "passwordRepeat"],
+      rule: (v) => v.length !== 0,
+      notification: "emptyInputs",
+    },
+    {
+      fieldNames: ["login"],
+      rule: (v) => v.length > 4,
+      notification: "smallLogin",
+    },
+    {
+      fieldNames: ["login"],
+      rule: (v) => v.match(/^[a-zA-Z]+$/),
+      notification: "nonLatinSymbolsInLogin",
+    },
+    {
+      fieldNames: ["email"],
+      rule: (v) => {
+        const validateEmailRegex = /^\S+@\S+\.\S+$/;
+        return validateEmailRegex.test(v);
+      },
+      notification: "emailInvalid",
+    },
+    {
+      fieldNames: ["password"],
+      rule: (v) => v.length > 8,
+      notification: "smallPassword",
+    },
+    {
+      fieldNames: ["password"],
+      rule: (v) => v.length < 30,
+      notification: "longPassword",
+    },
+    {
+      fieldNames: ["password"],
+      rule: (v) => v === formData.value.passwordRepeat,
+      notification: "passwordsNotEqual",
+    },
+    {
+      fieldNames: ["passwordRepeat"],
+      rule: (v) => v === formData.value.password,
+      notification: "passwordsNotEqual",
+    },
+  ];
+
+  validator.validate(formData, rules);
+};
 
 const registerUser = async () => {
-  await authorizationStore.registerUser(email.value, login.value, password.value);
-  await authorizationStore.authenticateUser(login.value, password.value);
+  validate();
+  if (!isOk.value) {
+    return;
+  }
+  await authorizationStore.registerUser(formData.value.email, formData.value.login, formData.value.password);
+  await authorizationStore.authenticateUser(formData.value.login, formData.value.password);
+  authorizationModalStore.closeLoginAndRegistrationModal();
+  if (!isAuthorized.value) {
+    notifications.value["wrongCredentials"] = true;
+    return;
+  }
   authorizationModalStore.closeLoginAndRegistrationModal();
 };
 </script>
@@ -35,11 +104,18 @@ const registerUser = async () => {
       <div class="flexible gapSmaller">
         <div class="flexibleY gapSmaller grow">
 
-          <CRTextInput placeholder="Имя пользователя" v-model:text="login" :is-valid="true"></CRTextInput>
-          <CRTextInput placeholder="Email" v-model:text="email" :is-valid="true"></CRTextInput>
+          {{ isValid }}
+          {{ notifications }}
 
-          <CRPasswordInput v-model:password="password" :is-valid="true"></CRPasswordInput>
-          <CRPasswordInput v-model:password="passwordRepeat" placeholder="Пароль повторно" :is-valid="true"></CRPasswordInput>
+          <CRTextInput placeholder="Имя пользователя" v-model:text="formData.login" :is-valid="isValid.login"
+                       @update:text="validate"></CRTextInput>
+          <CRTextInput placeholder="Email" v-model:text="formData.email" :is-valid="isValid.email"
+                       @update:text="validate"></CRTextInput>
+
+          <CRPasswordInput v-model:password="formData.password" :is-valid="isValid.password"
+                           @update:password="validate"></CRPasswordInput>
+          <CRPasswordInput v-model:password="formData.passwordRepeat" placeholder="Пароль повторно"
+                           :is-valid="isValid.passwordRepeat" @update:password="validate"></CRPasswordInput>
         </div>
       </div>
 

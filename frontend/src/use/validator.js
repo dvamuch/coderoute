@@ -7,6 +7,7 @@ export default function useValidator() {
   const isOk = ref(true);
 
   const validate = (formData, rules) => {
+
     notifications.value = {};
     isOk.value = true;
     let newIsValidObject = {};

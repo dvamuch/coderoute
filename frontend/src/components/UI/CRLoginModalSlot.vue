@@ -16,6 +16,12 @@ const formData = ref({
   password: "",
   login: "",
 });
+const isValid = computed(() => {
+  return validator.isValid.value || {password: true, login: true};
+});
+const notifications = computed(() => validator.notifications.value);
+const isOk = computed(() => validator.isOk.value);
+const isAuthorized = computed(() => authorizationStore.isAuthorized.value);
 
 const validate = () => {
   const rules = [
@@ -29,13 +35,6 @@ const validate = () => {
   validator.validate(formData, rules);
 };
 
-
-const isValid = computed(() => {
-  return validator.isValid.value || {password: true, login: true};
-});
-const notifications = computed(() => validator.notifications.value);
-const isOk = computed(() => validator.isOk.value);
-const isAuthorized = computed(() => authorizationStore.isAuthorized.value);
 
 const authenticateUser = async () => {
   validate();
@@ -51,8 +50,6 @@ const authenticateUser = async () => {
   }
   authorizationModalStore.closeLoginAndRegistrationModal();
 };
-
-
 </script>
 
 <template>
@@ -62,9 +59,6 @@ const authenticateUser = async () => {
       аккаунт</b></h6>
 
     <form class="flexibleY gapSmall" @submit="authenticateUser">
-
-      <!--      {{ isValid }}-->
-      <!--      {{ notifications }}-->
 
       <div class="flexible gapSmaller">
         <div class="flexibleY gapSmaller grow">
